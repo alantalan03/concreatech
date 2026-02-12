@@ -1,0 +1,1 @@
+export type AppLang = 'es' | 'en';

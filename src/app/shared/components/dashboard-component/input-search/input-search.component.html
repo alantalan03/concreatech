@@ -1,0 +1,11 @@
+<div class="input-container interactive">
+    <input
+        [disabled]="disabled"
+        [(ngModel)]="filterText"
+        (input)="onInput($event)"
+        type="text"
+        class="search"
+        [placeholder]="'lockerPage.input-search' | translate:ts.GetLang">
+	<app-icon  name="search-md" color="color-fg-quaternary" size="lg">
+	</app-icon>
+</div>

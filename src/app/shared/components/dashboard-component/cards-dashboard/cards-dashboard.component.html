@@ -1,0 +1,113 @@
+<div class="boxContainer-vertical " *ngIf="direction === 'vertical'">
+	<div class="card interactive" *ngFor="let item of cards; let i = index">
+		<div class="cardHead">
+			<div class="title">
+				{{item.name | translate:ts.GetLang}}
+			</div>
+			<app-icon style="cursor: pointer;width: 20px;height: 20px;display: flex;align-items: center;justify-content: center;" (mouseenter)="ShowTooltip($event, item.tooltip)" (mouseleave)="hideTooltip()"
+				name="info-circle"
+				color="color-fg-tertiary"
+				size="sm"
+				strokeWidth="semibold">
+			</app-icon>
+			<div class="tooltipContainer" *ngIf="isTooltipVisible && activeTooltipIndex === i">
+				<div class="tooltipCard">
+					{{item.tooltip | translate:ts.GetLang}}
+				</div>
+				<div style="position:absolute;width: 100%; display: flex; justify-content: flex-end; margin-top: 62px; margin-left: -2rem;">
+					<svg xmlns="http://www.w3.org/2000/svg" width="17" height="12" viewBox="0 0 17 12" fill="none">
+						<path d="M9.29702 10.9482C8.89687 11.4763 8.10313 11.4763 7.70298 10.9482L0.622165 1.60396C0.123097 0.945358 0.592853 2.98145e-07 1.41918 3.70385e-07L15.5808 1.60843e-06C16.4071 1.68067e-06 16.8769 0.94536 16.3778 1.60396L9.29702 10.9482Z" fill="var(--color-bg-primary)"/>
+					</svg>
+				</div>
+			</div>
+		</div>
+		<div class="cardBody">
+			<div class="number">
+				{{item.value}}
+				<div class="starIcon" *ngIf="item.starIcon === true">
+					<app-icon style="cursor: pointer;"
+					name="star-01"
+					color="color-score"
+					size="lg"
+					fillColor="color-score"
+					strokeWidth="semibold">
+					</app-icon>
+				</div>
+			</div>
+			<div class="footer-disabled" *ngIf="item.isDisabled">
+				{{item.footer | translate:ts.GetLang }}
+			</div>
+			<div class="footer" *ngIf="item.isCompare">
+				<div class="number-box-positive" *ngIf="item.number >0">
+					<div class="number">
+					{{item.number}}%
+					</div>
+				</div>
+				<div class="number-box-negative" *ngIf="item.number < 0">
+					<div class="number">
+					{{item.number}}%
+					</div>
+				</div>
+				<div class="text">
+					{{item.footer | translate:ts.GetLang}}
+				</div>
+			</div>
+			<div class="footer" *ngIf="item.OnlyFooter">
+				<div class="text">
+					{{item.footer | translate:ts.GetLang}}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="boxContainer-horizontal" *ngIf="direction === 'horizontal'">
+	<div class="card interactive" *ngFor="let item of cards; let i = index">
+		<div class="cardHead">
+			<div class="title">
+				{{item.name | translate:ts.GetLang}}
+			</div>
+
+			<app-icon style="cursor: pointer;width: 20px;height: 20px;display: flex;align-items: center;justify-content: center;" (mouseenter)="ShowTooltip($event, item.tooltip)" (mouseleave)="hideTooltip()"
+				name="info-circle"
+				color="color-fg-tertiary"
+				size="sm"
+				strokeWidth="semibold">
+			</app-icon>
+
+			<div class="tooltipContainer" *ngIf="isTooltipVisible && activeTooltipIndex === i">
+				<div class="tooltipCard">
+					{{item.tooltip | translate:ts.GetLang}}
+				</div>
+				<div style="position:absolute;width: 100%; display: flex; justify-content: flex-end; margin-top: 62px; margin-left: -2rem;">
+					<svg xmlns="http://www.w3.org/2000/svg" width="17" height="12" viewBox="0 0 17 12" fill="none">
+						<path d="M9.29702 10.9482C8.89687 11.4763 8.10313 11.4763 7.70298 10.9482L0.622165 1.60396C0.123097 0.945358 0.592853 2.98145e-07 1.41918 3.70385e-07L15.5808 1.60843e-06C16.4071 1.68067e-06 16.8769 0.94536 16.3778 1.60396L9.29702 10.9482Z" fill="var(--color-bg-primary)"/>
+					</svg>
+				</div>
+			</div>
+		</div>
+		<div class="cardBody">
+			<div class="number">
+			{{item.value}}
+			</div>
+			<div class="footer-disabled" *ngIf="item.isDisabled">
+			{{item.footer | translate:ts.GetLang}}
+			</div>
+			<div class="footer" *ngIf="item.isCompare">
+			<div class="number-box-positive" *ngIf="item.number >0">
+				<div class="number">
+				{{item.number}}%
+				</div>
+			</div>
+			<div class="number-box-negative" *ngIf="item.number < 0">
+				<div class="number">
+				{{item.number}}%
+				</div>
+			</div>
+			<div class="text">
+				{{item.footer | translate:ts.GetLang}}
+			</div>
+			</div>
+		</div>
+	</div>
+</div>

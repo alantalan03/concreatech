@@ -1,0 +1,78 @@
+.box-container{
+    display: flex;
+    flex-direction: column;
+    height: 66.25px;
+    gap: 10px;
+
+     .header-container{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: auto;
+        gap: 0px;
+        justify-content: space-between;
+        opacity: 0px;
+        .title{
+            color: var(--color-fg-secondary, #344054);
+            /* Body/B2 - Regular */
+            font-family: var(--body);
+            font-size: var(--font-b2);
+            font-weight: var(--medium);
+            line-height: var(--font-lh-b2);
+            letter-spacing: var(--font-spacing-b);
+        }
+    }
+    .body-container{
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        .chip-container-md-select{
+            cursor: pointer;
+            display: flex;
+            height: 24px;
+            padding: var(--spacing-1, 2px) var(--spacing-2, 4px) var(--spacing-1, 2px) var(--spacing-3, 8px);
+            justify-content: center;
+            align-items: center;
+            gap: var(--spacing-1, 2px);
+            border-radius: var(--radius-md, 8px);
+            border: 1px solid var(--color-chip-fg-blue, #246DC1);
+            background: var(--color-chip-bg-blue, #E9F1FA);
+            .label{
+                color: var(--color-chip-fg-blue);
+                text-align: center;
+                /* Captions/C1 - Medium */
+                font-family: var(--captions, Inter);
+                font-size: var(--font-c1, 12px);
+                font-style: normal;
+                font-weight: var(--medium, 500);
+                line-height: 18px; /* 150% */
+                letter-spacing: -0.048px;
+            }
+        }
+        
+        .chip-container-md{
+            cursor: pointer;
+            display: flex;
+            height: 24px;
+            padding: var(--spacing-1, 2px) var(--spacing-2, 4px) var(--spacing-1, 2px) var(--spacing-3, 8px);
+            justify-content: center;
+            align-items: center;
+            gap: var(--spacing-1, 2px);
+            border-radius: var(--radius-md, 10px);
+            border: 1px solid var(--color-border-hover, #98A2B3);
+            background: var(--color-btn-secondary-hover, #F2F4F7);
+            .label{
+                color: var(--color-chip-fg-brand);
+                text-align: center;
+                /* Captions/C1 - Medium */
+                font-family: var(--captions, Inter);
+                font-size: var(--font-c1, 12px);
+                font-style: normal;
+                font-weight: var(--medium, 500);
+                line-height: 18px; /* 150% */
+                letter-spacing: -0.048px;
+            }
+        }
+    }
+
+}

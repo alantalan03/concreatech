@@ -1,0 +1,173 @@
+<nav class="navbar">
+	<div class="nav-container">
+		<!-- Logo -->
+		<div class="logo" routerLink="/">
+			<span class="logo-text"> Concrea<span>Tech</span> </span>
+		</div>
+
+		<!-- Desktop links -->
+		<div class="nav-links desktop-only">
+			<a
+				routerLink="/concreatech/home"
+				routerLinkActive="active"
+				[routerLinkActiveOptions]="{ exact: true }"
+			>
+				{{ 'NAV.HOME' | translate }}
+			</a>
+
+			<a routerLink="/concreatech/solutions" routerLinkActive="active">
+				{{ 'NAV.SOLUTIONS' | translate }}
+			</a>
+
+			<a routerLink="/concreatech/benefits" routerLinkActive="active">
+				{{ 'NAV.BENEFITS' | translate }}
+			</a>
+
+			<a routerLink="/concreatech/cas" routerLinkActive="active">
+				{{ 'NAV.CAS' | translate }}
+			</a>
+
+			<a routerLink="/concreatech/cos" routerLinkActive="active">
+				{{ 'NAV.COS' | translate }}
+			</a>
+
+			<a routerLink="/concreatech/licenses" routerLinkActive="active">
+				{{ 'NAV.LICENSES' | translate }}
+			</a>
+
+			<a routerLink="/concreatech/contact" routerLinkActive="active">
+				{{ 'NAV.CONTACT' | translate }}
+			</a>
+		</div>
+
+		<!-- Actions -->
+		<div class="nav-actions">
+			<!-- Language -->
+			<!-- <div class="language-selector desktop-only">
+        <button class="language-btn" (click)="toggleLang()">
+          {{ langService.currentLang | uppercase }}
+        </button>
+
+        <div class="language-dropdown" *ngIf="langOpen">
+          <button (click)="changeLang('es')">🇲🇽 ES</button>
+          <button (click)="changeLang('en')">🇺🇸 EN</button>
+        </div>
+      </div> -->
+			<app-language-selector class="desktop-only"></app-language-selector>
+
+			<!-- Login -->
+
+			<app-button
+				class="desktop-only"
+				buttonClass="btn-md-secondary-full"
+				[label]="'NAV.DEMO' | translate"
+				[showIcon]="false"
+				colorIcon="color-fg-primary-inverted"
+			>
+			</app-button>
+
+			<!-- CTA -->
+
+			<app-button
+				class="desktop-only"
+				buttonClass="btn-md-primary-full"
+				[label]="'NAV.DEMO' | translate"
+				[showIcon]="false"
+				colorIcon="color-fg-primary-inverted"
+			>
+			</app-button>
+
+			<!-- Hamburger -->
+			<button class="menu-toggle mobile-only" (click)="toggleMenu()">☰</button>
+		</div>
+	</div>
+
+	<!-- Mobile Menu -->
+	<!-- Overlay -->
+	<div class="mobile-overlay" *ngIf="menuOpen" (click)="closeMenu()"></div>
+
+	<!-- Mobile Menu -->
+	<div class="mobile-menu" *ngIf="menuOpen">
+		<nav class="mobile-links">
+			<a
+				routerLink="/concreatech/home"
+				routerLinkActive="active"
+				(click)="closeMenu()"
+			>
+				{{ 'NAV.HOME' | translate }}
+			</a>
+
+			<a
+				routerLink="/concreatech/solutions"
+				routerLinkActive="active"
+				(click)="closeMenu()"
+			>
+				{{ 'NAV.SOLUTIONS' | translate }}
+			</a>
+
+			<a
+				routerLink="/concreatech/benefits"
+				routerLinkActive="active"
+				(click)="closeMenu()"
+			>
+				{{ 'NAV.BENEFITS' | translate }}
+			</a>
+
+			<a
+				routerLink="/concreatech/cas"
+				routerLinkActive="active"
+				(click)="closeMenu()"
+			>
+				{{ 'NAV.CAS' | translate }}
+			</a>
+
+			<a
+				routerLink="/concreatech/cos"
+				routerLinkActive="active"
+				(click)="closeMenu()"
+			>
+				{{ 'NAV.COS' | translate }}
+			</a>
+
+			<a
+				routerLink="/concreatech/licenses"
+				routerLinkActive="active"
+				(click)="closeMenu()"
+			>
+				{{ 'NAV.LICENSES' | translate }}
+			</a>
+
+			<a
+				routerLink="/concreatech/contact"
+				routerLinkActive="active"
+				(click)="closeMenu()"
+			>
+				{{ 'NAV.CONTACT' | translate }}
+			</a>
+		</nav>
+
+		<div class="mobile-divider"></div>
+
+		<!-- Language -->
+		<div class="mobile-lang">
+			<button (click)="changeLang('es')">🇲🇽 Español</button>
+			<button (click)="changeLang('en')">🇺🇸 English</button>
+		</div>
+
+		<div class="mobile-actions">
+			<app-button
+				buttonClass="btn-md-secondary-full"
+				[label]="'NAV.LOGIN' | translate"
+				[showIcon]="false"
+			>
+			</app-button>
+
+			<app-button
+				buttonClass="btn-md-primary-full"
+				[label]="'NAV.DEMO' | translate"
+				[showIcon]="false"
+			>
+			</app-button>
+		</div>
+	</div>
+</nav>

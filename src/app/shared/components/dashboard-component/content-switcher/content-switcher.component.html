@@ -1,0 +1,15 @@
+<div class="container-switch">
+	<!-- Iterate over each item in the content array -->
+	<div *ngFor="let item of content" (click)="selectContent(item)">
+		<div [ngClass]="{'content-selected': item.selected === true, 'content interactive': item.selected === false}">
+			<div class="text">
+				{{ item.text | translate:ts.GetLang }}
+			</div>
+			@if(item.showquantity === true){
+				<div class="number-box">
+					<div class="text">{{ item.quantity }}</div>
+				</div>
+			}
+		</div>
+	</div>
+</div>

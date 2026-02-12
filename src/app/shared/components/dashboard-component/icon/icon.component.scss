@@ -1,0 +1,15 @@
+.icon-wrapper {
+    display: flex;
+}
+
+.dynamic-icon {
+    transition: stroke 0.3s ease-in-out, fill 0.3s ease-in-out;
+}
+
+.icon-wrapper:hover .dynamic-icon {
+    stroke: var(--icon-hover-color, blue); // Se usa `hoverColor`
+}
+
+.icon-wrapper:active .dynamic-icon {
+    stroke: var(--icon-active-color, green); // Se usa `activeColor`
+}

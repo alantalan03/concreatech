@@ -1,0 +1,75 @@
+<div class="input-container">
+	<div class="input-header" *ngIf="showHeader">
+		{{header | translate:ts.GetLang}}
+		<span class="required" *ngIf="required === true">
+			*
+		</span>
+	</div>
+	<div class="input-body">
+		<div [ngClass]="{'input-error shake': showError === true, 'input interactive': showError === false, 'input-disabled': inputDisabled === true}">
+			<div class="erase-input" *ngIf="showIconSearch">
+				<app-icon *ngIf="showIconSearch === true"
+					name="search-lg"
+					color="color-fg-tertiary"
+					size="lg"
+					strokeWidth="semibold">
+				</app-icon>
+			</div>
+			<input
+				[disabled]="inputDisabled"
+				[placeholder]="(this.placeholder | translate: ts.GetLang)"
+				type="{{inputType}}"
+				[value]="inputValue"
+				(input)="onInputChange($event)"
+				#inputElement
+				autocomplete="off"
+				[attr.maxlength]="maxLength">
+			<div class="erase-input" *ngIf="showEraseIcon" (click)="eraseInput()">
+				<app-icon *ngIf="inputValue !== '' && showEraseIcon === true"
+					name="x-close"
+					color="color-fg-tertiary"
+					size="lg"
+					strokeWidth="semibold"
+					(click)="eraseInput()">
+				</app-icon>
+			</div>
+			<div class="units" *ngIf="showTextInside === true">
+				{{textInside}}
+			</div>
+			<div class="info-input" *ngIf="showIcon" (click)="showInfo()">
+				<app-icon
+					[name]="icon"
+					color="color-fg-quaternary"
+					size="md"
+					strokeWidth="regular">
+				</app-icon>
+				<!-- <app-icon
+					[name]="icon"
+					color="color-fg-quaternary"
+					size="md"
+					strokeWidth="regular"
+					appTooltip>
+				</app-icon> -->
+			</div>
+			<div class="password-input" *ngIf="showPasswordIcon" (click)="changeInputType()">
+				<app-icon
+					[name]="this.inputType ==='text' ? 'eye-off': 'eye'"
+					color="color-fg-tertiary"
+					size="lg"
+					strokeWidth="semibold">
+				</app-icon>
+			</div>
+		</div>
+		<div class="footer-error">
+			@if(error){
+				{{error | translate:ts.GetLang}}
+			}
+			
+		</div>
+		<div class="footer" *ngIf="showFooter">
+			@if(showFooter){
+				{{ footerText}}
+			}
+		</div>
+	</div>
+</div>

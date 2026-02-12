@@ -1,0 +1,31 @@
+<div class="cards-container-{{quantity}}">
+	@for(item of cards; track cards; let i = $index){
+		<div class="card">
+			<div class="header-box">
+				<div class="title-box">
+					{{item.name | translate:ts.GetLang}}
+				</div>
+				<div class="icon-info" (mouseenter)="ShowTooltip($event, item.tooltip)" (mouseleave)="hideTooltip()">
+				</div>
+				@if(isTooltipVisible===true && activeTooltipIndex === i){
+					<div class="tooltipContainer">
+						<div class="tooltipCard">
+							{{tooltipText | translate:ts.GetLang}}
+						</div>
+						<div style="position:absolute;width: 100%; display: flex; justify-content: flex-end; margin-top: 62px; margin-left: -2rem;">
+							<svg xmlns="http://www.w3.org/2000/svg" width="17" height="12" viewBox="0 0 17 12" fill="none">
+								<path d="M9.29702 10.9482C8.89687 11.4763 8.10313 11.4763 7.70298 10.9482L0.622165 1.60396C0.123097 0.945358 0.592853 2.98145e-07 1.41918 3.70385e-07L15.5808 1.60843e-06C16.4071 1.68067e-06 16.8769 0.94536 16.3778 1.60396L9.29702 10.9482Z" fill="#FDFDFD"/>
+							</svg>
+						</div>
+					</div>
+				}
+			</div>
+			<div class="body-box">
+				{{item.value}}
+			</div>
+			<div class="footer-box">
+			</div>
+		</div>
+	}
+
+</div>

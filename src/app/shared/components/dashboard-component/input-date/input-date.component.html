@@ -1,0 +1,12 @@
+<div class="input-container">
+	<div class="input">
+		<input
+			[placeholder]="(this.placeholder | translate: ts.GetLang)"
+			type="text"
+			[value]="inputValue"
+			(input)="onInputChange($event)"
+			[attr.maxlength]="maxLength">
+		<app-icon name="help-circle" color="color-fg-quaternary" size="md" strokeWidth="semibold">
+		</app-icon>
+	</div>
+</div>

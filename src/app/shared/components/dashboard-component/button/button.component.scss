@@ -1,0 +1,449 @@
+// Definición de variables
+$btn-border-radius: var(--radius-md, 8px);
+$btn-padding-x: var(--spacing-4);
+$btn-padding-y: var(--spacing-2);
+$btn-font-size: var(--font-b2);
+$btn-font-weight: var(--medium);
+$btn-line-height: 24px;
+$icon-size: var(--icon-size-lg, 1rem);
+
+// Variables de colores comunes
+$btn-primary-bg: var(--color-btn-primary-enabled);
+$btn-primary-hover: var(--color-btn-primary-hover);
+$btn-primary-active: var(--color-btn-primary-active);
+$btn-primary-focus: var(--color-btn-primary-enabled);
+$btn-primary-color: var(--color-fg-primary-inverted, #FCFCFC);
+$btn-primary-border: none;
+$btn-primary-box-shadow: 0px 0px 0px 4px rgba(34, 104, 185, 0.20);
+
+$btn-secondary-bg: var(--color-bg-primary, #F3F4F6);
+$btn-secondary-hover: var(--color-btn-secondary-hover, #E5E7EB);
+$btn-secondary-active: var(--color-btn-secondary-active, #D1D5DB);
+$btn-secondary-focus: var(--color-btn-secondary-focus, #9CA3AF);
+$btn-secondary-color: var(--color-fg-secondary, #1F2937);
+$btn-secondary-border: 1px solid var(--color-border-enabled,#D0D5DD);
+$btn-secondary-box-shadow: 0px 0px 0px 4px rgba(67, 97, 130, 0.3);
+
+$btn-tertiary-bg: var(--color-btn-tertiary-bg, transparent);
+$btn-tertiary-hover: var(--color-btn-tertiary-hover, #F9FAFB);
+$btn-tertiary-active: var(--color-btn-tertiary-active, #E5E7EB);
+$btn-tertiary-focus: var(--color-btn-tertiary-focus, #D1D5DB);
+$btn-tertiary-color: var(--color-fg-secondary,rgba(52, 64, 84, 1));
+$btn-tertiary-border: none;
+$btn-tertiary-box-shadow: 0px 0px 0px 4px rgba(67, 97, 130, 0.3);
+
+$btn-danger-bg: var(--color-btn-primary-danger-enabled);
+$btn-danger-hover: var(--color-btn-primary-danger-hover);
+$btn-danger-active:var(--color-btn-primary-danger-active);
+$btn-danger-focus: var(--color-btn-primary-danger-enabled);
+$btn-danger-color: var(--color-fg-primary-inverted, #FCFCFC);
+$btn-danger-border: none;
+$btn-danger-box-shadow: 0px 0px 0px 4px rgba(217, 45, 32, 0.2);
+
+// Variables de colores para botones Secondary Danger
+$btn-secondary-danger-bg: var(--color-bg-secondary, #F3F4F6);
+$btn-secondary-danger-hover: var(--color-btn-secondary-danger-hover, #FFEBEE);
+$btn-secondary-danger-active: var(--color-btn-secondary-danger-active, #FFCDD2);
+$btn-secondary-danger-focus: var(--color-btn-secondary-danger-hover, #FFEBEE);
+$btn-secondary-danger-color: var(--color-fg-danger, #E53935);
+$btn-secondary-danger-border: 1px solid var(--color-border-danger-enabled,#FDA29B);
+$btn-secondary-danger-box-shadow: 0px 0px 0px 4px rgba(253, 162, 155, 1);
+
+// Variables de colores para botones Tertiry Danger
+$btn-tertiary-danger-bg: var(--color-btn-tertiary-bg, transparent);
+$btn-tertiary-danger-hover: var(--color-btn-secondary-danger-hover, #FFEBEE);
+$btn-tertiary-danger-active: var(--color-btn-secondary-danger-active, #FFCDD2);
+$btn-tertiary-danger-focus: var(--color-btn-secondary-danger-hover, #FFEBEE);
+$btn-tertiary-danger-color: var(--color-fg-danger, #E53935);
+$btn-tertiary-danger-border: none;
+$btn-tertiary-danger-box-shadow: 0px 0px 0px 4px rgba(217, 45, 32, 0.2);
+
+// Variables de colores para botones Primary Warning
+$btn-warning-bg: var(--color-btn-primary-warning-enabled, #FFA726);
+$btn-warning-hover: var(--color-btn-primary-warning-hover, #FB8C00);
+$btn-warning-active: var(--color-btn-primary-warning-active, #F57C00);
+$btn-warning-focus: var(--color-btn-primary-warning-enabled, #FFA726);
+$btn-warning-color: var(--color-fg-primary-inverted, #FFFFFF);
+$btn-warning-border: none;
+$btn-warning-box-shadow: 0px 0px 0px 4px rgba(220, 104, 3, 0.2);
+
+// Variables de colores para botones Secondary Warning
+$btn-secondary-warning-bg: var(--color-bg-secondary, #F3F4F6);
+$btn-secondary-warning-hover: var(--color-btn-secondary-warning-hover, #FFF8E1);
+$btn-secondary-warning-active: var(--color-btn-secondary-warning-active, #FFECB3);
+$btn-secondary-warning-focus: var(--color-btn-secondary-warning-hover, #FFF8E1);
+$btn-secondary-warning-color: var(--color-fg-warning, #FFA726);
+$btn-secondary-warning-border: 1px solid var(--color-border-warning-hover,#FDB022);
+$btn-secondary-warning-box-shadow: 0px 0px 0px 4px rgba(220, 104, 3, 0.2);
+
+// Variables de colores para botones Tertiry  Warning
+$btn-tertiary-warning-bg:  var(--color-btn-tertiary-bg, transparent);
+$btn-tertiary-warning-hover: var(--color-btn-secondary-warning-hover, #FFF8E1);
+$btn-tertiary-warning-active: var(--color-btn-secondary-warning-active, #FFECB3);
+$btn-tertiary-warning-focus: var(--color-btn-secondary-warning-hover, #FFF8E1);
+$btn-tertiary-warning-color: var(--color-fg-warning, #FFA726);
+$btn-tertiary-warning-border: none;
+$btn-tertiary-warning-box-shadow: 0px 0px 0px 4px rgba(220, 104, 3, 0.2);
+
+
+$btn-disabled-bg: var(--color-bg-disabled, #FAFAFA);
+$btn-disabled-color: var(--color-fg-disabled, #98A2B3);
+
+// Mixin para estilos de botón comunes
+@mixin button-styles($width, $height, $bg, $hover-bg, $active-bg, $focus-bg, $text-color, $border, $boxShadow) {
+	display: flex;
+	flex-shrink: 1;
+	flex-direction: row-reverse;
+	width: $width;
+	height: $height;
+	padding: $btn-padding-y $btn-padding-x;
+	justify-content: center;
+	align-items: center;
+	gap: 6px;
+	border-radius: $btn-border-radius;
+	background: $bg;
+	border: $border;
+	outline: none;
+	cursor: pointer;
+	transition: background 0.4s ease;
+
+
+	// While hovering
+	// Change to: "Primary, Brand, Small, Hover, Text";
+	// Animate: Dissolve;
+	animation-timing-function: ease-out;
+	animation-duration: 400ms;
+
+	// While pressing
+	// Change to: "Primary, Brand, Small, Active, Text";
+	// Animate: Instant;
+	animation-duration: 0ms;
+
+
+	label {
+		cursor: inherit;
+		color: $text-color;
+		text-align: center;
+		font-family: var(--body);
+		font-size: $btn-font-size;
+		font-weight: $btn-font-weight;
+		line-height: $btn-line-height;
+	}
+
+	&:hover {
+		background: $hover-bg;
+	}
+
+	&:active {
+		background: $active-bg;
+		color:var(--color-fg-primary-inverted);
+	}
+
+	&:focus-visible {
+		background: $focus-bg;
+		box-shadow: $boxShadow;
+	}
+
+	&:disabled {
+		background: $btn-disabled-bg;
+		color: $btn-disabled-color;
+		cursor: not-allowed;
+		label {
+			color: $btn-disabled-color;
+		}
+	}
+}
+
+//#region SMALL
+// Estilos para botones pequeños (sm)
+.btn-sm-primary {
+	@include button-styles(91px, 32px, $btn-primary-bg, $btn-primary-hover, $btn-primary-active, $btn-primary-focus, $btn-primary-color,$btn-primary-border,$btn-primary-box-shadow);
+}
+.btn-sm-primary-full {
+	@include button-styles(100% , 32px, $btn-primary-bg, $btn-primary-hover, $btn-primary-active, $btn-primary-focus, $btn-primary-color,$btn-primary-border,$btn-primary-box-shadow);
+}
+.btn-sm-secondary {
+	@include button-styles(91px, 32px, $btn-secondary-bg, $btn-secondary-hover, $btn-secondary-active, $btn-secondary-focus, $btn-secondary-color,$btn-secondary-border,$btn-secondary-box-shadow);
+}
+.btn-sm-secondary-full {
+	@include button-styles(100%, 32px, $btn-secondary-bg, $btn-secondary-hover, $btn-secondary-active, $btn-secondary-focus, $btn-secondary-color,$btn-secondary-border,$btn-secondary-box-shadow);
+}
+.btn-sm-tertiary {
+	@include button-styles(91px, 32px, $btn-tertiary-bg, $btn-tertiary-hover, $btn-tertiary-active, $btn-tertiary-focus, $btn-tertiary-color,$btn-tertiary-border,$btn-tertiary-box-shadow);
+}
+.btn-sm-tertiary-full {
+	@include button-styles(100%, 32px, $btn-tertiary-bg, $btn-tertiary-hover, $btn-tertiary-active, $btn-tertiary-focus, $btn-tertiary-color,$btn-tertiary-border,$btn-tertiary-box-shadow);
+}
+.btn-sm-danger {
+	@include button-styles(91px, 32px, $btn-danger-bg, $btn-danger-hover, $btn-danger-active, $btn-danger-focus, $btn-danger-color,$btn-danger-border,$btn-danger-box-shadow);
+}
+.btn-sm-danger-full {
+	@include button-styles(100%, 32px, $btn-danger-bg, $btn-danger-hover, $btn-danger-active, $btn-danger-focus, $btn-danger-color,$btn-danger-border,$btn-danger-box-shadow);
+}
+.btn-sm-secondary-danger {
+	@include button-styles(91px, 32px, $btn-secondary-danger-bg, $btn-secondary-danger-hover, $btn-secondary-danger-active, $btn-secondary-danger-focus, $btn-secondary-danger-color,$btn-secondary-danger-border,$btn-secondary-danger-box-shadow);
+}
+.btn-sm-secondary-danger-full {
+	@include button-styles(100%, 32px, $btn-secondary-danger-bg, $btn-secondary-danger-hover, $btn-secondary-danger-active, $btn-secondary-danger-focus, $btn-secondary-danger-color,$btn-secondary-danger-border,$btn-secondary-danger-box-shadow);
+}
+.btn-sm-tertiary-danger {
+	@include button-styles(91px, 32px, $btn-tertiary-danger-bg, $btn-tertiary-danger-hover, $btn-tertiary-danger-active, $btn-tertiary-danger-focus, $btn-tertiary-danger-color,$btn-tertiary-danger-border,$btn-tertiary-danger-box-shadow);
+}
+.btn-sm-tertiary-danger-full {
+	@include button-styles(100%, 32px, $btn-tertiary-danger-bg, $btn-tertiary-danger-hover, $btn-tertiary-danger-active, $btn-tertiary-danger-focus, $btn-tertiary-danger-color,$btn-tertiary-danger-border,$btn-tertiary-danger-box-shadow);
+}
+.btn-sm-warning {
+	@include button-styles(91px, 32px, $btn-warning-bg, $btn-warning-hover, $btn-warning-active, $btn-warning-focus, $btn-warning-color,$btn-warning-border,$btn-warning-box-shadow);
+}
+.btn-sm-warning-full {
+	@include button-styles(100%, 32px, $btn-warning-bg, $btn-warning-hover, $btn-warning-active, $btn-warning-focus, $btn-warning-color,$btn-warning-border,$btn-warning-box-shadow);
+}
+.btn-sm-secondary-warning {
+	@include button-styles(91px, 32px, $btn-secondary-warning-bg, $btn-secondary-warning-hover, $btn-secondary-warning-active, $btn-secondary-warning-focus, $btn-secondary-warning-color,$btn-secondary-warning-border,$btn-secondary-warning-box-shadow);
+}
+.btn-sm-secondary-warning-full {
+	@include button-styles(100%, 32px, $btn-secondary-warning-bg, $btn-secondary-warning-hover, $btn-secondary-warning-active, $btn-secondary-warning-focus, $btn-secondary-warning-color,$btn-secondary-warning-border,$btn-secondary-warning-box-shadow);
+}
+.btn-sm-tertiary-warning {
+	@include button-styles(91px, 32px, $btn-tertiary-warning-bg, $btn-tertiary-warning-hover, $btn-tertiary-warning-active, $btn-tertiary-warning-focus, $btn-tertiary-warning-color,$btn-tertiary-warning-border,$btn-tertiary-warning-box-shadow);
+}
+.btn-sm-tertiary-warning-full {
+	@include button-styles(100%, 32px, $btn-tertiary-warning-bg, $btn-tertiary-warning-hover, $btn-tertiary-warning-active, $btn-tertiary-warning-focus, $btn-tertiary-warning-color,$btn-tertiary-warning-border,$btn-tertiary-warning-box-shadow);
+}
+//#endregion
+
+// #region MEDIAN
+// Estilos para botones medianos (md)
+.btn-md-primary {
+	@include button-styles(99px, 40px, $btn-primary-bg, $btn-primary-hover, $btn-primary-active, $btn-primary-focus, $btn-primary-color,$btn-primary-border,$btn-primary-box-shadow);
+}
+.btn-md-primary-full {
+	@include button-styles(100%, 40px, $btn-primary-bg, $btn-primary-hover, $btn-primary-active, $btn-primary-focus, $btn-primary-color,$btn-primary-border,$btn-primary-box-shadow);
+}
+.btn-md-secondary {
+	@include button-styles(99px, 40px, $btn-secondary-bg, $btn-secondary-hover, $btn-secondary-active, $btn-secondary-focus, $btn-secondary-color,$btn-secondary-border,$btn-secondary-box-shadow);
+}
+.btn-md-secondary-full {
+	@include button-styles(100%, 40px, $btn-secondary-bg, $btn-secondary-hover, $btn-secondary-active, $btn-secondary-focus, $btn-secondary-color,$btn-secondary-border,$btn-secondary-box-shadow);
+}
+.btn-md-tertiary {
+	@include button-styles(99px, 40px, $btn-tertiary-bg, $btn-tertiary-hover, $btn-tertiary-active, $btn-tertiary-focus, $btn-tertiary-color,$btn-tertiary-border,$btn-tertiary-box-shadow);
+}
+.btn-md-tertiary-full {
+	@include button-styles(100%, 40px, $btn-tertiary-bg, $btn-tertiary-hover, $btn-tertiary-active, $btn-tertiary-focus, $btn-tertiary-color,$btn-tertiary-border,$btn-tertiary-box-shadow);
+}
+.btn-md-danger {
+	@include button-styles(99px, 40px, $btn-danger-bg, $btn-danger-hover, $btn-danger-active, $btn-danger-focus, $btn-danger-color,$btn-danger-border,$btn-danger-box-shadow);
+}
+.btn-md-danger-full {
+	@include button-styles(100%, 40px, $btn-danger-bg, $btn-danger-hover, $btn-danger-active, $btn-danger-focus, $btn-danger-color,$btn-danger-border,$btn-danger-box-shadow);
+}
+.btn-md-secondary-danger {
+	@include button-styles(99px, 40px, $btn-secondary-danger-bg, $btn-secondary-danger-hover, $btn-secondary-danger-active, $btn-secondary-danger-focus, $btn-secondary-danger-color,$btn-secondary-danger-border,$btn-secondary-danger-box-shadow);
+}
+.btn-md-secondary-danger-full {
+	@include button-styles(100%, 40px, $btn-secondary-danger-bg, $btn-secondary-danger-hover, $btn-secondary-danger-active, $btn-secondary-danger-focus, $btn-secondary-danger-color,$btn-secondary-danger-border,$btn-secondary-danger-box-shadow);
+}
+.btn-md-tertiary-danger {
+	@include button-styles(99px, 40px, $btn-tertiary-danger-bg, $btn-tertiary-danger-hover, $btn-tertiary-danger-active, $btn-tertiary-danger-focus, $btn-tertiary-danger-color,$btn-tertiary-danger-border,$btn-tertiary-danger-box-shadow);
+}
+.btn-md-tertiary-danger-full {
+	@include button-styles(100%, 40px, $btn-tertiary-danger-bg, $btn-tertiary-danger-hover, $btn-tertiary-danger-active, $btn-tertiary-danger-focus, $btn-tertiary-danger-color,$btn-tertiary-danger-border,$btn-tertiary-danger-box-shadow);
+}
+.btn-md-warning {
+	@include button-styles(99px, 40px, $btn-warning-bg, $btn-warning-hover, $btn-warning-active, $btn-warning-focus, $btn-warning-color,$btn-warning-border,$btn-warning-box-shadow);
+}
+.btn-md-warning-full {
+	@include button-styles(100%, 40px, $btn-warning-bg, $btn-warning-hover, $btn-warning-active, $btn-warning-focus, $btn-warning-color,$btn-warning-border,$btn-warning-box-shadow);
+}
+.btn-md-secondary-warning {
+	@include button-styles(99px, 40px, $btn-secondary-warning-bg, $btn-secondary-warning-hover, $btn-secondary-warning-active, $btn-secondary-warning-focus, $btn-secondary-warning-color,$btn-secondary-warning-border,$btn-secondary-warning-box-shadow);
+}
+.btn-md-secondary-warning-full {
+	@include button-styles(100%, 40px, $btn-secondary-warning-bg, $btn-secondary-warning-hover, $btn-secondary-warning-active, $btn-secondary-warning-focus, $btn-secondary-warning-color,$btn-secondary-warning-border,$btn-secondary-warning-box-shadow);
+}
+.btn-md-tertiary-warning {
+	@include button-styles(99px, 40px, $btn-tertiary-warning-bg, $btn-tertiary-warning-hover, $btn-tertiary-warning-active, $btn-tertiary-warning-focus, $btn-tertiary-warning-color,$btn-tertiary-warning-border,$btn-tertiary-warning-box-shadow);
+}
+.btn-md-tertiary-warning-full {
+	@include button-styles(100%, 40px, $btn-tertiary-warning-bg, $btn-tertiary-warning-hover, $btn-tertiary-warning-active, $btn-tertiary-warning-focus, $btn-tertiary-warning-color,$btn-tertiary-warning-border,$btn-tertiary-warning-box-shadow);
+}
+//#endregion
+
+//#region LARGE
+// Estilos para botones grandes (lg)
+.btn-lg-primary {
+	@include button-styles(109px, 48px, $btn-primary-bg, $btn-primary-hover, $btn-primary-active, $btn-primary-focus, $btn-primary-color,$btn-primary-border, $btn-primary-box-shadow);
+}
+.btn-lg-primary-full {
+	@include button-styles(100%, 48px, $btn-primary-bg, $btn-primary-hover, $btn-primary-active, $btn-primary-focus, $btn-primary-color,$btn-primary-border, $btn-primary-box-shadow);
+}
+.btn-lg-secondary {
+	@include button-styles(109px, 48px, $btn-secondary-bg, $btn-secondary-hover, $btn-secondary-active, $btn-secondary-focus, $btn-secondary-color,$btn-secondary-border, $btn-secondary-box-shadow);
+}
+.btn-lg-secondary-full {
+	@include button-styles(100%, 48px, $btn-secondary-bg, $btn-secondary-hover, $btn-secondary-active, $btn-secondary-focus, $btn-secondary-color,$btn-secondary-border, $btn-secondary-box-shadow);
+}
+.btn-lg-tertiary {
+	@include button-styles(109px, 48px, $btn-tertiary-bg, $btn-tertiary-hover, $btn-tertiary-active, $btn-tertiary-focus, $btn-tertiary-color,$btn-tertiary-border, $btn-tertiary-box-shadow);
+}
+.btn-lg-tertiary-full {
+	@include button-styles(100%, 48px, $btn-tertiary-bg, $btn-tertiary-hover, $btn-tertiary-active, $btn-tertiary-focus, $btn-tertiary-color,$btn-tertiary-border, $btn-tertiary-box-shadow);
+}
+.btn-lg-danger {
+	@include button-styles(109px, 48px, $btn-danger-bg, $btn-danger-hover, $btn-danger-active, $btn-danger-focus, $btn-danger-color,$btn-danger-border, $btn-danger-box-shadow);
+}
+.btn-lg-danger-full {
+	@include button-styles(100%, 48px, $btn-danger-bg, $btn-danger-hover, $btn-danger-active, $btn-danger-focus, $btn-danger-color,$btn-danger-border, $btn-danger-box-shadow);
+}
+.btn-lg-secondary-danger {
+	@include button-styles(109px, 48px, $btn-secondary-danger-bg, $btn-secondary-danger-hover, $btn-secondary-danger-active, $btn-secondary-danger-focus, $btn-secondary-danger-color,$btn-secondary-danger-border, $btn-secondary-danger-box-shadow);
+}
+.btn-lg-secondary-danger-full {
+	@include button-styles(100%, 48px, $btn-secondary-danger-bg, $btn-secondary-danger-hover, $btn-secondary-danger-active, $btn-secondary-danger-focus, $btn-secondary-danger-color,$btn-secondary-danger-border, $btn-secondary-danger-box-shadow);
+}
+.btn-lg-tertiary-danger {
+	@include button-styles(109px, 48px, $btn-tertiary-danger-bg, $btn-tertiary-danger-hover, $btn-tertiary-danger-active, $btn-tertiary-danger-focus, $btn-tertiary-danger-color,$btn-tertiary-danger-border, $btn-tertiary-danger-box-shadow);
+}
+.btn-lg-tertiary-danger-full {
+	@include button-styles(100%, 48px, $btn-tertiary-danger-bg, $btn-tertiary-danger-hover, $btn-tertiary-danger-active, $btn-tertiary-danger-focus, $btn-tertiary-danger-color,$btn-tertiary-danger-border, $btn-tertiary-danger-box-shadow);
+}
+.btn-lg-warning {
+	@include button-styles(109px, 48px, $btn-warning-bg, $btn-warning-hover, $btn-warning-active, $btn-warning-focus, $btn-warning-color,$btn-warning-border, $btn-warning-box-shadow);
+}
+.btn-lg-warning-full {
+	@include button-styles(100%, 48px, $btn-warning-bg, $btn-warning-hover, $btn-warning-active, $btn-warning-focus, $btn-warning-color,$btn-warning-border, $btn-warning-box-shadow);
+}
+.btn-lg-secondary-warning {
+	@include button-styles(109px, 48px, $btn-secondary-warning-bg, $btn-secondary-warning-hover, $btn-secondary-warning-active, $btn-secondary-warning-focus, $btn-secondary-warning-color,$btn-secondary-warning-border, $btn-secondary-warning-box-shadow);
+}
+.btn-lg-secondary-warning-full {
+	@include button-styles(100%, 48px, $btn-secondary-warning-bg, $btn-secondary-warning-hover, $btn-secondary-warning-active, $btn-secondary-warning-focus, $btn-secondary-warning-color,$btn-secondary-warning-border, $btn-secondary-warning-box-shadow);
+}
+.btn-lg-tertiary-warning {
+	@include button-styles(109px, 48px, $btn-tertiary-warning-bg, $btn-tertiary-warning-hover, $btn-tertiary-warning-active, $btn-tertiary-warning-focus, $btn-tertiary-warning-color,$btn-tertiary-warning-border, $btn-tertiary-warning-box-shadow);
+}
+.btn-lg-tertiary-warning-full {
+	@include button-styles(100%, 48px, $btn-tertiary-warning-bg, $btn-tertiary-warning-hover, $btn-tertiary-warning-active, $btn-tertiary-warning-focus, $btn-tertiary-warning-color,$btn-tertiary-warning-border, $btn-tertiary-warning-box-shadow);
+}
+//#endregion
+
+//#region X-LARGE
+// Estilos para botones extra grandes (xl)
+.btn-xl-primary {
+	@include button-styles(129px, 60px, $btn-primary-bg, $btn-primary-hover, $btn-primary-active, $btn-primary-focus, $btn-primary-color,$btn-primary-border, $btn-primary-box-shadow);
+}
+.btn-xl-primary-full {
+	@include button-styles(100%, 60px, $btn-primary-bg, $btn-primary-hover, $btn-primary-active, $btn-primary-focus, $btn-primary-color,$btn-primary-border, $btn-primary-box-shadow);
+}
+.btn-xl-secondary {
+	@include button-styles(129px, 60px, $btn-secondary-bg, $btn-secondary-hover, $btn-secondary-active, $btn-secondary-focus, $btn-secondary-color,$btn-secondary-border, $btn-secondary-box-shadow);
+}
+.btn-xl-secondary-full {
+	@include button-styles(100%, 60px, $btn-secondary-bg, $btn-secondary-hover, $btn-secondary-active, $btn-secondary-focus, $btn-secondary-color,$btn-secondary-border, $btn-secondary-box-shadow);
+}
+.btn-xl-tertiary {
+	@include button-styles(129px, 60px, $btn-tertiary-bg, $btn-tertiary-hover, $btn-tertiary-active, $btn-tertiary-focus, $btn-tertiary-color,$btn-tertiary-border, $btn-tertiary-box-shadow);
+}
+.btn-xl-tertiary-full {
+	@include button-styles(100%, 60px, $btn-tertiary-bg, $btn-tertiary-hover, $btn-tertiary-active, $btn-tertiary-focus, $btn-tertiary-color,$btn-tertiary-border, $btn-tertiary-box-shadow);
+}
+.btn-xl-danger {
+	@include button-styles(129px, 60px, $btn-danger-bg, $btn-danger-hover, $btn-danger-active, $btn-danger-focus, $btn-danger-color,$btn-danger-border, $btn-danger-box-shadow);
+}
+.btn-xl-danger-full {
+	@include button-styles(100%, 60px, $btn-danger-bg, $btn-danger-hover, $btn-danger-active, $btn-danger-focus, $btn-danger-color,$btn-danger-border, $btn-danger-box-shadow);
+}
+.btn-xl-secondary-danger {
+	@include button-styles(129px, 60px, $btn-secondary-danger-bg, $btn-secondary-danger-hover, $btn-secondary-danger-active, $btn-secondary-danger-focus, $btn-secondary-danger-color,$btn-secondary-danger-border, $btn-secondary-danger-box-shadow);
+}
+.btn-xl-secondary-danger-full {
+	@include button-styles(100%, 60px, $btn-secondary-danger-bg, $btn-secondary-danger-hover, $btn-secondary-danger-active, $btn-secondary-danger-focus, $btn-secondary-danger-color,$btn-secondary-danger-border, $btn-secondary-danger-box-shadow);
+}
+.btn-xl-tertiary-danger {
+	@include button-styles(129px, 60px, $btn-tertiary-danger-bg, $btn-tertiary-danger-hover, $btn-tertiary-danger-active, $btn-tertiary-danger-focus, $btn-tertiary-danger-color,$btn-tertiary-danger-border, $btn-tertiary-danger-box-shadow);
+}
+.btn-xl-tertiary-danger-full {
+	@include button-styles(100%, 60px, $btn-tertiary-danger-bg, $btn-tertiary-danger-hover, $btn-tertiary-danger-active, $btn-tertiary-danger-focus, $btn-tertiary-danger-color,$btn-tertiary-danger-border, $btn-tertiary-danger-box-shadow);
+}
+.btn-xl-warning {
+	@include button-styles(129px, 60px, $btn-warning-bg, $btn-warning-hover, $btn-warning-active, $btn-warning-focus, $btn-warning-color,$btn-warning-border, $btn-warning-box-shadow);
+}
+.btn-xl-warning-full {
+	@include button-styles(100%, 60px, $btn-warning-bg, $btn-warning-hover, $btn-warning-active, $btn-warning-focus, $btn-warning-color,$btn-warning-border, $btn-warning-box-shadow);
+}
+.btn-xl-secondary-warning {
+	@include button-styles(129px, 60px, $btn-secondary-warning-bg, $btn-secondary-warning-hover, $btn-secondary-warning-active, $btn-secondary-warning-focus, $btn-secondary-warning-color,$btn-secondary-warning-border, $btn-secondary-warning-box-shadow);
+}
+.btn-xl-secondary-warning-full {
+	@include button-styles(100%, 60px, $btn-secondary-warning-bg, $btn-secondary-warning-hover, $btn-secondary-warning-active, $btn-secondary-warning-focus, $btn-secondary-warning-color,$btn-secondary-warning-border, $btn-secondary-warning-box-shadow);
+}
+.btn-xl-tertiary-warning {
+	@include button-styles(129px, 60px, $btn-tertiary-warning-bg, $btn-tertiary-warning-hover, $btn-tertiary-warning-active, $btn-tertiary-warning-focus, $btn-tertiary-warning-color,$btn-tertiary-warning-border, $btn-tertiary-warning-box-shadow);
+}
+.btn-xl-tertiary-warning-full {
+	@include button-styles(100%, 60px, $btn-tertiary-warning-bg, $btn-tertiary-warning-hover, $btn-tertiary-warning-active, $btn-tertiary-warning-focus, $btn-tertiary-warning-color,$btn-tertiary-warning-border, $btn-tertiary-warning-box-shadow);
+}
+//#endregion
+
+//#region XX-LARGE
+// Estilos para botones doble extra grandes (xxl)
+.btn-xxl-primary {
+	@include button-styles(140px, 72px, $btn-primary-bg, $btn-primary-hover, $btn-primary-active, $btn-primary-focus, $btn-primary-color,$btn-primary-border, $btn-primary-box-shadow);
+}
+.btn-xxl-primary-full {
+	@include button-styles(100%	, 72px, $btn-primary-bg, $btn-primary-hover, $btn-primary-active, $btn-primary-focus, $btn-primary-color,$btn-primary-border, $btn-primary-box-shadow);
+}
+.btn-xxl-secondary {
+	@include button-styles(140px, 72px, $btn-secondary-bg, $btn-secondary-hover, $btn-secondary-active, $btn-secondary-focus, $btn-secondary-color,$btn-secondary-border, $btn-secondary-box-shadow);
+}
+.btn-xxl-secondary-full {
+	@include button-styles(100%	, 72px, $btn-secondary-bg, $btn-secondary-hover, $btn-secondary-active, $btn-secondary-focus, $btn-secondary-color,$btn-secondary-border, $btn-secondary-box-shadow);
+}
+.btn-xxl-tertiary {
+	@include button-styles(140px, 72px, $btn-tertiary-bg, $btn-tertiary-hover, $btn-tertiary-active, $btn-tertiary-focus, $btn-tertiary-color,$btn-tertiary-border, $btn-tertiary-box-shadow);
+}
+.btn-xxl-tertiary-full {
+	@include button-styles(100%	, 72px, $btn-tertiary-bg, $btn-tertiary-hover, $btn-tertiary-active, $btn-tertiary-focus, $btn-tertiary-color,$btn-tertiary-border, $btn-tertiary-box-shadow);
+}
+.btn-xxl-danger {
+	@include button-styles(140px, 72px, $btn-danger-bg, $btn-danger-hover, $btn-danger-active, $btn-danger-focus, $btn-danger-color,$btn-danger-border, $btn-danger-box-shadow);
+}
+.btn-xxl-danger-full {
+	@include button-styles(100%	, 72px, $btn-danger-bg, $btn-danger-hover, $btn-danger-active, $btn-danger-focus, $btn-danger-color,$btn-danger-border, $btn-danger-box-shadow);
+}
+.btn-xxl-secondary-danger {
+	@include button-styles(140px, 72px, $btn-secondary-danger-bg, $btn-secondary-danger-hover, $btn-secondary-danger-active, $btn-secondary-danger-focus, $btn-secondary-danger-color,$btn-secondary-danger-border, $btn-secondary-danger-box-shadow);
+}
+.btn-xxl-secondary-danger-full {
+	@include button-styles(100%	, 72px, $btn-secondary-danger-bg, $btn-secondary-danger-hover, $btn-secondary-danger-active, $btn-secondary-danger-focus, $btn-secondary-danger-color,$btn-secondary-danger-border, $btn-secondary-danger-box-shadow);
+}
+.btn-xxl-tertiary-danger {
+	@include button-styles(140px, 72px, $btn-tertiary-danger-bg, $btn-tertiary-danger-hover, $btn-tertiary-danger-active, $btn-tertiary-danger-focus, $btn-tertiary-danger-color,$btn-tertiary-danger-border, $btn-tertiary-danger-box-shadow);
+}
+.btn-xxl-tertiary-danger-full {
+	@include button-styles(100%	, 72px, $btn-tertiary-danger-bg, $btn-tertiary-danger-hover, $btn-tertiary-danger-active, $btn-tertiary-danger-focus, $btn-tertiary-danger-color,$btn-tertiary-danger-border, $btn-tertiary-danger-box-shadow);
+}
+.btn-xxl-warning {
+	@include button-styles(140px, 72px, $btn-warning-bg, $btn-warning-hover, $btn-warning-active, $btn-warning-focus, $btn-warning-color,$btn-warning-border, $btn-warning-box-shadow);
+}
+.btn-xxl-warning-full {
+	@include button-styles(100%, 72px, $btn-warning-bg, $btn-warning-hover, $btn-warning-active, $btn-warning-focus, $btn-warning-color,$btn-warning-border, $btn-warning-box-shadow);
+}
+.btn-xxl-secondary-warning {
+	@include button-styles(140px, 72px, $btn-secondary-warning-bg, $btn-secondary-warning-hover, $btn-secondary-warning-active, $btn-secondary-warning-focus, $btn-secondary-warning-color,$btn-secondary-warning-border, $btn-secondary-warning-box-shadow);
+}
+.btn-xxl-secondary-warning-full {
+	@include button-styles(100%, 72px, $btn-secondary-warning-bg, $btn-secondary-warning-hover, $btn-secondary-warning-active, $btn-secondary-warning-focus, $btn-secondary-warning-color,$btn-secondary-warning-border, $btn-secondary-warning-box-shadow);
+}
+.btn-xxl-tertiary-warning {
+	@include button-styles(140px, 72px, $btn-tertiary-warning-bg, $btn-tertiary-warning-hover, $btn-tertiary-warning-active, $btn-tertiary-warning-focus, $btn-tertiary-warning-color,$btn-tertiary-warning-border, $btn-tertiary-warning-box-shadow);
+}
+.btn-xxl-tertiary-warning-full {
+	@include button-styles(100%, 72px, $btn-tertiary-warning-bg, $btn-tertiary-warning-hover, $btn-tertiary-warning-active, $btn-tertiary-warning-focus, $btn-tertiary-warning-color,$btn-tertiary-warning-border, $btn-tertiary-warning-box-shadow);
+}
+//#endregion
+// Icono de tamaño grande
+.app-icon {
+	font-size: $icon-size;
+}

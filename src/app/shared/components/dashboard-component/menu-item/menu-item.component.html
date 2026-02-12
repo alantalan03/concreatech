@@ -1,0 +1,23 @@
+<div class="menu-item-container">
+  <div
+    *ngFor="let item of items"
+    class="item-container" tabindex="0"
+    [ngClass]="{ 'item-container-selected': isSelected(item) }"
+    (click)="selectItem(item)"
+  >
+    <div class="item">
+      <app-icon
+        [name]="item.icon"
+        [color]="isSelected(item) 
+          ? 'color-fg-primary-inverted' 
+          : 'color-fg-primary'"
+        size="sm"
+        strokeWidth="regular">
+      </app-icon>
+
+      <div class="label-container">
+        {{ item.label }}
+      </div>
+    </div>
+  </div>
+</div>

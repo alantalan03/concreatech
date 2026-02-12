@@ -1,0 +1,12 @@
+<div class="chip interactive" [ngClass]="chipClass">
+  <app-icon
+    *ngIf="icon"
+    [name]="icon"
+    [color]="color || 'color-fg-primary'"
+    size="sm"
+    strokeWidth="semibold">
+  </app-icon>
+  <div class="label">
+    {{ label | translate:ts.GetLang }}
+  </div>
+</div>

@@ -1,0 +1,176 @@
+.dropdown-container {
+	position: relative; // 👈 para que el hijo .container se posicione con respecto a este
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	gap: var(--spacing-3);
+	.title {
+		display: flex;
+		font-family: var(--body);
+		font-size: var(--font-b2);
+		font-weight: var(--medium);
+		line-height: var(--font-lh-b2);
+		letter-spacing: var(--font-spacing-b);
+		text-align: left;
+		text-underline-position: from-font;
+		text-decoration-skip-ink: none;
+		.required{
+			color: var(--color-fg-danger);
+			font-family: var(--body);
+			font-size: var(--font-b2);
+			font-weight: var(--medium);
+			line-height: var(--font-lh-b2);
+			letter-spacing: var(--font-spacing-b);
+			text-align: left;
+			text-underline-position: from-font;
+			text-decoration-skip-ink: none;
+		}
+	}
+	.dropdown {
+		position: relative;
+		display: flex;
+		padding: 0px var(--spacing-5, 16px);
+		align-items: center;
+		gap: var(--spacing-3, 8px);
+		align-self: stretch;
+		border-radius: var(--radius-md, 8px);
+		border: 1px solid var(--color-border-enabled);
+		background: var(--color-bg-primary);
+		cursor: pointer;
+		&:hover{
+			border: 1px solid var(--color-border-hover);
+			background: var(--color-bg-primary);
+		}
+		&:active{
+			border: 1px solid var(--color-border-hover);
+			background: var(--color-bg-primary);
+		}
+		// Efecto de Focus
+		&:focus-visible{
+			outline: none;
+			border: 1px solid var(--borders-color-border-brand);
+			box-shadow: 0px 0px 0px 4px rgba(67, 97, 130, 0.3);
+		}
+		&.disabled {
+			cursor: not-allowed;
+			background: var(--color-bg-disabled);
+			border: 1px solid var(--color-border-disabled);
+			color: var(--color-fg-disabled);
+
+			.input {
+				color: var(--color-fg-disabled);
+			}
+		}
+		.input {
+			display: flex;
+			gap: var(--spacing-3);
+			flex-direction: row;
+			height: 38px;
+			justify-content: space-between;
+			align-items: center;
+			flex: 1;
+			overflow: hidden;
+			color: var(--color-fg-quaternary);
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			font-family: var(--primary-font);
+			font-size: 14px;
+			font-weight: 400;
+			line-height: 150%; /* 21px */
+		}
+	}
+	.container {
+		position: absolute;
+		top: 100%;   // 👈 justo debajo del .dropdown
+		left: 0;
+		right: 0;    // 👈 asegura que ocupe todo el ancho
+		max-height: 0;
+		overflow-y: auto;
+		opacity: 0;
+		padding: var(--spacing-2);
+		gap: var(--spacing-0);
+		border-radius: var(--radius-md, 8px);
+		border: 1px solid var(--color-divider);
+		background: var(--color-bg-primary);
+		box-shadow: 4px 4px 12px rgba(41, 41, 41, 0.1);
+		transition: max-height 0.3s ease, opacity 0.3s ease;
+		z-index: 10;
+		.search {
+			position: sticky;
+			top: 0;
+			background: var(--color-bg-primary);
+			padding: var(--spacing-2) var(--spacing-3);
+			input {
+			width: 100%;
+			height: 34px;
+			border: 1px solid var(--color-divider);
+			border-radius: var(--radius-sm);
+			padding: 0 var(--spacing-3);
+			outline: none;
+			&:focus {
+				border: 1px solid var(--borders-color-border-brand);
+				box-shadow: 0 0 0 3px rgba(67,97,130,.2);
+			}
+			}
+		}
+	}
+	.container.open {
+		opacity: 1;
+  		max-height: 250px;/* Altura máxima permitida para evitar overflow */
+	}
+	.error-message {
+		height: 20px;
+		color: red;
+		font-size: 12px;
+	}
+	.footer-message {
+		display: flex;
+		flex-direction: row;
+		gap: 8px;
+		.text{
+			font-family: var(--captions);
+		    font-size: var(--font-c2);
+            font-weight: var(--medium);
+            line-height: var(--font-lh-c2);
+            letter-spacing: var(--font-spacing-c);
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+            color: var(--color-fg-tertiary, rgba(52, 64, 84, 1));
+		}
+	}
+	.item {
+		width: 100%; /* Ocupa todo el ancho del contenedor */
+		height: 40px;
+		padding: 10px var(--spacing-4);
+		display: flex;
+		align-items: center;
+		gap: var(--spacing-3);
+		border-radius: var(--radius-sm, 4px);
+		cursor: pointer;
+		background: transparent;
+		transition: background-color 0.2s ease;
+		&:hover {
+			background: var(--color-bg-secondary, #F0F0F0);
+		}
+		&:active{
+			background: var(--color-btn-secondary-active);
+		}
+		.text {
+			font-family: var(--font--primary);
+			font-size: var();
+			font-weight: 400;
+			line-height: 150%; /* 24px */
+			color: var(--color-fg-tertiary);
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+	}
+	.item-select {
+		background: var(--color-bg-secondary);
+		.text {
+			font-weight: 500; /* Destacar texto del elemento seleccionado */
+		}
+	}
+}

@@ -1,0 +1,23 @@
+<div class="breadcrumb-container">
+	<ng-container *ngFor="let page of displayedPages; let last = last">
+		<ng-container *ngIf="page.label !== '...'; else ellipsis">
+			<div class="breadcrumb-item" (mouseenter)="showTooltip(page)" (mouseleave)="hideTooltip()">
+				<button
+					class="breadcrumb-page"
+					[class.active]="last"
+					(click)="navigateTo(page.url)">
+					{{ page.label | translate:ts.GetLang}}
+				</button>
+			</div>
+			<ng-container *ngIf="!last">
+			<app-icon name="chevron-right" color="color-fg-tertiary" size="md"></app-icon>
+			</ng-container>
+		</ng-container>
+		<ng-template #ellipsis>
+			<div class="breadcrumb-item" (mouseenter)="showHiddenPages()" (mouseleave)="hideHiddenPages()">
+				<div class="breadcrumb-ellipsis">...</div>
+			</div>
+			<app-icon name="chevron-right" color="color-fg-tertiary" size="md"></app-icon>
+		</ng-template>
+	</ng-container>
+</div>

@@ -1,0 +1,50 @@
+@use './variables-primitives' as primitives; // Si tus variables están en un archivo variables.scss
+* {
+    //
+    // ?                            Numeric Values
+    //
+    // * -------------------------- Spacing ------------------------------------
+    --spacing-0: #{primitives.$baseunit-1};
+    --spacing-1: #{primitives.$baseunit-2};
+    --spacing-2: #{primitives.$baseunit-3};
+    --spacing-3: #{primitives.$baseunit-4};
+    --spacing-4: #{primitives.$baseunit-5};
+    --spacing-5: #{primitives.$baseunit-6};
+    --spacing-6: #{primitives.$baseunit-8};
+    --spacing-7: #{primitives.$baseunit-10};
+    --spacing-8: #{primitives.$baseunit-11};
+    --spacing-9: #{primitives.$baseunit-13};
+    --spacing-10: #{primitives.$baseunit-14};
+    --spacing-11: #{primitives.$baseunit-15};
+    --spacing-12: #{primitives.$baseunit-16};
+    --spacing-13: #{primitives.$baseunit-17};
+    --spacing-14: #{primitives.$baseunit-19};
+    --spacing-15: #{primitives.$baseunit-20};
+    --spacing-16: #{primitives.$baseunit-21};
+    --spacing-17: #{primitives.$baseunit-22};
+    --dashboard-gap: var(--spacing-6);
+    // * -------------------------- Icons --------------------------------------
+    --size-icon-xs: #{primitives.$baseunit-5};
+    --size-icon-sm: #{primitives.$baseunit-6};
+    --size-icon-md: #{primitives.$baseunit-7};
+    --size-icon-lg: #{primitives.$baseunit-8};
+    --size-icon-xl: #{primitives.$baseunit-10};
+    --size-icon-2xl: #{primitives.$baseunit-12};
+    --size-icon-3xl: #{primitives.$baseunit-14};
+    --size-icon-4xl: #{primitives.$baseunit-16};
+    --size-icon-5xl: #{primitives.$baseunit-18};
+    --size-icon-6xl: #{primitives.$baseunit-20};
+    // * -------------------------- Radius -------------------------------------
+    --radius-xs: #{primitives.$baseunit-2};
+    --radius-sm: #{primitives.$baseunit-3};
+    --radius-md: #{primitives.$baseunit-4};
+    --radius-lg: #{primitives.$baseunit-5};
+    --radius-xl: #{primitives.$baseunit-6};
+    --radius-full: #{primitives.$baseunit-22};
+    // * -------------------------- Stroke -------------------------------------
+    --stroke-xs: #{primitives.$auxunit-1};
+    --stroke-sm: #{primitives.$auxunit-2};
+    --stroke-md: #{primitives.$auxunit-3};
+    --stroke-lg: #{primitives.$auxunit-4};
+    --stroke-xl: #{primitives.$auxunit-5};
+}

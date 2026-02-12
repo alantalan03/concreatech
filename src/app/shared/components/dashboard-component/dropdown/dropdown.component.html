@@ -1,0 +1,63 @@
+<div class="dropdown-container">
+	<div class="title" *ngIf="showTitleContainer">
+		{{title | translate:ts.GetLang}}
+		<span class="required" *ngIf="required === true">
+			*
+		</span>
+	</div>
+	<div
+		class="dropdown"
+		(keydown)="onKeydown($event)"
+		(click)="!disabled && toggleDropdown()"
+		tabindex="0"
+		[ngClass]="{ 'disabled': disabled }"
+		[attr.aria-disabled]="disabled">
+		<div class="input">
+			{{ getSelectedText()  | translate:ts.GetLang}}
+
+		</div>
+		@if(showIcon){
+			<app-icon [name]="icon" color="color-fg-quaternary" size="md" strokeWidth="semibold" style="height: 40px; display: flex; justify-content: center; align-items: center;">
+			</app-icon>
+		}
+	</div>
+	@if(showError){
+		<div class="error-message">
+			<div>
+				{{ errorMessage }}
+			</div>
+		</div>
+	}
+	@if(showFooter){
+		<div class="footer-message">
+			<div class="text">
+				{{ footerText }}
+			</div>
+		</div>
+	}
+	<div class="container" [class.open]="isDropdownOpen">
+		<div class="search" *ngIf="enableSearch">
+			<input
+				#searchInput
+				type="text"
+				[placeholder]="searchPlaceholder | translate:ts.GetLang"
+				[value]="searchTerm"
+				(input)="onSearch(searchInput.value)"
+				(keydown.enter)="onEnterSearch()"
+			/>
+		</div>
+		<!-- 🧭 lista filtrada -->
+		<div
+		class="item"
+		*ngFor="let item of filteredItems; let i = index; trackBy: trackByValue"
+		[ngClass]="{ 'item-select': i === selectedIndex }"
+		(click)="!disabled && selectItem(item, i)">
+			<div class="text">{{ displayKey ? item[displayKey] : item.text }}</div>
+		</div>
+
+		 <!-- 🫥 sin resultados -->
+		<div class="item" *ngIf="filteredItems.length === 0">
+			<div class="text">Sin resultados</div>
+		</div>
+	</div>
+</div>

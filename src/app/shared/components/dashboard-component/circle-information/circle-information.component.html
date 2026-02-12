@@ -1,0 +1,18 @@
+<div style="width: 25px; height: 25px; display: flex; justify-content: center; text-align: center;">
+	<div
+		class="circle"
+		[style.border]="getComputedColor(borderColor, '100')"
+		>
+		<div
+			class="circle-1"
+			[style.border]="getComputedColor(borderColor, '200')"
+		>
+			<app-icon style="display: flex;justify-content: center;align-items: center;"
+				[name]="this.icon"
+				[color]="getComputedColorIcon(iconColor, '300')"
+				size="sm"
+				strokeWidth="regular"
+			></app-icon>
+		</div>
+	</div>
+</div>

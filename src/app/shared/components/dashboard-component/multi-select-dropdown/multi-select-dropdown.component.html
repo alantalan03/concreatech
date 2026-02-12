@@ -1,0 +1,17 @@
+<div class="dropdown-container">
+	<div class="title" *ngIf="showTitleContainer">
+		{{ title | translate:ts.GetLang }}
+		<span class="required" *ngIf="required">*</span>
+	</div>
+	<div class="dropdown" (click)="!disabled && toggleDropdown()" tabindex="0" [ngClass]="{ 'disabled': disabled }" [attr.aria-disabled]="disabled">
+		<div class="input">
+			{{ getSelectedText()  | translate:ts.GetLang}}
+		</div>
+		<app-icon name="chevron-down" color="color-fg-quaternary" size="md" strokeWidth="semibold"></app-icon>
+	</div>
+	<div class="container" [class.open]="isDropdownOpen">
+		<div class="item" *ngFor="let item of items" [ngClass]="{ 'item-selected': selectedItems.includes(item) }" (click)="selectItem(item)">
+			<div class="text">{{ displayKey ? item[displayKey] : item.text }}</div>
+		</div>
+	</div>
+</div>

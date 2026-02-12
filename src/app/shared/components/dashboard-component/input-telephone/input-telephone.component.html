@@ -1,0 +1,16 @@
+<div class="phone-input-container">
+  <div class="header">
+    {{'addClientDialog.bodyContainer.dialog.fields.telephone' | translate:ts.GetLang}}
+    <span class="required" *ngIf="required === true">
+			*
+		</span>
+  </div>
+  <div class="phone-input" [class.disabled]="disabled">
+    <select [(ngModel)]="selectedCountryCode">
+      <option *ngFor="let country of countries" [value]="country.code">
+        {{ country.code }}
+      </option>
+    </select>
+    <input type="text" [(ngModel)]="phoneNumber" (input)="onPhoneChange()" [placeholder]="'addClientDialog.bodyContainer.dialog.placeholder.telephone' | translate: ts.GetLang" maxlength="10"/>
+  </div>
+</div>

@@ -1,0 +1,75 @@
+<section class="modules" id="modulos">
+
+  <div class="section-header">
+    <div class="section-tag">
+      {{ 'modules.tag' | translate }}
+    </div>
+
+    <div class="badge">
+      ✔ {{ 'modules.badge' | translate }}
+    </div>
+
+    <h2 class="section-title">
+      {{ 'modules.title' | translate }}
+    </h2>
+
+    <p class="section-subtitle">
+      {{ 'modules.subtitle' | translate }}
+    </p>
+  </div>
+
+  <div class="carousel">
+
+    <div
+      class="slide"
+      *ngFor="let m of modules; let i = index"
+      [class.active]="i === currentIndex"
+    >
+
+      <div class="slide-content">
+
+        <div class="info">
+          <div class="module-badge">
+            <span>{{ m.number }}</span>
+            <small>{{ m.category | translate }}</small>
+          </div>
+
+          <h3>{{ m.title | translate }}</h3>
+
+          <p class="description">
+            {{ m.description | translate }}
+          </p>
+
+          <ul>
+            <li *ngFor="let f of m.features">
+              ✔ {{ f | translate }}
+            </li>
+          </ul>
+        </div>
+
+        <div class="image">
+          <div class="image-frame">
+            <img [src]="m.image" alt="">
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Nav -->
+    <button class="nav prev" (click)="prev()">‹</button>
+    <button class="nav next" (click)="next()">›</button>
+
+  </div>
+
+  <!-- Dots -->
+  <div class="dots">
+    <button
+      *ngFor="let m of modules; let i = index"
+      (click)="goTo(i)"
+      [class.active]="i === currentIndex"
+    ></button>
+  </div>
+
+</section>

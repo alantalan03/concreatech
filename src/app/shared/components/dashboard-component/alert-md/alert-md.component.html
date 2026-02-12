@@ -1,0 +1,44 @@
+<div class="container-alert-md" [ngClass]="[position, 'enter']">
+	<!-- Icono de Alerta basado en el tipo -->
+	<app-circle-information *ngIf="type === 'danger'" type="danger" icon="x-circle"></app-circle-information>
+	<app-circle-information *ngIf="type === 'success'" type="success" icon="check-circle"></app-circle-information>
+	<app-circle-information *ngIf="type === 'warning'" type="warning" icon="alert-circle"></app-circle-information>
+	<app-circle-information *ngIf="type === 'info'" type="info" icon="zap-circle"></app-circle-information>
+
+	<!-- Contenedor del Mensaje -->
+	<div class="message-container">
+		<!-- Título del Mensaje -->
+		<div class="header">
+			<div class="message-text">
+				<!-- Puedes modificar este mensaje a través del componente si lo necesitas -->
+				{{ messageTitle  | translate:ts.GetLang  }}
+			</div>
+			<!-- Descripción del Mensaje -->
+			<div class="message-subtitle">
+				{{ messageSubtitle  | translate:ts.GetLang  }}
+			</div>
+		</div>
+
+		<!-- Caja de Acciones -->
+		<div class="action-box">
+			<!-- Acción Secundaria (opcional) -->
+			<app-link *ngIf="Secondaryaction"
+				[text]="secondaryActionText || 'Secondary Action'"
+				[url]="secondaryActionUrl || '#'"
+				[linkType]="'secondary'"
+				(click)="handleSecondaryAction()"
+			></app-link>
+
+			<!-- Acción Primaria (opcional) -->
+			<app-link *ngIf="Primaryaction"
+				[text]="primaryActionText || 'Primary Action'"
+				[url]="primaryActionUrl || '#'"
+				[linkType]="'primary'"
+				(click)="handlePrimaryAction()"
+			></app-link>
+		</div>
+	</div>
+
+	<!-- Botón de Cerrar -->
+	<app-close-button (click)="closeAlert()"></app-close-button>
+</div>

@@ -1,0 +1,152 @@
+{
+	"NAV": {
+		"HOME": "Inicio",
+		"SOLUTIONS": "Soluciones",
+		"BENEFITS": "Beneficios",
+		"CAS": "CAS",
+		"COS": "COS",
+		"LICENSES": "Licencias",
+		"CONTACT": "Contacto",
+		"LOGIN": "Iniciar Sesión",
+		"DEMO": "Solicitar Demo"
+	},
+	"HERO": {
+		"TAG": "CONTECH INNOVATION",
+		"TITLE_LINE_1": "El futuro del",
+		"TITLE_HIGHLIGHT": "concreto premezclado",
+		"TITLE_LINE_2": "es digital",
+		"SUBTITLE": "Sistematización y automatización completa para plantas de concreto premezclado. Plataforma en la nube que maximiza tu eficiencia operativa y transforma tu negocio.",
+		"CTA_PRIMARY": "Solicitar demo",
+		"CTA_SECONDARY": "Ver casos de éxito"
+	},
+
+	"STATS": {
+		"PRECISION": "Precisión en dosificación",
+		"COST_REDUCTION": "Reducción de costos operativos",
+		"REAL_TIME": "Monitoreo en tiempo real",
+		"PROFITABILITY": "Incremento en rentabilidad"
+	},
+	"PRODUCTS": {
+		"TAG": "Nuestras soluciones",
+		"TITLE": "Tecnología de vanguardia",
+		"SUBTITLE": "Dos sistemas integrados que revolucionan la operación de plantas de concreto premezclado",
+		"LEARN_MORE": "Explorar",
+		"COS": {
+			"TITLE": "Concrete Operating System",
+			"TYPE": "Software SaaS Cloud-Based",
+			"DESCRIPTION": "Plataforma integral de gestión en la nube que sistematiza cada aspecto de tu planta.",
+			"FEATURE_1": "Gestión de pedidos y remisiones digitales",
+			"FEATURE_2": "Control de calidad automatizado",
+			"FEATURE_3": "Estados financieros en tiempo real",
+			"FEATURE_4": "Reportes operativos y dashboards",
+			"FEATURE_5": "Multi-planta y gestión de flotilla"
+		},
+		"CAS": {
+			"TITLE": "Concrete Automation System",
+			"TYPE": "Hardware IoT & Implementación",
+			"DESCRIPTION": "Sistema de automatización física con sensores IoT y control remoto total.",
+			"FEATURE_1": "Automatización de carga completa",
+			"FEATURE_2": "Sensores IoT de alta precisión",
+			"FEATURE_3": "Control remoto de básculas",
+			"FEATURE_4": "Integración nativa con COS",
+			"FEATURE_5": "Instalación llave en mano"
+		}
+	},
+	"modules": {
+		"tag": "Módulos del Sistema",
+		"badge": "Módulos dentro de la plataforma COS",
+		"title": "Funcionalidades por Licencia",
+		"subtitle": "Cada licencia desbloquea módulos específicos para digitalizar aspectos clave de tu operación",
+
+		"dashboard": {
+		"category": "Monitoreo",
+		"title": "Dashboard Operativo",
+		"description": "Visualiza el estado de tu planta en tiempo real...",
+		"f1": "KPIs en tiempo real de producción",
+		"f2": "Control de inventarios por material",
+		"f3": "Gráficas de volumen acumulado y proyectado",
+		"f4": "Vista multi-planta consolidada"
+		}
+	},
+
+  "pricing": {
+    "tag": "Planes de Licenciamiento",
+    "badge": "COS - Control Operativo Software",
+    "title": "Sistematiza tu planta con COS",
+    "subtitle": "Potencializa la eficiencia operativa con nuestras licencias modulares. Elige el plan que se adapte a tu crecimiento.",
+    "period": "MXN por planta / mes",
+    "cta": "Empezar ahora",
+    "coming": "PRÓXIMAMENTE",
+
+    "basic": {
+      "name": "Básica",
+      "f1": "Gestión de pedidos",
+      "f2": "Diseño de mezclas",
+      "f3": "Control de inventarios",
+      "f4": "Remisiones automáticas",
+      "f5": "Automatización de carga (CAS)",
+      "f6": "Usuarios ilimitados",
+      "f7": "Soporte comercial"
+    },
+
+    "intermediate": {
+      "name": "Intermedia",
+      "f1": "Todo lo de Básica +",
+      "f2": "Control de calidad completo",
+      "f3": "Mantenimiento de equipos",
+      "f4": "Nómina semanal",
+      "f5": "Reportes de productividad",
+      "f6": "Soporte prioritario"
+    },
+
+    "advanced": {
+      "name": "Avanzada",
+      "f1": "Todo lo de Intermedia +",
+      "f2": "Ventas y CxC",
+      "f3": "Compras y CxP",
+      "f4": "Estados financieros",
+      "f5": "Análisis de rentabilidad",
+      "f6": "Dashboards ejecutivos"
+    },
+
+    "plus": {
+      "name": "Plus",
+      "f1": "Todo lo de Avanzada +",
+      "f2": "Control de flotilla GPS",
+      "f3": "Gestión multi-planta",
+      "f4": "Optimización de rutas",
+      "f5": "Analytics avanzado (BI)",
+      "f6": "Soporte 24/7 premium",
+      "f7": "Gerente de cuenta dedicado"
+    }
+  },
+  "cta": {
+    "title": "¿Listo para digitalizar tu planta?",
+    "description": "Únete a las 100+ plantas que ya transformaron su operación con ConcreaTech. Prueba gratis por 30 días sin compromiso.",
+    "primary": "Solicitar demostración gratuita",
+    "secondary": "Agendar reunión"
+  },
+  "footer": {
+    "description": "Impulsando la transformación digital de la industria del concreto premezclado en Latinoamérica con tecnología de vanguardia.",
+    "rights": "Todos los derechos reservados.",
+    "products": {
+      "title": "Productos",
+      "integration": "Integración Completa",
+      "cases": "Casos de Éxito"
+    },
+    "resources": {
+      "title": "Recursos",
+      "docs": "Documentación",
+      "help": "Centro de Ayuda",
+      "blog": "Blog ConTech",
+      "webinars": "Webinars"
+    },
+    "company": {
+      "title": "Empresa",
+      "about": "Sobre Nosotros",
+      "careers": "Carreras",
+      "contact": "Contacto",
+      "privacy": "Privacidad"
+    }
+  }
+}

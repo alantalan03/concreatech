@@ -1,0 +1,25 @@
+<div class="container-alert-sm" [ngClass]="position">
+	<!-- Icono de Alerta basado en el tipo -->
+	<app-circle-information *ngIf="type === 'danger'" type="danger" icon="x-circle"></app-circle-information>
+	<app-circle-information *ngIf="type === 'success'" type="success" icon="check-circle"></app-circle-information>
+	<app-circle-information *ngIf="type === 'warning'" type="warning" icon="alert-circle"></app-circle-information>
+	<app-circle-information *ngIf="type === 'info'" type="info" icon="zap-circle"></app-circle-information>
+
+	<!-- Mensaje de Alerta -->
+	<div class="message-text">
+		Message
+	</div>
+
+	<!-- Link (Opcional) -->
+	<div style="display: flex; width: 36px;">
+		<app-link-component *ngIf="action"
+			[text]="'Action'"
+			[url]="'/home'"
+			[linkType]="'secondary'"
+		></app-link-component>
+	</div>
+
+	<!-- Botón de Cerrar -->
+	<app-close-button></app-close-button>
+</div>
+

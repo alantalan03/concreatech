@@ -1,0 +1,110 @@
+@mixin chip-style($border-color, $bg-color, $fg-color) {
+    cursor: auto;
+    display: inline-flex;
+    padding: var(--spacing-1, 2px) var(--spacing-3, 8px);
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    width: 100%;
+    gap: var(--spacing-2, 4px);
+    border-radius: var(--radius-full, 8px);
+    border: 1px solid $border-color;
+    background: $bg-color;
+
+  .label {
+    color: $fg-color;
+    text-align: center;
+    font-family: var(--captions, Inter);
+    font-size: var(--font-c1, 12px);
+    font-style: normal;
+    font-weight: var(--semibold);
+    line-height: var(--font-lh-c1);
+    letter-spacing: var(--font-spacing-c);
+  }
+   &:hover {
+   opacity: 5.5;
+  }
+
+  &:active {
+    opacity: 5.5;
+  }
+}
+
+.chip-brand {
+  @include chip-style(
+    var(--color-chip-outline-brand),
+    var(--color-chip-bg-brand),
+    var(--color-chip-fg-brand)
+  );
+}
+
+.chip-indigo {
+  @include chip-style(
+    var(--color-chip-outline-indigo),
+    var(--color-chip-bg-indigo),
+    var(--color-chip-fg-indigo)
+  );
+}
+
+.chip-blue {
+  @include chip-style(
+    var(--color-chip-outline-blue),
+    var(--color-chip-bg-blue),
+    var(--color-chip-fg-blue)
+  );
+}
+
+.chip-green {
+  @include chip-style(
+    var(--color-chip-outline-green),
+    var(--color-chip-bg-green),
+    var(--color-chip-fg-green)
+  );
+}
+
+.chip-esmerald {
+  @include chip-style(
+    var(--color-chip-outline-esmerald),
+    var(--color-chip-bg-esmerald),
+    var(--color-chip-fg-esmerald)
+  );
+}
+
+.chip-orange {
+  @include chip-style(
+    var(--color-chip-outline-orange),
+    var(--color-chip-bg-orange),
+    var(--color-chip-fg-orange)
+  );
+}
+
+.chip-red {
+  @include chip-style(
+    var(--color-chip-outline-red),
+    var(--color-chip-bg-red),
+    var(--color-chip-fg-red)
+  );
+}
+.chip-gray {
+  @include chip-style(
+    var(--color-chip-outline-gray),
+    var(--color-chip-bg-gray),
+    var(--color-chip-fg-gray)
+  );
+}
+
+.chip-fuschia {
+  @include chip-style(
+    var(--color-chip-outline-fuschia),
+    var(--color-chip-bg-fuschia),
+    var(--color-chip-fg-fuschia)
+  );
+}
+
+.chip-yellow {
+  @include chip-style(
+    var(--color-chip-outline-yellow),
+    var(--color-chip-bg-yellow),
+    var(--color-chip-fg-yellow)
+  );
+}

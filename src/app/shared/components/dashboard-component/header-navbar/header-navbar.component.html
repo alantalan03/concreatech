@@ -1,0 +1,305 @@
+<!-- ? MAIN CONTAINER -->
+<div class="main-cont">
+    <!-- ? SECTION 1 HEADER MENU ------------------------>
+    <section>
+        <!-- ? ICON CONTAINER -->
+        <div class="icon-cont">
+            <!-- ICON -->
+            <img [src]="'../../../../assets/theme/'+localService.GetMode+'/icons/icon-menu-movile.svg'">
+            <!-- INPUT CHECKBOX -->
+            <input type="checkbox" [(ngModel)]="leftCollpase">
+            
+        </div>
+    
+        <!-- ? LOGO CONTAINER -->
+        <div class="logo-cont">
+            <!-- LOGO -->
+            <img [src]="'../../../../assets/theme/'+localService.GetMode+'/logos/logo-header-movile.svg'">
+    
+        </div>
+    
+        <!-- ? MENU SETTINGS -->
+        <section>
+            <notifications/>
+    
+        </section>
+
+    </section>
+
+
+    <!-- ? SECTION 1 NAVBAR MENU ------------------------>
+    <section>
+        <!-- ? MENUS CONTAINER -->
+        <div class="menus-cont">
+            <!-- ? HEADER MENU -->
+            <div class="header-menu">
+                <!-- CROSS -->
+                <img [src]="'../../../../assets/theme/'+localService.GetMode+'/icons/icon-cross.svg'" (click)="collapseMenu()">
+                
+            </div>
+            
+            <!-- ? MENU CONTAINER -->
+            <div class="menu-cont">
+                <!-- ? COMPANY DATA -->
+                <div class="company-data">
+                    <p class="font_h3 color_fg_secondary font_regular"> {{company}} </p>
+                    <p class="font_b1 color_fg_quaternary font_medium"> {{ roll }} </p>
+    
+                </div>
+                <!-- ? MENUS -->
+                <div class="menus">
+                    <!-- ? MENU 1 -->
+                    <ul>
+                        @for (menu of MenuBlock1; track menu.check; let i = $index) {
+                            <li routerLinkActive="active-link" (click)="collapseMenu(500)">
+                                <a  class="link-menu" 
+                                    [routerLink]="menu.router">
+                                    <!-- ICON & TXT -->
+                                    <div class="icon-txt-cont">
+                                        <!-- ICON -->
+                                        <img [src]="'../../../../assets/theme/'+localService.GetMode+'/icons/icon-'+menu.icon+'.svg'">
+                                        <!-- TXT -->
+                                        <p class="color_fg_primary font_c1 font_regular">{{ menu.txt | translate:ts.GetLang }}</p>
+                                    </div>
+                                </a>
+                            </li>
+                        }
+						<!-- ? LANG -->
+						<li class="li-menu">
+							<!-- ? LINK MENU -->
+							<a class="link-menu">
+								<!-- ICON & TXT -->
+								<div class="icon-txt-cont">
+									<!-- ICON -->
+									<img [src]="'../../../../assets/theme/'+localService.GetMode+'/icons/icon-lang.svg'">
+									<!-- TXT -->
+									<p class="color_fg_primary font_c1 font_regular">{{ 'menu.fullfillment' | translate:ts.GetLang }}</p>
+								</div>
+								<!-- ? CHEVRON CONTAINER -->
+								<div class="chevron-cont-link">
+									<!-- CHEVRON -->
+									<img [src]="'../../../../assets/theme/' + localService.GetMode + '/icons/icon-chevron-sidebar.svg'" class="icon-xs">
+								</div>
+								<!-- INPUT CHECKBOX -->
+								<input type="checkbox" [(ngModel)]="fullfillmentCheckbox" class="input-checkbox" (click)="collapseMenu(500)">
+							</a>
+							<!-- ? DROPDOWN CONTAINER -->
+							<div class="dropdown-cont lang-cont">
+								<ul>
+									<li (click)="ChangeOrders()" [class]="{ 'selected' : this.url === 'orders' }" >
+										<div class="marker-cont icon-xs">
+											<span class="circle-marker" ></span>
+										</div>
+										<p class="color_fg_primary font_c1 font_regular" >
+											{{ 'menu.orders' | translate:ts.GetLang }}
+										</p>
+									</li>
+									<li (click)="ChangeRequest()" [class]="{ 'selected' : this.url === 'request' }" >
+										<div class="marker-cont icon-xs">
+											<span class="circle-marker" ></span>
+										</div>
+										<p class="color_fg_primary font_c1 font_regular" >
+											{{ 'menu.request' | translate:ts.GetLang }}
+										</p>
+									</li>
+									<li (click)="ChangeInventory()" [class]="{ 'selected' : this.url === 'inventory' }" >
+										<div class="marker-cont icon-xs">
+											<span class="circle-marker" ></span>
+										</div>
+										<p class="color_fg_primary font_c1 font_regular" >
+											{{ 'menu.inventory' | translate:ts.GetLang }}
+										</p>
+									</li>
+								</ul>
+							</div>
+						</li>
+                    </ul>
+                    <!-- ? MENU 2 -->
+                    <!-- ? SETTINGS -->
+                    <div class="settings">
+                        <ul class="ul-menu">
+                            <!-- ? LANG -->
+                            <li class="li-menu">
+                                <!-- ? LINK MENU -->
+                                <a class="link-menu">
+                                    <!-- ICON & TXT -->
+                                    <div class="icon-txt-cont">
+                                        <!-- ICON -->
+                                        <img [src]="'../../../../assets/theme/'+localService.GetMode+'/icons/icon-lang.svg'">
+                                        <!-- TXT -->
+                                        <p class="color_fg_primary font_c1 font_regular">{{ 'menu.lang' | translate:ts.GetLang }}</p>
+                                    </div>
+                                    <!-- ? CHEVRON CONTAINER -->
+                                    <div class="chevron-cont-link">
+                                        <!-- CHEVRON -->
+                                        <img [src]="'../../../../assets/theme/' + localService.GetMode + '/icons/icon-chevron-sidebar.svg'" class="icon-xs">
+                                    </div>
+                                    <!-- INPUT CHECKBOX -->
+                                    <input type="checkbox" [(ngModel)]="langCheckbox" class="input-checkbox" (click)="collapseMenu(500)">
+                                </a>
+                                <!-- ? DROPDOWN CONTAINER -->
+                                <div class="dropdown-cont lang-cont">
+                                    <!-- ? DROPDOWN LIST -->
+                                    <ul>
+                                        <!-- LANG ES -->
+                                        <li (click)="ChangeLang('es')" 
+                                            [class]="{ 'selected' : GetLang === 'es' }" >
+                                            <!-- MARKER -->
+                                            <div class="marker-cont">
+                                                <span class="circle-marker" ></span> 
+                                            </div>
+                                            <!-- TXT -->
+                                            <p class="color_fg_primary font_c1 font_regular" >
+                                                es
+                                            </p>
+
+                                        </li>
+                                        <!-- LANG EN -->
+                                        <li (click)="ChangeLang('en')" [class]="{ 'selected' : GetLang === 'en' }" >
+                                            <!-- MARKER -->
+                                            <div class="marker-cont">
+                                                <span class="circle-marker" ></span> 
+                                            </div>
+                                            <!-- TXT -->
+                                            <p class="color_fg_primary font_c1 font_regular" >
+                                                en
+                                            </p>
+                                            
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </li>
+
+							
+
+                            <!-- ? LANG -->
+                            <li class="li-menu">
+                                <!-- ? LINK MENU -->
+                                <a class="link-menu">
+                                    <!-- ICON & TXT -->
+                                    <div class="icon-txt-cont">
+                                        <!-- ICON -->
+                                        <img [src]="'../../../../assets/theme/'+localService.GetMode+'/icons/icon-appearance.svg'">
+                                        <!-- TXT -->
+                                        <p class="color_fg_primary font_c1 font_regular">{{ 'menu.appearance' | translate:ts.GetLang }}</p>
+                                    </div>
+                                    <!-- ? CHEVRON CONTAINER -->
+                                    <div class="chevron-cont-link">
+                                        <!-- CHEVRON -->
+                                        <img [src]="'../../../../assets/theme/' + localService.GetMode + '/icons/icon-chevron-sidebar.svg'" class="icon-xs">
+                                    </div>
+                                    <!-- INPUT CHECKBOX -->
+                                    <input type="checkbox" [(ngModel)]="appearanceCheckbox" class="input-checkbox" (click)="collapseMenu(500)">
+                                </a>
+                                <!-- ? DROPDOWN CONTAINER -->
+                                <div class="dropdown-cont lang-cont">
+                                    <!-- ? DROPDOWN LIST -->
+                                    <ul>
+                                        <!-- LANG ES -->
+                                        <li (click)="ChangeMode('dark')" [class]="{ 'selected' : this.localService.GetMode === 'dark' }">
+                                            <!-- MARKER -->
+                                            <div class="marker-cont icon-xs">
+                                                <span class="circle-marker" ></span> 
+                                            </div>
+                                            <!-- TXT -->
+                                            <p class="color_fg_primary font_c1 font_regular" >
+                                                {{ 'menu.dark' | translate:ts.GetLang }}
+                                            </p>
+                                        </li>
+                                        <!-- LANG EN -->
+                                        <li (click)="ChangeMode('light')" [class]="{ 'selected' : this.localService.GetMode === 'light' }" >
+                                            <!-- MARKER -->
+                                            <div class="marker-cont icon-xs">
+                                                <span class="circle-marker" ></span> 
+                                            </div>
+                                            <!-- TXT -->
+                                            <p class="color_fg_primary font_c1 font_regular" >
+                                                {{ 'menu.light' | translate:ts.GetLang }}
+                                            </p>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </li>
+                        </ul>
+
+                        <!-- ? MENU 2 -->
+                        <ul class="ul-menu">
+                            @for (menu of MenuBlock2; track $index) {
+                                <li routerLinkActive="active-link" (click)="collapseMenu(500)">
+                                    <a  class="link-menu"  
+                                        [routerLink]="menu.router">
+                                        <!-- ICON & TXT -->
+                                        <div class="icon-txt-cont">
+                                            <!-- ICON -->
+                                            <img [src]="'../../../../assets/theme/'+localService.GetMode+'/icons/icon-'+menu.icon+'.svg'">
+                                            <!-- TXT -->
+                                            <p class="color_fg_primary font_c1 font_regular">{{ menu.txt | translate:ts.GetLang }}</p>
+                                        </div>
+                                    </a>
+                                </li>
+                            }
+                        </ul>
+
+                        <!-- ? ACCOUNT MENU -->
+                        <div class="block-profile">
+                            <!-- ? ROW 1 -->
+                            <div class="row-1">
+                                <!-- ? AVATAR USER -->
+                                <div class="avatar-user">
+                                    <!-- ? SECTION AVATAR -->
+                                    <div class="avatar cursor_pointer" routerLink="./account" (click)="collapseMenu(500)">
+                                        <span class="font_c2 color_fg_tertiary font_medium">
+                                            PR
+                                        </span>
+                                    </div>
+                    
+                                    <!-- ? SECTION USER -->
+                                    <div class="user-cont cursor_pointer" routerLink="./account" (click)="collapseMenu(500)">
+                                        <!-- USER -->
+                                        <p class="font_c1 color_fg_primary font_medium">
+                                            {{'User Name' | translate:ts.GetLang}}
+                                        </p>
+                                        <!-- ACCOUNT -->
+                                        <p class="font_c3 color_fg_quaternary font_normal">
+                                            {{'My Account' | translate:ts.GetLang}}
+                                        </p>
+                    
+                                    </div>
+
+                                </div>
+                                <!-- LOGOUT -->
+                                <a routerLink="../">
+                                    <img [src]="'../../../../assets/theme/' + localService.GetMode + '/icons/icon-logout.svg'" class="icon-xs">
+                                </a>
+
+                            </div>
+
+                            <!-- ? ROW 2 -->
+                            <div class="row-2">
+                                <p class="color_fg_quaternary font_regular font_c3">
+                                    Powered by 
+                                    <span class="font_medium color_fg_primary">
+                                        {{company}}
+                                    </span>
+                                    <span>
+                                        {{version}}
+                                    </span>
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+    
+            </div>
+
+        </div>
+        
+    </section>
+
+</div>

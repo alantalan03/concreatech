@@ -1,0 +1,197 @@
+@use './variables-primitives' as primitives; // Si tus variables están en un archivo variables.scss
+
+.theme--dark {
+    // * -------------------------- Background --------------------------------
+    --color-bg-primary: 		#{primitives.$silver-950};
+    --color-bg-secondary: 		#{primitives.$silver-900};
+    --color-bg-tertiary: 		#{primitives.$silver-800};
+    --color-bg-quaternary: 		#{primitives.$silver-700};
+    --color-bg-brand: 			#{primitives.$brand-950};
+    --color-bg-disabled: 		#{primitives.$silver-800};
+    --color-bg-elevation: 		#{primitives.$silver-800};
+    --color-bg-focus: 			#{primitives.$silver-500};
+    // * -------------------------- Foreground --------------------------------
+    --color-fg-primary: 			#{primitives.$silver-25};
+    --color-fg-primary-inverted:	#{primitives.$silver-25};
+    --color-fg-secondary: 			#{primitives.$silver-200};
+    --color-fg-tertiary: 			#{primitives.$silver-300};
+    --color-fg-quaternary: 			#{primitives.$silver-400};
+    --color-fg-brand: 				#{primitives.$brand-500};
+    --color-fg-disabled:		 	#{primitives.$silver-500};
+    --color-fg-link: 				#{primitives.$blue-400};
+    --color-fg-danger: 				#{primitives.$danger-500};
+    --color-fg-warning: 			#{primitives.$warning-500};
+    // * -------------------------- Border ------------------------------------
+    --color-border-brand: 			#{primitives.$brand-400};
+    --color-border-enabled: 		#{primitives.$silver-800};
+    --color-border-hover: 			#{primitives.$silver-700};
+    --color-border-active: 			#{primitives.$silver-600};
+    --color-border-disabled: 		#{primitives.$silver-500};
+    --color-border-danger-enabled: 	#{primitives.$danger-500};
+    --color-border-danger-hover: 	#{primitives.$danger-400};
+    --color-border-danger-active: 	#{primitives.$danger-300};
+    --color-border-warning-enabled: #{primitives.$warning-500};
+    --color-border-warning-hover: 	#{primitives.$warning-400};
+    --color-border-warning-active: 	#{primitives.$warning-300};
+    --color-divider: 				#{primitives.$silver-700};
+
+    --shadow-elevated:  0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    //
+    // ?                            Buttons
+    //
+    // * -------------------------- Primary -----------------------------------
+    --color-btn-primary-enabled: 			#{primitives.$brand-500};
+    --color-btn-primary-hover: 				#{primitives.$brand-400};
+    --color-btn-primary-active: 			#{primitives.$brand-300};
+    // * -------------------------- Danger / Primary ---------------------------
+    --color-btn-primary-danger-enabled: 	#{primitives.$danger-700};
+    --color-btn-primary-danger-hover: 		#{primitives.$danger-600};
+    --color-btn-primary-danger-active: 		#{primitives.$danger-500};
+    // * -------------------------- Warning / Primary ---------------------------
+    --color-btn-primary-warning-enabled: 	#{primitives.$warning-700};
+    --color-btn-primary-warning-hover: 		#{primitives.$warning-600};
+    --color-btn-primary-warning-active:		#{primitives.$warning-500};
+
+    // * -------------------------- Secondary --------------------------------
+    --color-btn-secondary-hover: 			#{primitives.$silver-700};
+    --color-btn-secondary-active: 			#{primitives.$silver-800};
+    // * -------------------------- Danger / Secondary ------------------------
+    --color-btn-secondary-danger-hover: 	#{primitives.$danger-900};
+    --color-btn-secondary-danger-active: 	#{primitives.$danger-950};
+    // * -------------------------- Warning / Secondary ------------------------
+    --color-btn-secondary-warning-hover: 	#{primitives.$warning-900};
+    --color-btn-secondary-warning-active: 	#{primitives.$warning-950};
+
+    // * -------------------------- Tertiary ---------------------------------
+    --color-btn-tertiary-hover:				#{primitives.$silver-700};
+    --color-btn-tertiary-active: 			#{primitives.$silver-600};
+
+    // * -------------------------- Link -------------------------------------
+    --color-btn-link-hover: 				#{primitives.$blue-700};
+    --color-btn-link-active: 				#{primitives.$blue-800};
+    //
+    // ?                            Chips
+    //
+    // * -------------------------- Brand ------------------------------------
+    --color-chip-bg-brand: 			#{primitives.$brand-900};
+    --color-chip-outline-brand: 		#{primitives.$brand-600};
+    --color-chip-fg-brand: 			#{primitives.$brand-200};
+    // * -------------------------- Info ------------------------------------
+    --color-chip-bg-info: 		#{primitives.$info-900};
+    --color-chip-outline-info: #{primitives.$info-600};
+    --color-chip-fg-info: 		#{primitives.$info-200};
+    // * -------------------------- Silver ------------------------------------
+    --color-chip-bg-gray: 					#{primitives.$silver-950};
+    --color-chip-outline-gray: 				#{primitives.$silver-700};
+    --color-chip-fg-gray: 					#{primitives.$silver-300};
+    // * -------------------------- Green ------------------------------------
+    --color-chip-bg-green: 					#{primitives.$green-950};
+    --color-chip-outline-green: 			#{primitives.$green-700};
+    --color-chip-fg-green: 					#{primitives.$green-300};
+    // * -------------------------- Esmerald ------------------------------------
+    --color-chip-bg-esmerald: 				#{primitives.$esmerald-950};
+    --color-chip-outline-esmerald: 			#{primitives.$esmerald-700};
+    --color-chip-fg-esmerald: 				#{primitives.$esmerald-300};
+    // * -------------------------- Success ------------------------------------
+    --color-chip-bg-success: 			#{primitives.$success-950};
+    --color-chip-outline-success: 		#{primitives.$success-700};
+    --color-chip-fg-success:		 	#{primitives.$success-300};
+    // * -------------------------- Blue ------------------------------------
+    --color-chip-bg-blue: 					#{primitives.$blue-950};
+    --color-chip-outline-blue: 				#{primitives.$blue-700};
+    --color-chip-fg-blue: 					#{primitives.$blue-300};
+    // * -------------------------- Indigo ------------------------------------
+    --color-chip-bg-indigo: 				#{primitives.$indigo-950};
+    --color-chip-outline-indigo: 			#{primitives.$indigo-700};
+    --color-chip-fg-indigo: 				#{primitives.$indigo-300};
+    // * -------------------------- Purple ------------------------------------
+    --color-chip-bg-purple: 				#{primitives.$purple-950};
+    --color-chip-outline-purple: 			#{primitives.$purple-700};
+    --color-chip-fg-purple: 				#{primitives.$purple-300};
+    // * -------------------------- Fuschia ------------------------------------
+    --color-chip-bg-fuschia: 				#{primitives.$fuschia-950};
+    --color-chip-outline-fuschia: 			#{primitives.$fuschia-700};
+    --color-chip-fg-fuschia:				#{primitives.$fuschia-300};
+    // * -------------------------- Red ---------------------------------------
+    --color-chip-bg-red: 					#{primitives.$danger-950};
+    --color-chip-outline-red: 				#{primitives.$danger-700};
+    --color-chip-fg-red: 					#{primitives.$danger-300};
+    // * -------------------------- Orange -------------------------------------
+    --color-chip-bg-orange: 				#{primitives.$warning-950};
+    --color-chip-outline-orange: 			#{primitives.$warning-700};
+    --color-chip-fg-orange: 				#{primitives.$warning-300};
+	// * -------------------------- Yellow -------------------------------------
+	--color-chip-bg-yellow: 				#{primitives.$yellow-800};
+	--color-chip-outline-yellow: 			#{primitives.$yellow-700};
+	--color-chip-fg-yellow: 				#{primitives.$yellow-300};
+    //
+    // ?                            System
+    //
+    // * -------------------------- Success -------------------------------------
+    --color-system-success-100: 			#{primitives.$success-900};
+    --color-system-success-200: 			#{primitives.$success-700};
+    --color-system-success-300: 			#{primitives.$success-500};
+    // * -------------------------- Danger --------------------------------------
+    --color-system-danger-100: #{primitives.$opacity-danger-300};
+    --color-system-danger-200: #{primitives.$opacity-danger-600};
+    --color-system-danger-300: #{primitives.$opacity-danger-950};
+    --color-system-danger-400: #{primitives.$danger-700};
+    // * -------------------------- Warning -------------------------------------
+    --color-system-warning-100: #{primitives.$warning-900};
+    --color-system-warning-200: #{primitives.$warning-700};
+    --color-system-warning-300: #{primitives.$warning-500};
+    // * -------------------------- Informative ------------------------------
+    --color-system-info-100: #{primitives.$opacity-info-300};
+    --color-system-info-200: #{primitives.$opacity-info-600};
+    --color-system-info-300: #{primitives.$opacity-info-950};
+    --color-system-info-400: #{primitives.$blue-700};
+    //
+    // ?                            Utilities
+    //
+    // * -------------------------- Tables and charts --------------------------
+    --color-score: 		#{primitives.$yellow-400};
+    --color-trend-up:	#{primitives.$success-500};
+    --color-trend-down: #{primitives.$danger-500};
+    --color-chart-100: 	#{primitives.$blue-900};
+    --color-chart-200: 	#{primitives.$blue-800};
+    --color-chart-300: 	#{primitives.$blue-700};
+    --color-chart-400: 	#{primitives.$blue-600};
+    --color-chart-500: 	#{primitives.$blue-500};
+    --color-chart-600: 	#{primitives.$blue-400};
+    --color-chart-700: 	#{primitives.$blue-300};
+    --color-chart-800: 	#{primitives.$blue-200};
+    --color-chart-900: 	#{primitives.$blue-100};
+    --color-chart-950: 	#{primitives.$blue-50};
+    // * -------------------------- Locker scheme -------------------------
+    --color-locker-fill: #2f2f2f;
+    --color-locker-stroke: #000000;
+
+	--color-available       :#{primitives.$silver-800};
+	--color-available-fill  :#{primitives.$silver-950};
+	--color-available-hover :#{primitives.$silver-900};
+
+	--color-defective       :#{primitives.$danger-800};
+	--color-defective-fill  :#{primitives.$danger-950};
+	--color-defective-hover :#{primitives.$danger-900};
+
+    --color-occupied        :#{primitives.$purple-800};
+	--color-occupied-fill   :#{primitives.$purple-950};
+	--color-occupied-hover  :#{primitives.$purple-900};
+
+    --color-unassigned      :#{primitives.$gray-300};
+	--color-unassigned-fill :#{primitives.$gray-50};
+	--color-unassigned-hover:#{primitives.$gray-100};
+
+    --color-open            :#{primitives.$blue-800};
+	--color-open-fill       :#{primitives.$blue-950};
+	--color-open-hover      :#{primitives.$blue-900};
+
+
+	--color-expired         :#{primitives.$warning-800};
+	--color-expired-fill    :#{primitives.$warning-950};
+	--color-expired-hover   :#{primitives.$warning-900};
+
+	--color-schedule        :#{primitives.$fuschia-800};
+	--color-schedule-fill   :#{primitives.$fuschia-950};
+	--color-schedule-hover  :#{primitives.$fuschia-900};
+}

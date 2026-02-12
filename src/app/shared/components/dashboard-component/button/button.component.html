@@ -1,0 +1,11 @@
+ <button [class]="buttonClass" [disabled]="this.disabled">
+	<ng-container *ngIf="isLoader; else content">
+		<loader></loader>
+	</ng-container>
+	<ng-template #content>
+		<label *ngIf="showLabel">
+			{{ label }}
+		</label>
+		<app-icon *ngIf="showIcon" [name]="icon" [color]="colorIcon" size="md"></app-icon>
+	</ng-template>
+</button>

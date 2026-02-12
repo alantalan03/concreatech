@@ -1,0 +1,24 @@
+<div class="item-container">
+	<div class="icon-container">
+		<div class="circle" *ngIf="order.read===false">
+		</div>
+		<app-icon name="package" color="color-fg-secondary" size="sm"></app-icon>
+	</div>
+	<div class="text-container">
+		{{'notifications.items.packet' | translate:ts.GetLang }}
+		<strong> {{order.order_number}} </strong>
+		{{'notifications.items.statusTopic.'+ order.id_topic_audit | translate:ts.GetLang }}
+		<strong> {{order.locker_name}} </strong>
+		<div class="time-container">
+			{{ 'notifications.items.ago' | translate:ts.GetLang }}
+			{{ this.timeElapsed }}
+			{{ 
+				this.isMinutes ? ('notifications.items.minutes' | translate:ts.GetLang) :
+				this.isHour    ? ('notifications.items.hours'   | translate:ts.GetLang) :
+				this.isDays    ? ('notifications.items.days'    | translate:ts.GetLang) :
+				this.isMonths  ? ('notifications.items.months'  | translate:ts.GetLang) :
+				this.isYear    ? ('notifications.items.years'   | translate:ts.GetLang) : ''
+			}}
+		</div>
+	</div>
+</div>

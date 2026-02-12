@@ -1,0 +1,28 @@
+<div class="box-container">
+  <div class="header-container">
+    <div class="title">{{ titulo | translate:ts.GetLang }}</div>
+  </div>
+  <div class="body-container">
+    <div
+      *ngFor="let opcion of opciones"
+      role="button"
+      tabindex="0"
+      [attr.aria-pressed]="opcion.id === opcionSeleccionadaId"
+      [ngClass]="{
+        'chip-container-md-select': opcion.id === opcionSeleccionadaId,
+        'chip-container-md': opcion.id !== opcionSeleccionadaId
+      }"
+      (click)="seleccionarOpcion(opcion)"
+    >
+      <app-icon   *ngIf="opcion.id === opcionSeleccionadaId"
+        [name]="'check'"
+        [color]="opcion.id === opcionSeleccionadaId ? 'color-chip-fg-blue': 'color-chip-fg-brand'"
+        size="sm"
+        strokeWidth="semibold"
+      ></app-icon>
+
+
+      <div class="label">{{ opcion.nombre }}</div>
+    </div>
+  </div>
+</div>

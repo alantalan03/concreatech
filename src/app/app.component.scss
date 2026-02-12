@@ -1,0 +1,40 @@
+// ::ng-deep app-products{
+// 	height: 86vh !important;
+// }
+// app-tracking{
+// 	height: 100%;
+// }
+
+// ::ng-deep app-cancel-request{
+// 	display: flex;
+// 	flex-direction: column;
+// 	gap:16px;
+// }
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none; /* Oculto por defecto */
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+.scroll-to-top:focus {
+    outline: none; /* Elimina el borde de enfoque */
+}
+
+// @media screen and (max-width:393px) {
+// 	::ng-deep app-products{
+// 		height: 90vh !important;
+// 	}
+// }
+// @media screen and (min-width:393px) and (max-width:1140px) {
+// 	::ng-deep app-products{
+// 		height: 90vh !important;
+// 	}
+// }

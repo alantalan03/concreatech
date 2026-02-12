@@ -1,0 +1,214 @@
+/* ===============================
+   HERO SECTION
+================================ */
+.hero {
+  position: relative;
+  width: 100%;
+  padding: 6rem 1.5rem 4rem;
+  background: var(--color-bg-primary);
+  overflow: hidden;
+}
+
+/* ===============================
+   BACKGROUND GRID
+================================ */
+.hero-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(
+      to right,
+      rgba(17, 186, 130, 0.06) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(17, 186, 130, 0.06) 1px,
+      transparent 1px
+    );
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ===============================
+   WRAPPER
+================================ */
+.hero-wrapper {
+  position: relative;
+  max-width: 1280px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 4rem;
+  align-items: center;
+  z-index: 1;
+}
+
+/* ===============================
+   CONTENT
+================================ */
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.hero-tag {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  color: var(--color-fg-brand);
+}
+
+/* Title */
+.hero-content h1 {
+  font-family: 'Sora', sans-serif;
+  font-size: clamp(2.4rem, 4vw, 3.5rem);
+  line-height: 1.1;
+  color: var(--color-fg-primary);
+  font-weight: 700;
+
+  .highlight {
+    color: var(--color-fg-brand);
+  }
+}
+
+/* Subtitle */
+.hero-subtitle {
+  font-size: 1rem;
+  max-width: 520px;
+  color: var(--color-fg-secondary);
+  line-height: 1.6;
+}
+
+/* ===============================
+   BUTTONS
+================================ */
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.btn-primary {
+  background: var(--color-btn-primary-enabled);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: var(--color-btn-primary-hover);
+    transform: translateY(-1px);
+  }
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 1px solid var(--color-border-brand);
+  color: var(--color-fg-brand);
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: var(--color-bg-brand);
+  }
+}
+
+/* ===============================
+   VISUAL
+================================ */
+.hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-visual-float {
+    width: 450px;
+    height: 450px;
+    will-change: transform;
+}
+
+/* ===============================
+   SENSOR ANIMATIONS (SVG)
+================================ */
+.sensor {
+  transform-origin: center center;
+  transform-box: fill-box;
+  animation: sensorPulse 3.5s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+/* staggered delays */
+.sensor-1 { animation-delay: 0s; }
+.sensor-2 { animation-delay: 0.6s; }
+.sensor-3 { animation-delay: 1.2s; }
+.sensor-4 { animation-delay: 1.8s; }
+.sensor-5 { animation-delay: 2.4s; }
+.sensor-6 { animation-delay: 3s; }
+
+/* ===============================
+   KEYFRAMES
+================================ */
+@keyframes sensorPulse {
+  0% {
+    opacity: 0.55;
+    transform: scale(0.95);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.12);
+  }
+  100% {
+    opacity: 0.55;
+    transform: scale(0.95);
+  }
+}
+
+@keyframes heroFloat {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 1024px) {
+  .hero-wrapper {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .hero-visual {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding-top: 4rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+}

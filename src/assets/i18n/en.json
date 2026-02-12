@@ -1,0 +1,29 @@
+{
+  "NAV": {
+    "HOME": "Home",
+    "SOLUTIONS": "Solutions",
+    "BENEFITS": "Benefits",
+    "CAS": "CAS",
+    "COS": "COS",
+    "LICENSES": "Licenses",
+    "CONTACT": "Contact",
+    "LOGIN": "Login",
+    "DEMO": "Request Demo"
+  },
+  "HERO": {
+    "TAG": "CONTECH INNOVATION",
+    "TITLE_LINE_1": "The future of",
+    "TITLE_HIGHLIGHT": "ready-mix concrete",
+    "TITLE_LINE_2": "is digital",
+    "SUBTITLE": "Complete systematization and automation for ready-mix concrete plants. Cloud platform that maximizes your operational efficiency and transforms your business.",
+    "CTA_PRIMARY": "Request demo",
+    "CTA_SECONDARY": "See success stories"
+  },
+  
+  "STATS": {
+    "PRECISION": "Dosing accuracy",
+    "COST_REDUCTION": "Reduction in operating costs",
+    "REAL_TIME": "Real-time monitoring",
+    "PROFITABILITY": "Increase in profitability"
+  }
+}

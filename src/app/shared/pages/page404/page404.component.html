@@ -1,0 +1,86 @@
+<div class="container-404">
+	<div class="box">
+		<div class="boxHeader">
+			<div class="BoxTitle">
+				<div class="boxText">
+					<div class="errorTxt">
+						Error 404
+					</div>
+					<div class="titleTxt">
+						Pagina no disponible
+					</div>
+				</div>
+				<div class="boxSubtitle">
+					Sentimos no haber encontrado lo que estabas buscando. Puedes volver a la pagina principal o seguir explorando nuestra plataforma con los siguientes enlaces.
+				</div>
+			</div>
+			<div class="linkBox">
+				<app-button buttonClass="btn-md-primary-full" label="Ir a la pantalla principal" (click)="continueLocker()">
+				</app-button>
+			</div>
+		</div>
+		<div class="boxFooter">
+			<div class="cardBox">
+				<div class="cardBoxTitle">
+					<div class="title">
+						<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M8.33398 13.3346H11.6673M7.33398 18.3346H12.6673C14.0674 18.3346 14.7675 18.3346 15.3023 18.0622C15.7727 17.8225 16.1552 17.44 16.3948 16.9696C16.6673 16.4348 16.6673 15.7348 16.6673 14.3346V5.66797C16.6673 4.26784 16.6673 3.56777 16.3948 3.03299C16.1552 2.56259 15.7727 2.18014 15.3023 1.94045C14.7675 1.66797 14.0674 1.66797 12.6673 1.66797H7.33398C5.93385 1.66797 5.23379 1.66797 4.69901 1.94045C4.2286 2.18014 3.84615 2.56259 3.60647 3.03299C3.33398 3.56777 3.33398 4.26784 3.33398 5.66797V14.3346C3.33398 15.7348 3.33398 16.4348 3.60647 16.9696C3.84615 17.44 4.2286 17.8225 4.69901 18.0622C5.23379 18.3346 5.93385 18.3346 7.33398 18.3346ZM12.5007 7.5013C12.5007 8.88201 11.3814 10.0013 10.0007 10.0013C8.61994 10.0013 7.50065 8.88201 7.50065 7.5013C7.50065 6.12059 8.61994 5.0013 10.0007 5.0013C11.3814 5.0013 12.5007 6.12059 12.5007 7.5013Z" stroke="#344054" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+						<div class="text">
+							Lockers
+						</div>
+					</div>
+					<div class="subtitle">
+						Revisa los lockers y su estado actual.
+					</div>
+				</div>
+				<div class="linkBox" (click)="continueLocker()">
+					<div class="text">
+						Continuar
+					</div>
+				</div>
+			</div>
+			<div class="cardBox">
+				<div class="cardBoxTitle">
+					<div class="title">
+						<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M9.58268 4.16797H9.94468C12.4841 4.16797 13.7537 4.16797 14.2357 4.62404C14.6523 5.01827 14.837 5.59904 14.7245 6.16148C14.5944 6.81215 13.5578 7.54535 11.4846 9.01174L8.09745 11.4075C6.02427 12.8739 4.98767 13.6071 4.85755 14.2578C4.74506 14.8202 4.9297 15.401 5.34632 15.7952C5.8283 16.2513 7.09798 16.2513 9.63735 16.2513H10.416M6.66602 4.16797C6.66602 5.54868 5.54673 6.66797 4.16602 6.66797C2.7853 6.66797 1.66602 5.54868 1.66602 4.16797C1.66602 2.78726 2.7853 1.66797 4.16602 1.66797C5.54673 1.66797 6.66602 2.78726 6.66602 4.16797ZM18.3327 15.8346C18.3327 17.2153 17.2134 18.3346 15.8327 18.3346C14.452 18.3346 13.3327 17.2153 13.3327 15.8346C13.3327 14.4539 14.452 13.3346 15.8327 13.3346C17.2134 13.3346 18.3327 14.4539 18.3327 15.8346Z" stroke="#344054" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+						<div class="text">
+							Ordenes
+						</div>
+					</div>
+					<div class="subtitle">
+						Revisa el historial o las ordenes en proceso.
+					</div>
+				</div>
+				<div class="linkBox" (click)="continueOrders()">
+					<div class="text">
+						Continuar
+					</div>
+				</div>
+			</div>
+			<div class="cardBox">
+				<div class="cardBoxTitle">
+					<div class="title">
+						<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M4.4296 16.2C4.93653 15.0056 6.12012 14.168 7.49935 14.168H12.4993C13.8786 14.168 15.0622 15.0056 15.5691 16.2M13.3327 7.91797C13.3327 9.75892 11.8403 11.2513 9.99935 11.2513C8.1584 11.2513 6.66602 9.75892 6.66602 7.91797C6.66602 6.07702 8.1584 4.58464 9.99935 4.58464C11.8403 4.58464 13.3327 6.07702 13.3327 7.91797ZM18.3327 10.0013C18.3327 14.6037 14.6017 18.3346 9.99935 18.3346C5.39698 18.3346 1.66602 14.6037 1.66602 10.0013C1.66602 5.39893 5.39698 1.66797 9.99935 1.66797C14.6017 1.66797 18.3327 5.39893 18.3327 10.0013Z" stroke="#344054" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+
+						<div class="text">
+							Mi cuenta
+						</div>
+					</div>
+					<div class="subtitle">
+						Echa un vistazo a tu información o configuración.
+					</div>
+				</div>
+				<div class="linkBox" (click)="continueAccount()">
+					<div class="text">
+						Continuar
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

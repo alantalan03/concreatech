@@ -1,0 +1,38 @@
+<div class="container-default">
+	<div class="title" *ngIf="showTitle"> 
+		{{title}}
+	</div>
+	<div class="calendar-container">
+		
+		<p-datePicker #calendar
+			[selectionMode]="isRange === true ? 'range' :'single' "
+			[(ngModel)]="selectedDates"
+			(onSelect)="onSelect($event)"
+			[showIcon]="true"
+			dateFormat="M dd, yy">
+	
+			<ng-template pTemplate="footer" >
+				<div class="footer-buttons">
+					<app-button (click)="clearSelection()" label="Borrar" buttonClass="btn-sm-tertiary">
+					</app-button>
+					<div class="buttons">
+						<app-button
+							[disabled]="selectedDates.length === 0"
+							label="Cancelar"
+							buttonClass="btn-sm-secondary"
+							(click)="cancelSelection()">
+							Cancelar
+						</app-button>
+						<app-button
+							[disabled]="selectedDates.length === 0"
+							label="Aceptar"
+							buttonClass="btn-sm-primary"
+							(click)="acceptSelection()">
+							Aceptar
+						</app-button>
+					</div>
+				</div>
+			</ng-template>
+		</p-datePicker>
+	</div>
+</div>

@@ -1,0 +1,90 @@
+* {
+    //
+    // ?                            Local Styles
+    //
+    // * -------------------------- Text Styles -------------------------------------
+    --font--primary: 'Sora', sans-serif;
+    --font--secondary: 'Sora', sans-serif;
+    --font-code: 'Space Mono', monospace;
+
+    // * -------------------------- Big Headlines --------------------
+    --big-headlines: 'Sora', sans-serif;
+
+    --font-bh1: 80px;
+    --font-lh-bh1: 88px;
+
+    --font-bh2: 64px;
+    --font-lh-bh2: 68px;
+
+    --font-bh3: 48px;
+    --font-lh-bh3: 52px;
+
+    --font-bh4: 36px;
+    --font-lh-bh4: 44px;
+
+    --font-bh5: 34px;
+    --font-lh-bh5: 42px;
+
+    --font-bh6: 30px;
+    --font-lh-bh6: 34px;
+
+    --font-spacing-bh: -1%;
+
+    // * -------------------------- Headlines --------------------------
+    --headlines: 'Sora', sans-serif;
+
+    --font-h1: 24px;
+    --font-lh-h1: 28px;
+
+    --font-h2: 22px;
+    --font-lh-h2: 26px;
+
+    --font-h3: 20px;
+    --font-lh-h3: 24px;
+
+    --font-h4: 18px;
+    --font-lh-h4: 22px; // 👈 corregido (tenía 22ppx)
+
+    --font-spacing-h: -0.8%;
+
+    // * -------------------------- Body -----------------------------
+    --body: 'Sora', sans-serif;
+
+    --font-b1: 16px;
+    --font-lh-b1: 24px;
+
+    --font-b2: 14px;
+    --font-lh-b2: 22px;
+
+    --font-spacing-b: -0.6%;
+
+    // * -------------------------- Captions -----------------------------
+    --captions: 'Sora', sans-serif;
+
+    --font-c1: 12px;
+    --font-lh-c1: 20px;
+
+    --font-c2: 10px;
+    --font-lh-c2: 18px;
+
+    --font-spacing-c: -0.4%;
+
+    //
+    // ?                            Helpers
+    //
+    // * -------------------------- Containers --------------------------
+    --dashboard--width: 82.45%;
+    --sidebar--width: 18rem;
+    --auth__form--width: 36rem;
+
+    // * -------------------------- Transitions ---------------------------------------------------
+    --transition--bg-color: background-color 0.2s ease-in-out;
+
+    // * -------------------------- Font Weights -----------------------
+    --black: 900;
+    --extrabold: 800;
+    --bold: 700;
+    --semibold: 600;
+    --medium: 500;
+    --regular: 400;
+}

@@ -1,0 +1,64 @@
+.orders-container{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 1,364px;
+	padding: 16px var(--spacing-7) 16px var(--spacing-7);
+	gap: var(--spacing-5);
+	opacity: 0px;
+	.header-container{
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		height: 40px;
+		gap: 0px;
+		justify-content: space-between;
+		.title{
+			height: 2.5rem;
+			width: 22.8125rem;
+		}
+		.notification{
+			height: 32px;
+			width: 32px;
+		}
+	}
+	.cards-container{
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		height: auto;
+		gap: 16px;
+		justify-content: space-between;
+		opacity: 0px;
+		.chart-card{
+			width:100%;
+			height: 441px;
+			padding: var(--spacing-6);
+			border-radius: var(--radius-lg);
+		}
+		.cards{
+			display: flex;
+			flex-direction: column;
+			width: 238px;
+			height: 441px;
+			gap: 24px;
+			.card-item{
+				width: 100%;
+				height: 100%;
+				padding: var(--spacing-4) var(--spacing-5) var(--spacing-4) var(--spacing-5);
+				gap: var(--spacing-4);
+				border-radius: var(--radius-md);
+				opacity: 0px;
+
+			}
+		}
+	}
+
+	.table-container{
+		width: 100%;
+		height: 616px;
+		padding: var(--spacing-5);
+		gap: 16px;
+		border-radius: var(--radius-lg);
+	}
+}

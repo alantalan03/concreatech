@@ -1,0 +1,84 @@
+/* ----------------------------------------------
+ * Big Headlines (Work Sans)
+ * ---------------------------------------------- */
+@for $i from 1 through 6 {
+  .text-bh#{$i} {
+    font-family: var(--big-headlines);
+    font-size: var(--font-bh#{$i});
+    line-height: var(--font-lh-bh#{$i});
+    letter-spacing: var(--font-spacing-bh);
+    font-weight: var(--bold, 700);
+    font-style: normal;
+  }
+}
+
+/* ----------------------------------------------
+ * Headlines (Work Sans)
+ * ---------------------------------------------- */
+@for $i from 1 through 4 {
+  .text-h#{$i} {
+    font-family: var(--headlines);
+    font-size: var(--font-h#{$i});
+    line-height: var(--font-lh-h#{$i});
+    letter-spacing: var(--font-spacing-h);
+    font-weight: var(--semibold, 600);
+    font-style: normal;
+  }
+}
+
+/* ----------------------------------------------
+ * Body (Inter)
+ * ---------------------------------------------- */
+.text-b1,
+.text-b2 {
+  font-family: var(--body);
+  font-style: normal;
+  letter-spacing: var(--font-spacing-b);
+}
+.text-b1 {
+  font-size: var(--font-b1);
+  line-height: var(--font-lh-b1);
+}
+.text-b2 {
+  font-size: var(--font-b2);
+  line-height: var(--font-lh-b2);
+}
+
+/* ----------------------------------------------
+ * Captions (Inter)
+ * ---------------------------------------------- */
+.text-c1,
+.text-c2 {
+  font-family: var(--captions);
+  font-style: normal;
+  letter-spacing: var(--font-spacing-c);
+}
+.text-c1 {
+  font-size: var(--font-c1);
+  line-height: var(--font-lh-c1);
+}
+.text-c2 {
+  font-size: var(--font-c2);
+  line-height: var(--font-lh-c2);
+}
+
+
+// Utiliza estas clases combinadas con las anteriores
+.text-fg-primary        { color: var(--color-fg-primary); }
+.text-fg-primary-inverted { color: var(--color-fg-primary-inverted); }
+.text-fg-secondary      { color: var(--color-fg-secondary); }
+.text-fg-tertiary       { color: var(--color-fg-tertiary); }
+.text-fg-quaternary     { color: var(--color-fg-quaternary); }
+.text-fg-brand          { color: var(--color-fg-brand); }
+.text-fg-disabled       { color: var(--color-fg-disabled); }
+.text-fg-link           { color: var(--color-fg-link); }
+.text-fg-danger         { color: var(--color-fg-danger); }
+.text-fg-warning        { color: var(--color-fg-warning); }
+
+
+.weight-black     { font-weight: var(--black); }
+.weight-extrabold { font-weight: var(--extrabold); }
+.weight-bold      { font-weight: var(--bold); }
+.weight-semibold  { font-weight: var(--semibold); }
+.weight-medium    { font-weight: var(--medium); }
+.weight-regular   { font-weight: var(--regular); }

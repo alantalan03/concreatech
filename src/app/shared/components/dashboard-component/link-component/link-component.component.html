@@ -1,0 +1,9 @@
+<div [ngClass]="{
+	'link-primary': linkType === 'primary',
+	'link-secondary':  linkType === 'secondary',
+	'link-disabled': linkType ==='disabled'
+}">
+	<label for="">
+		{{ text | translate:ts.GetLang}}
+	</label>
+</div>

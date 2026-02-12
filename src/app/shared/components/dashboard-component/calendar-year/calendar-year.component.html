@@ -1,0 +1,17 @@
+<div class="container-default">
+	<div class="title" *ngIf="showTitle"> 
+		{{title}}
+	</div>
+	<div class="calendar-container">
+  <p-calendar
+    [(ngModel)]="selectedYear"
+    [selectionMode]="'single'"
+    view="year"
+    dateFormat="yy"
+    (onSelect)="onSelect($event)"
+    [showIcon]="true"
+    inputId="calendar-year"
+    #calendar
+  ></p-calendar>
+	</div>
+</div>

@@ -1,0 +1,126 @@
+.locker-container{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: auto;
+	gap: 16px;
+	.header-container{
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		height: 40px;
+		gap: 0px;
+		justify-content: space-between;
+		.title{
+			height: 2.5rem;
+			width: 22.8125rem;
+		}
+		.notification{
+			height: 32px;
+			width: 32px;
+		}
+	}
+	.cards-container{
+		display: flex;
+		width: 100%;
+		height: 441px;
+		gap: 24px;
+		.big-card{
+			width:369px;
+			height: 441px;
+			padding: var(--spacing-6);
+			border-radius: var(--radius-lg);
+		}
+		.cards{
+			display: flex;
+			flex-direction: column;
+			width: 238px;
+			height: 441px;
+			gap: 24px;
+			.card-item{
+				width: 100%;
+				height: 100%;
+				padding: var(--spacing-4) var(--spacing-5) var(--spacing-4) var(--spacing-5);
+				gap: var(--spacing-4);
+				border-radius: var(--radius-md);
+				opacity: 0px;
+
+			}
+		}
+		.map-card{
+			width: 100%;
+			height: 100%;
+			gap: var(--spacing-3);
+			border-radius: var(--radius-lg);
+		}
+	}
+	.table-container{
+		width: 100%;
+		height: 616px;
+		padding: var(--spacing-5);
+		gap: 16px;
+		border-radius: var(--radius-lg);
+	}
+}
+
+
+@media screen and (min-width:720px) and (max-width:1280px) {
+	.locker-container{
+		.cards-container{
+			display: flex;
+			flex-direction: column;
+			.big-card{
+				width:100%;
+				height: 441px;
+				padding: var(--spacing-6);
+				border-radius: var(--radius-lg);
+			}
+			.cards{
+				display: flex;
+				flex-direction: column;
+				width: 100%;
+				height: 441px;
+				gap: 24px;
+				.card-item{
+					width: 100%;
+					height: 110px;
+					padding: var(--spacing-4) var(--spacing-5) var(--spacing-4) var(--spacing-5);
+					gap: var(--spacing-4);
+					border-radius: var(--radius-md);
+					opacity: 0px;
+	
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width:719px) {
+	.locker-container{
+		.cards-container{
+			display: flex;
+			flex-direction: column;
+			.big-card{
+				width:100%;
+				height: 441px;
+				padding: var(--spacing-6);
+				border-radius: var(--radius-lg);
+			}
+			.cards{
+				display: flex;
+				flex-direction: column;
+				width: 100%;
+				height: 441px;
+				gap: 24px;
+				.card-item{
+					width: 100%;
+					height: 110px;
+					padding: var(--spacing-4) var(--spacing-5) var(--spacing-4) var(--spacing-5);
+					gap: var(--spacing-4);
+					border-radius: var(--radius-md);
+					opacity: 0px;
+	
+				}
+			}
+		}
+	}
+}

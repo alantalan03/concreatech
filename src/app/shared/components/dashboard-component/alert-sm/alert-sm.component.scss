@@ -1,0 +1,89 @@
+.container-alert-sm {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	width: 420px;
+	height: 51px;
+	padding: var(--spacing-4);
+	gap: var(--spacing-3);
+	border-radius: var(--radius-lg);
+	background: var(--color-bg-elevation, rgba(252, 252, 252, 1));
+	border: 1px solid var(--color-divider, rgba(234, 236, 240, 1));
+	box-shadow: 0 4px 12px rgba(41, 41, 41, 0.1);
+
+	position: fixed; /* Para mantenerla enfrente de todo */
+	z-index: 1000; /* Ajusta según sea necesario para sobreponerla */
+	transition: all 0.3s ease-in-out;
+
+	/* Aseguramos que el icono esté centrado */
+	> app-circle-information {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	/* Estilo del mensaje */
+	.message-text {
+		flex-grow: 1;
+		display: flex;
+		align-items: center;
+		color: var(--color-text-primary, #333);
+		font-size: 14px;
+	}
+
+	/* Ajustamos el botón de cerrar */
+	app-close-button {
+		margin-left: auto;
+	}
+
+	/* Posiciones específicas */
+	&.top-left {
+		top: 20px;
+		left: 20px;
+	}
+
+	&.top-center {
+		top: 20px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	&.top-right {
+		top: 20px;
+		right: 20px;
+	}
+
+	&.center-left {
+		top: 50%;
+		left: 20px;
+		transform: translateY(-50%);
+	}
+
+	&.center {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	&.center-right {
+		top: 50%;
+		right: 20px;
+		transform: translateY(-50%);
+	}
+
+	&.bottom-left {
+		bottom: 20px;
+		left: 20px;
+	}
+
+	&.bottom-center {
+		bottom: 20px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	&.bottom-right {
+		bottom: 20px;
+		right: 20px;
+	}
+}

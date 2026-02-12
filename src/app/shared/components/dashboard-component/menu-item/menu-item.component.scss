@@ -1,0 +1,120 @@
+.menu-item-container{
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  width: auto;
+  height: 100%;
+
+  .item-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: auto;
+    background-color: var(--color-bg-primary);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-3) var(--spacing-3);
+    align-items: center;
+    border: 2px solid var(--color-border-enabled);
+    cursor: pointer;
+    user-select: none;
+
+    transition:
+      background-color 0.2s ease,
+      border-color 0.2s ease,
+      box-shadow 0.2s ease,
+      transform 0.08s ease;
+
+    .item{
+      display: flex;
+      flex-direction: row;
+      width: auto;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      gap: var(--spacing-4);
+
+      .label-container{
+        display: flex;
+        flex-direction: row;
+        font-family: var(--body);
+        font-weight: var(--semibold);
+        font-size: var(--font-b2);
+        line-height: var(--font-lh-b2);
+        color: var(--color-fg-primary);
+      }
+    }
+
+    /* ---------- HOVER ---------- */
+    &:hover{
+      background-color: var(--gray-50);
+      border-color: var(--color-border-hover);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+    }
+
+    /* ---------- ACTIVE ---------- */
+    &:active{
+      transform: scale(0.97);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    }
+
+    /* ---------- FOCUS ---------- */
+    // &:focus-visible{
+    //   outline: none;
+    //   border-color: var(--color-border-focus);
+    //   box-shadow: 0 0 0 3px var(--color-focus-ring);
+    // }
+  }
+
+  .item-container-selected{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: auto;
+    border-radius: var(--radius-md);
+    padding: var(--spacing-4) var(--spacing-4);
+    align-items: center;
+    background-color: var(--gray-950);
+    border: none;
+    cursor: pointer;
+
+    transition:
+      background-color 0.2s ease,
+      transform 0.08s ease;
+
+    .item{
+      display: flex;
+      flex-direction: row;
+      width: auto;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      gap: var(--spacing-4);
+
+      .label-container{
+        display: flex;
+        flex-direction: row;
+        font-family: var(--body);
+        font-weight: var(--semibold);
+        font-size: var(--font-b2);
+        line-height: var(--font-lh-b2);
+        color: var(--color-fg-primary-inverted);
+      }
+    }
+
+    /* Hover cuando está seleccionado */
+    &:hover{
+      background-color: var(--gray-900);
+    }
+
+    /* Active cuando está seleccionado */
+    &:active{
+      transform: scale(0.98);
+    }
+
+    /* Focus */
+    // &:focus-visible{
+    //   outline: none;
+    //   box-shadow: 0 0 0 3px var(--color-focus-ring-inverted);
+    // }
+  }
+}

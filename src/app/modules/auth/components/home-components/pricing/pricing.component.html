@@ -1,0 +1,59 @@
+<section class="pricing" id="precios">
+
+  <div class="section-header">
+    <div class="section-tag">
+      {{ 'pricing.tag' | translate }}
+    </div>
+
+    <div class="cos-badge">
+      ✔ {{ 'pricing.badge' | translate }}
+    </div>
+
+    <h2 class="section-title">
+      {{ 'pricing.title' | translate }}
+    </h2>
+
+    <p class="section-subtitle">
+      {{ 'pricing.subtitle' | translate }}
+    </p>
+  </div>
+
+  <div class="pricing-grid">
+
+    <div
+      class="pricing-card"
+      *ngFor="let plan of plans"
+      [class.featured]="plan.featured"
+    >
+
+      <div class="badge" *ngIf="plan.badge">
+        {{ plan.badge | translate }}
+      </div>
+
+      <h3 class="name">
+        {{ plan.name | translate }}
+      </h3>
+
+      <div class="price">
+        {{ plan.price }}
+      </div>
+
+      <div class="period">
+        {{ plan.period | translate }}
+      </div>
+
+      <ul>
+        <li *ngFor="let f of plan.features">
+          ✔ {{ f | translate }}
+        </li>
+      </ul>
+
+      <button class="btn">
+        {{ 'pricing.cta' | translate }}
+      </button>
+
+    </div>
+
+  </div>
+
+</section>

@@ -1,0 +1,16 @@
+<div class="language-selector">
+  <button class="language-trigger" (click)="toggle()">
+    {{ currentLabel }}
+  </button>
+
+  <div class="language-dropdown" *ngIf="open">
+    <button
+      class="language-option"
+      *ngFor="let opt of options"
+      (click)="select(opt.code)"
+    >
+      <span class="country">{{ opt.country }}</span>
+      <span class="label">{{ opt.label }}</span>
+    </button>
+  </div>
+</div>

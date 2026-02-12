@@ -1,0 +1,10 @@
+.custom-tooltip{
+	cursor: pointer;
+	height: auto;
+	width: 200px;
+	padding: 12px 12px;
+	background-color: var(--color-btn-primary-enabled);
+	color: var(--color-fg-primary-inverted);
+	border-radius: 20px;
+	box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.10);
+}

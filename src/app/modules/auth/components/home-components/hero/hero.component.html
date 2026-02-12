@@ -1,0 +1,148 @@
+<section class="hero" id="inicio">
+	<div class="hero-grid"></div>
+
+	<div class="hero-wrapper">
+		<!-- Content -->
+		<div class="hero-content">
+			<div class="hero-tag">[ CONTECH INNOVATION ]</div>
+
+			<h1>
+				{{ 'HERO.TITLE_LINE_1' | translate }}<br />
+				<span class="highlight">
+					{{ 'HERO.TITLE_HIGHLIGHT' | translate }} </span
+				><br />
+				{{ 'HERO.TITLE_LINE_2' | translate }}
+			</h1>
+
+			<p class="hero-subtitle">
+				{{ 'HERO.SUBTITLE' | translate }}
+			</p>
+
+			<div class="hero-buttons">
+				<a
+					class="btn-primary"
+					href="https://calendly.com/concreatech-mx/30min"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					{{ 'HERO.CTA_PRIMARY' | translate }}
+				</a>
+
+				<a class="btn-secondary" href="#testimonios">
+					{{ 'HERO.CTA_SECONDARY' | translate }}
+				</a>
+			</div>
+		</div>
+
+		<!-- Visual -->
+		<div class="hero-visual">
+			<!-- 🔽 SVG COMPLETO (sin tocar lógica) -->
+			<!-- Pega aquí exactamente el SVG que ya tienes -->
+			<!-- (no lo recorto para que no pierda fidelidad) -->
+			<!-- 👉 tu SVG va aquí tal cual -->
+       <div class="hero-visual-float">
+        <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Background circles -->
+                    <circle cx="250" cy="250" r="200" fill="none" stroke="rgba(13, 59, 102, 0.1)" stroke-width="2"></circle>
+                    <circle cx="250" cy="250" r="160" fill="none" stroke="rgba(16, 185, 129, 0.15)" stroke-width="2"></circle>
+                    <circle cx="250" cy="250" r="120" fill="none" stroke="rgba(13, 59, 102, 0.1)" stroke-width="2"></circle>
+                    
+                    <!-- Central concrete mixer icon -->
+                    <g transform="translate(250, 250)">
+                        <!-- Mixer drum -->
+                        <ellipse cx="0" cy="-20" rx="50" ry="30" fill="#0D3B66" opacity="0.2"></ellipse>
+                        <rect x="-45" y="-20" width="90" height="60" rx="5" fill="#0D3B66" opacity="0.3"></rect>
+                        <ellipse cx="0" cy="40" rx="50" ry="30" fill="#0D3B66" opacity="0.2"></ellipse>
+                        
+                        <!-- Mixer base -->
+                        <rect x="-15" y="40" width="30" height="40" fill="#0D3B66" opacity="0.25"></rect>
+                        <rect x="-25" y="75" width="50" height="10" rx="3" fill="#10B981" opacity="0.4"></rect>
+                    </g>
+                    
+                    <!-- IoT Sensors around -->
+                    <g class="sensor sensor-1">
+                        <circle cx="250" cy="80" r="20" fill="#10B981" opacity="0.2"></circle>
+                        <circle cx="250" cy="80" r="12" fill="#10B981" opacity="0.4"></circle>
+                        <!-- IoT network icon -->
+                        <circle cx="250" cy="80" r="4" fill="#10B981"></circle>
+                        <circle cx="240" cy="75" r="2" fill="#10B981"></circle>
+                        <circle cx="260" cy="75" r="2" fill="#10B981"></circle>
+                        <circle cx="240" cy="85" r="2" fill="#10B981"></circle>
+                        <circle cx="260" cy="85" r="2" fill="#10B981"></circle>
+                        <line x1="250" y1="80" x2="240" y2="75" stroke="#10B981" stroke-width="1"></line>
+                        <line x1="250" y1="80" x2="260" y2="75" stroke="#10B981" stroke-width="1"></line>
+                        <text x="250" y="50" text-anchor="middle" font-size="12" fill="#0D3B66" font-family="Space Mono" font-weight="700">IoT</text>
+                    </g>
+                    
+                    <g class="sensor sensor-2">
+                        <circle cx="420" cy="180" r="20" fill="#10B981" opacity="0.2"></circle>
+                        <circle cx="420" cy="180" r="12" fill="#10B981" opacity="0.4"></circle>
+                        <!-- Database/Data icon -->
+                        <ellipse cx="420" cy="175" rx="8" ry="4" fill="#10B981"></ellipse>
+                        <rect x="412" y="175" width="16" height="8" fill="#10B981" opacity="0.6"></rect>
+                        <ellipse cx="420" cy="183" rx="8" ry="4" fill="#10B981"></ellipse>
+                        <text x="420" y="220" text-anchor="middle" font-size="12" fill="#0D3B66" font-family="Space Mono" font-weight="700">Data</text>
+                    </g>
+                    
+                    <g class="sensor sensor-3">
+                        <circle cx="420" cy="320" r="20" fill="#10B981" opacity="0.2"></circle>
+                        <circle cx="420" cy="320" r="12" fill="#10B981" opacity="0.4"></circle>
+                        <!-- Cloud icon -->
+                        <path d="M 410 320 C 410 316 413 313 417 313 C 418 310 421 308 424 308 C 427 308 430 310 431 313 C 435 313 438 316 438 320 C 438 324 435 327 431 327 L 410 327 C 406 327 410 324 410 320 Z" fill="#10B981" opacity="0.8"></path>
+                        <text x="420" y="355" text-anchor="middle" font-size="12" fill="#0D3B66" font-family="Space Mono" font-weight="700">Cloud</text>
+                    </g>
+                    
+                    <g class="sensor sensor-4">
+                        <circle cx="250" cy="420" r="20" fill="#10B981" opacity="0.2"></circle>
+                        <circle cx="250" cy="420" r="12" fill="#10B981" opacity="0.4"></circle>
+                        <!-- AI/Neural network icon -->
+                        <circle cx="250" cy="415" r="3" fill="#10B981"></circle>
+                        <circle cx="243" cy="420" r="2.5" fill="#10B981" opacity="0.8"></circle>
+                        <circle cx="257" cy="420" r="2.5" fill="#10B981" opacity="0.8"></circle>
+                        <circle cx="250" cy="425" r="2.5" fill="#10B981" opacity="0.8"></circle>
+                        <line x1="250" y1="415" x2="243" y2="420" stroke="#10B981" stroke-width="1.5"></line>
+                        <line x1="250" y1="415" x2="257" y2="420" stroke="#10B981" stroke-width="1.5"></line>
+                        <line x1="243" y1="420" x2="250" y2="425" stroke="#10B981" stroke-width="1"></line>
+                        <line x1="257" y1="420" x2="250" y2="425" stroke="#10B981" stroke-width="1"></line>
+                        <text x="250" y="455" text-anchor="middle" font-size="12" fill="#0D3B66" font-family="Space Mono" font-weight="700">AI/ML</text>
+                    </g>
+                    
+                    <g class="sensor sensor-5">
+                        <circle cx="80" cy="320" r="20" fill="#10B981" opacity="0.2"></circle>
+                        <circle cx="80" cy="320" r="12" fill="#10B981" opacity="0.4"></circle>
+                        <!-- Automation/Gear icon -->
+                        <circle cx="80" cy="320" r="6" fill="none" stroke="#10B981" stroke-width="2"></circle>
+                        <circle cx="80" cy="313" r="2" fill="#10B981"></circle>
+                        <circle cx="87" cy="320" r="2" fill="#10B981"></circle>
+                        <circle cx="80" cy="327" r="2" fill="#10B981"></circle>
+                        <circle cx="73" cy="320" r="2" fill="#10B981"></circle>
+                        <text x="80" y="355" text-anchor="middle" font-size="12" fill="#0D3B66" font-family="Space Mono" font-weight="700">Auto</text>
+                    </g>
+                    
+                    <g class="sensor sensor-6">
+                        <circle cx="80" cy="180" r="20" fill="#10B981" opacity="0.2"></circle>
+                        <circle cx="80" cy="180" r="12" fill="#10B981" opacity="0.4"></circle>
+                        <!-- BI Dashboard/Charts icon -->
+                        <rect x="74" y="184" width="3" height="8" fill="#10B981"></rect>
+                        <rect x="78" y="180" width="3" height="12" fill="#10B981"></rect>
+                        <rect x="82" y="182" width="3" height="10" fill="#10B981"></rect>
+                        <rect x="86" y="178" width="3" height="14" fill="#10B981"></rect>
+                        <text x="80" y="220" text-anchor="middle" font-size="12" fill="#0D3B66" font-family="Space Mono" font-weight="700">BI</text>
+                    </g>
+                    
+                    <!-- Connection lines -->
+                    <line x1="250" y1="250" x2="250" y2="100" stroke="rgba(16, 185, 129, 0.2)" stroke-width="2" stroke-dasharray="5,5" class="connect-line"></line>
+                    <line x1="250" y1="250" x2="400" y2="180" stroke="rgba(16, 185, 129, 0.2)" stroke-width="2" stroke-dasharray="5,5" class="connect-line"></line>
+                    <line x1="250" y1="250" x2="400" y2="320" stroke="rgba(16, 185, 129, 0.2)" stroke-width="2" stroke-dasharray="5,5" class="connect-line"></line>
+                    <line x1="250" y1="250" x2="250" y2="400" stroke="rgba(16, 185, 129, 0.2)" stroke-width="2" stroke-dasharray="5,5" class="connect-line"></line>
+                    <line x1="250" y1="250" x2="100" y2="320" stroke="rgba(16, 185, 129, 0.2)" stroke-width="2" stroke-dasharray="5,5" class="connect-line"></line>
+                    <line x1="250" y1="250" x2="100" y2="180" stroke="rgba(16, 185, 129, 0.2)" stroke-width="2" stroke-dasharray="5,5" class="connect-line"></line>
+                    
+                    <!-- Industry 4.0 label -->
+                    <text x="250" y="30" text-anchor="middle" font-size="16" fill="#0D3B66" font-family="Space Mono" font-weight="700">INDUSTRIA 4.0</text>
+                </svg>
+       </div>
+	
+		</div>
+	</div>
+</section>

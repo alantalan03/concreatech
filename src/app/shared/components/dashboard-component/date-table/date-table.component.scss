@@ -1,0 +1,10 @@
+.text{
+	color: var(--color-fg-primary, #475467);
+	/* Captions/C1 - Regular */
+	font-family: var(--captions);
+    font-size: var(--font-c1);
+	font-style: normal;
+	font-weight: var(--medium);
+	line-height: var(--font-lh-c1);
+	align-self: stretch;
+}

@@ -1,0 +1,86 @@
+<section class="testimonials" id="testimonios">
+	<div class="testimonials-container">
+		<!-- Header -->
+		<div class="section-header">
+			<div class="section-tag">Casos de Éxito</div>
+			<h2 class="section-title">Lo que dicen nuestros clientes</h2>
+			<p class="section-subtitle">
+				Empresas líderes del sector confían en ConcreaTech para transformar sus
+				operaciones
+			</p>
+		</div>
+
+		<!-- Carousel -->
+		<div class="testimonials-carousel-wrapper">
+			<div class="testimonials-carousel">
+				<div
+					class="testimonial-card"
+					*ngFor="let t of testimonials; let i = index"
+					[class.active]="i === currentIndex"
+				>
+					<div class="testimonial-content">
+						<div class="quote-icon">
+							<svg viewBox="0 0 48 48">
+								<path
+									d="M12 24C12 19.5817 15.5817 16 20 16V20C17.7909 20 16 21.7909 16 24V28H24V36H12V24Z"
+									fill="currentColor"
+								/>
+								<path
+									d="M28 24C28 19.5817 31.5817 16 36 16V20C33.7909 20 32 21.7909 32 24V28H40V36H28V24Z"
+									fill="currentColor"
+								/>
+							</svg>
+						</div>
+
+						<p class="testimonial-text">"{{ t.text }}"</p>
+
+						<div class="testimonial-author">
+							<div class="author-info">
+								<h4 class="author-name">{{ t.name }}</h4>
+								<p class="author-position">{{ t.position }}</p>
+							</div>
+
+							<div class="company-logo">
+								<div class="logo-placeholder">
+									{{ t.company }}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Arrows -->
+			<button class="testimonial-nav prev" (click)="prev()">‹</button>
+
+			<button class="testimonial-nav next" (click)="next()">›</button>
+
+			<!-- Dots -->
+			<div class="testimonial-dots">
+				<button
+					*ngFor="let t of testimonials; let i = index"
+					(click)="goTo(i)"
+					[class.active]="i === currentIndex"
+				>
+					 <app-icon
+						[name]="'placeholder'"
+						[color]="'color-fg-brand'"
+						size="sm"
+						strokeWidth="semibold">
+					</app-icon>
+				</button>
+			</div>
+		</div>
+
+		<!-- Clients Logos -->
+		<div class="clients-logos">
+			<h3 class="clients-title">Confían en nosotros</h3>
+
+			<div class="logos-scroll">
+				<div class="logo-item" *ngFor="let logo of logos">
+					{{ logo }}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

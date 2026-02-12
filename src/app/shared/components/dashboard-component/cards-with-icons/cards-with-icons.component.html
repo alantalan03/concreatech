@@ -1,0 +1,41 @@
+<div class="card-with-icon-container">
+	<div class="card" *ngFor="let item of cards">
+		<div class="metrics">
+			<div class="title">{{ item.name }}</div>
+
+			<div class="value">
+				{{ item.value | number }}
+			</div>
+
+			<div class="footer">
+				<div class="value-container">
+					<div class="badge" [ngClass]="item.footerValue >= 0 ? 'success' : 'danger'">
+						<app-icon style="display: flex" [name]="item.footerValue >= 0 ? 'arrow-up-right' : 'arrow-down-right'"
+							[color]="item.footerValue >= 0 ? 'esmerald-500' : 'danger-500'"
+							size="sm"
+							strokeWidth="semibold"
+						>
+						</app-icon>
+
+						{{ item.footerValue }}%
+					</div>
+
+					<span class="footer-text">
+						{{ item.footer }}
+					</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="icon-container" [style.backgroundColor]="'var(' + item.backgroundColor + ')'">
+			<app-icon
+				style="display: flex"
+				[name]="item.icon"
+				color="color-fg-primary-inverted"
+				size="lg"
+				strokeWidth="semibold"
+			>
+			</app-icon>
+		</div>
+	</div>
+</div>

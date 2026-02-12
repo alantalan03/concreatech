@@ -1,0 +1,177 @@
+.cas-automation {
+    padding: 6rem 1.5rem;
+    background: #FFFFFF;
+    max-width: 1200px;
+    justify-content: center;
+    /* display: flex; */
+    /* flex-direction: column; */
+    width: 100%;
+    margin: auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-tag {
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  font-weight: 600;
+  color: var(--brand-500);
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-size: 2.8rem;
+  color: var(--primary-500);
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  color: var(--gray-600);
+}
+
+/* ================= GRID ================= */
+
+.cas-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+/* ================= CARD ================= */
+
+.cas-card {
+  background: #f9fafb;
+  padding: 2rem;
+  border-radius: 16px;
+  border: 1px solid var(--gray-200);
+  transition: all 0.3s ease;
+}
+
+.cas-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+  border-color: var(--brand-300);
+}
+
+/* Badge */
+
+.cas-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--primary-500) 0%, var(--brand-500) 100%);
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.35rem 0.8rem;
+    border-radius: 999px;
+    margin-bottom: 1rem;
+}
+
+/* Title */
+
+.cas-title {
+  font-size: 1.1rem;
+  color: var(--primary-500);
+  margin-bottom: 1rem;
+}
+
+/* Description */
+
+.cas-description {
+  font-size: 0.9rem;
+  color: var(--gray-600);
+  margin-bottom: 1.2rem;
+}
+
+/* List */
+
+.cas-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cas-list li {
+  font-size: 0.85rem;
+  color: var(--gray-700);
+  margin-bottom: 0.6rem;
+  padding-left: 1.3rem;
+  position: relative;
+}
+
+.cas-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: var(--brand-500);
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+/* ================= CTA ================= */
+
+.cas-cta {
+  margin-top: 5rem;
+  padding: 3rem;
+  border-radius: 20px;
+  border: 2px solid var(--brand-500);
+  text-align: center;
+}
+
+.cas-cta h3 {
+  font-size: 1.6rem;
+  color: var(--primary-500);
+  margin-bottom: 1rem;
+}
+
+.cas-cta p {
+  color: var(--gray-600);
+  margin-bottom: 2rem;
+}
+
+.cas-button {
+  display: inline-block;
+  background: var(--primary-500);
+  color: white;
+  padding: 0.9rem 2rem;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.cas-button:hover {
+  background: var(--primary-700);
+  transform: translateY(-3px);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1200px) {
+  .cas-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .cas-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .cas-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .cas-cta {
+    padding: 2rem;
+  }
+}

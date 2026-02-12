@@ -1,0 +1,900 @@
+@if(showAlert === true){
+	@if(alertType === 'small'){
+		@if(position ==='bottom-right'){
+			<div class="alert-sm-container-right-bottom">
+				<div class="alert-sm-box">
+					<div class="alert-sm-img">
+						@if(imgType === 'success'){
+							<img [src]="urlSuccess" alt="Success">
+						}
+						@if(imgType === 'error'){
+							<img [src]="urlError" alt="error">
+						}
+						@if(imgType === 'info'){
+							<img [src]="urlInfo" alt="info">
+						}
+						@if(imgType === 'zap'){
+							<img [src]="urlZap" alt="Zap">
+						}
+						<div class="text">
+							{{textAlert  | translate:ts.GetLang}}
+						</div>
+					</div>
+					<div class="action" [routerLink]="primaryActionUrl">
+						{{primaryActionTxt  | translate:ts.GetLang}}
+					</div>
+					<app-close-button (click)="closeAlert()">
+					</app-close-button>
+				</div>
+			</div>
+		}
+		@if(position ==='bottom-center'){
+			<div class="alert-sm-container-center-bottom">
+				<div class="alert-sm-box">
+					<div class="alert-sm-img">
+						@if(imgType === 'success'){
+							<img [src]="urlSuccess" alt="Success">
+						}
+						@if(imgType === 'error'){
+							<img [src]="urlError" alt="error">
+						}
+						@if(imgType === 'info'){
+							<img [src]="urlInfo" alt="info">
+						}
+						@if(imgType === 'zap'){
+							<img [src]="urlZap" alt="Zap">
+						}
+						<div class="text">
+							{{textAlert  | translate:ts.GetLang}}
+						</div>
+					</div>
+					<div class="action" [routerLink]="primaryActionUrl">
+						{{primaryActionTxt  | translate:ts.GetLang}}
+					</div>
+					<app-close-button (click)="closeAlert()">
+
+					</app-close-button>
+				</div>
+			</div>
+		}
+		@if(position ==='bottom-left'){
+			<div class="alert-sm-container-left-bottom">
+				<div class="alert-sm-box">
+					<div class="alert-sm-img">
+						@if(imgType === 'success'){
+							<img [src]="urlSuccess" alt="Success">
+						}
+						@if(imgType === 'error'){
+							<img [src]="urlError" alt="error">
+						}
+						@if(imgType === 'info'){
+							<img [src]="urlInfo" alt="info">
+						}
+						@if(imgType === 'zap'){
+							<img [src]="urlZap" alt="Zap">
+						}
+						<div class="text">
+							{{textAlert  | translate:ts.GetLang}}
+						</div>
+					</div>
+					<div class="action" [routerLink]="primaryActionUrl">
+						{{primaryActionTxt  | translate:ts.GetLang}}
+					</div>
+					<app-close-button (click)="closeAlert()">
+
+					</app-close-button>
+				</div>
+			</div>
+		}
+		@if(position ==='right-center'){
+			<div class="alert-sm-container-right-center">
+				<div class="alert-sm-box">
+					<div class="alert-sm-img">
+						@if(imgType === 'success'){
+							<img [src]="urlSuccess" alt="Success">
+						}
+						@if(imgType === 'error'){
+							<img [src]="urlError" alt="error">
+						}
+						@if(imgType === 'info'){
+							<img [src]="urlInfo" alt="info">
+						}
+						@if(imgType === 'zap'){
+							<img [src]="urlZap" alt="Zap">
+						}
+						<div class="text">
+							{{textAlert  | translate:ts.GetLang}}
+						</div>
+					</div>
+					<div class="action" [routerLink]="primaryActionUrl">
+						{{primaryActionTxt  | translate:ts.GetLang}}
+					</div>
+					<app-close-button (click)="closeAlert()">
+
+					</app-close-button>
+				</div>
+			</div>
+		}
+		@if(position ==='center'){
+			<div class="alert-sm-container-center">
+				<div class="alert-sm-box">
+					<div class="alert-sm-img">
+						@if(imgType === 'success'){
+							<img [src]="urlSuccess" alt="Success">
+						}
+						@if(imgType === 'error'){
+							<img [src]="urlError" alt="error">
+						}
+						@if(imgType === 'info'){
+							<img [src]="urlInfo" alt="info">
+						}
+						@if(imgType === 'zap'){
+							<img [src]="urlZap" alt="Zap">
+						}
+						<div class="text">
+							{{textAlert  | translate:ts.GetLang}}
+						</div>
+					</div>
+					<div class="action" [routerLink]="primaryActionUrl">
+						{{primaryActionTxt  | translate:ts.GetLang}}
+					</div>
+					<app-close-button (click)="closeAlert()">
+
+					</app-close-button>
+				</div>
+			</div>
+		}
+		@if(position ==='left-center'){
+			<div class="alert-sm-container-left-center">
+				<div class="alert-sm-box">
+					<div class="alert-sm-img">
+						@if(imgType === 'success'){
+							<img [src]="urlSuccess" alt="Success">
+						}
+						@if(imgType === 'error'){
+							<img [src]="urlError" alt="error">
+						}
+						@if(imgType === 'info'){
+							<img [src]="urlInfo" alt="info">
+						}
+						@if(imgType === 'zap'){
+							<img [src]="urlZap" alt="Zap">
+						}
+						<div class="text">
+							{{textAlert  | translate:ts.GetLang}}
+						</div>
+					</div>
+					<div class="action" [routerLink]="primaryActionUrl">
+						{{primaryActionTxt  | translate:ts.GetLang}}
+					</div>
+					<app-close-button (click)="closeAlert()">
+
+					</app-close-button>
+				</div>
+			</div>
+		}
+		@if(position ==='top-right'){
+			<div class="alert-sm-container-top-right">
+				<div class="alert-sm-box">
+					<div class="alert-sm-img">
+						@if(imgType === 'success'){
+							<img [src]="urlSuccess" alt="Success">
+						}
+						@if(imgType === 'error'){
+							<img [src]="urlError" alt="error">
+						}
+						@if(imgType === 'info'){
+							<img [src]="urlInfo" alt="info">
+						}
+						@if(imgType === 'zap'){
+							<img [src]="urlZap" alt="Zap">
+						}
+						<div class="text">
+							{{textAlert  | translate:ts.GetLang}}
+						</div>
+					</div>
+					<div class="action" [routerLink]="primaryActionUrl">
+						{{primaryActionTxt  | translate:ts.GetLang}}
+					</div>
+					<app-close-button (click)="closeAlert()">
+					</app-close-button>
+				</div>
+			</div>
+		}
+		@if(position ==='top-center'){
+			<div class="alert-sm-container-top-center">
+				<div class="alert-sm-box">
+					<div class="alert-sm-img">
+						@if(imgType === 'success'){
+							<img [src]="urlSuccess" alt="Success">
+						}
+						@if(imgType === 'error'){
+							<img [src]="urlError" alt="error">
+						}
+						@if(imgType === 'info'){
+							<img [src]="urlInfo" alt="info">
+						}
+						@if(imgType === 'zap'){
+							<img [src]="urlZap" alt="Zap">
+						}
+						<div class="text">
+							{{textAlert  | translate:ts.GetLang}}
+						</div>
+					</div>
+					<div class="action" [routerLink]="primaryActionUrl">
+						{{primaryActionTxt  | translate:ts.GetLang}}
+					</div>
+					<app-close-button (click)="closeAlert()">
+
+					</app-close-button>
+				</div>
+			</div>
+		}
+		@if(position ==='top-left'){
+			<div class="alert-sm-container-top-left">
+				<div class="alert-sm-box">
+					<div class="alert-sm-img">
+						@if(imgType === 'success'){
+							<img [src]="urlSuccess" alt="Success">
+						}
+						@if(imgType === 'error'){
+							<img [src]="urlError" alt="error">
+						}
+						@if(imgType === 'info'){
+							<img [src]="urlInfo" alt="info">
+						}
+						@if(imgType === 'zap'){
+							<img [src]="urlZap" alt="Zap">
+						}
+						<div class="text">
+							{{textAlert  | translate:ts.GetLang}}
+						</div>
+					</div>
+					<div class="action" [routerLink]="primaryActionUrl">
+						{{primaryActionTxt  | translate:ts.GetLang}}
+					</div>
+					<app-close-button (click)="closeAlert()">
+
+					</app-close-button>
+				</div>
+			</div>
+		}
+	}
+
+	@if(alertType === 'medium' ){
+		@if(position ==='bottom-right'){
+			<div class="alert-md-container-right-bottom">
+				<div class="alert-md-box">
+					<div class="alert-md-img">
+						@if(imgType === 'success'){
+							<img [src]="urlSuccess" alt="Success">
+						}
+						@if(imgType === 'error'){
+							<img [src]="urlError" alt="error">
+						}
+						@if(imgType === 'info'){
+							<img [src]="urlInfo" alt="info">
+						}
+						@if(imgType === 'zap'){
+							<img [src]="urlZap" alt="Zap">
+						}
+						<div class="textBox">
+							<div class="text">
+								{{textAlert  | translate:ts.GetLang}}
+							</div>
+							<div class="subtitle">
+								{{subtitleAlert  | translate:ts.GetLang}}
+							</div>
+						</div>
+					</div>
+					<app-close-button (click)="closeAlert()">
+					</app-close-button>
+				</div>
+			</div>
+		}
+		@if(position ==='bottom-center'){
+			<div class="alert-md-container-center-bottom">
+				<div class="alert-md-box">
+					<div class="alert-md-img">
+						@if(imgType === 'success'){
+							<img [src]="urlSuccess" alt="Success">
+						}
+						@if(imgType === 'error'){
+							<img [src]="urlError" alt="error">
+						}
+						@if(imgType === 'info'){
+							<img [src]="urlInfo" alt="info">
+						}
+						@if(imgType === 'zap'){
+							<img [src]="urlZap" alt="Zap">
+						}
+						<div class="textBox">
+							<div class="text">
+								{{textAlert  | translate:ts.GetLang}}
+							</div>
+							<div class="subtitle">
+								{{subtitleAlert  | translate:ts.GetLang}}
+							</div>
+						</div>
+					</div>
+					<app-close-button (click)="closeAlert()">
+
+					</app-close-button>
+				</div>
+			</div>
+		}
+		@if(position ==='bottom-left'){
+			<div class="alert-md-container-left-bottom">
+				<div class="alert-md-box">
+					<div class="alert-md-img">
+						@if(imgType === 'success'){
+							<img [src]="urlSuccess" alt="Success">
+						}
+						@if(imgType === 'error'){
+							<img [src]="urlError" alt="error">
+						}
+						@if(imgType === 'info'){
+							<img [src]="urlInfo" alt="info">
+						}
+						@if(imgType === 'zap'){
+							<img [src]="urlZap" alt="Zap">
+						}
+						<div class="textBox">
+							<div class="text">
+								{{textAlert  | translate:ts.GetLang}}
+							</div>
+							<div class="subtitle">
+								{{subtitleAlert  | translate:ts.GetLang}}
+							</div>
+						</div>
+					</div>
+					<app-close-button (click)="closeAlert()">
+
+					</app-close-button>
+				</div>
+			</div>
+		}
+		@if(position ==='right-center'){
+			<div class="alert-md-container-right-center">
+				<div class="alert-md-box">
+					<div class="alert-md-img">
+						@if(imgType === 'success'){
+							<img [src]="urlSuccess" alt="Success">
+						}
+						@if(imgType === 'error'){
+							<img [src]="urlError" alt="error">
+						}
+						@if(imgType === 'info'){
+							<img [src]="urlInfo" alt="info">
+						}
+						@if(imgType === 'zap'){
+							<img [src]="urlZap" alt="Zap">
+						}
+						<div class="textBox">
+							<div class="text">
+								{{textAlert  | translate:ts.GetLang}}
+							</div>
+							<div class="subtitle">
+								{{subtitleAlert  | translate:ts.GetLang}}
+							</div>
+						</div>
+					</div>
+					<app-close-button (click)="closeAlert()">
+
+					</app-close-button>
+				</div>
+			</div>
+		}
+		@if(position ==='center'){
+			<div class="alert-md-container-center">
+				<div class="alert-md-box">
+					<div class="alert-md-img">
+						@if(imgType === 'success'){
+							<img [src]="urlSuccess" alt="Success">
+						}
+						@if(imgType === 'error'){
+							<img [src]="urlError" alt="error">
+						}
+						@if(imgType === 'info'){
+							<img [src]="urlInfo" alt="info">
+						}
+						@if(imgType === 'zap'){
+							<img [src]="urlZap" alt="Zap">
+						}
+						<div class="textBox">
+							<div class="text">
+								{{textAlert  | translate:ts.GetLang}}
+							</div>
+							<div class="subtitle">
+								{{subtitleAlert  | translate:ts.GetLang}}
+							</div>
+						</div>
+					</div>
+					<app-close-button (click)="closeAlert()">
+
+					</app-close-button>
+				</div>
+			</div>
+		}
+		@if(position ==='left-center'){
+			<div class="alert-md-container-left-center">
+				<div class="alert-md-box">
+					<div class="alert-md-img">
+						@if(imgType === 'success'){
+							<img [src]="urlSuccess" alt="Success">
+						}
+						@if(imgType === 'error'){
+							<img [src]="urlError" alt="error">
+						}
+						@if(imgType === 'info'){
+							<img [src]="urlInfo" alt="info">
+						}
+						@if(imgType === 'zap'){
+							<img [src]="urlZap" alt="Zap">
+						}
+						<div class="textBox">
+							<div class="text">
+								{{textAlert  | translate:ts.GetLang}}
+							</div>
+							<div class="subtitle">
+								{{subtitleAlert  | translate:ts.GetLang}}
+							</div>
+						</div>
+					</div>
+					<app-close-button (click)="closeAlert()">
+
+					</app-close-button>
+				</div>
+			</div>
+		}
+		@if(position ==='top-right'){
+			<div class="alert-md-container-top-right">
+				<div class="alert-md-box">
+					<div class="alert-md-img">
+						@if(imgType === 'success'){
+							<img [src]="urlSuccess" alt="Success">
+						}
+						@if(imgType === 'error'){
+							<img [src]="urlError" alt="error">
+						}
+						@if(imgType === 'info'){
+							<img [src]="urlInfo" alt="info">
+						}
+						@if(imgType === 'zap'){
+							<img [src]="urlZap" alt="Zap">
+						}
+						<div class="textBox">
+							<div class="text">
+								{{textAlert  | translate:ts.GetLang}}
+							</div>
+							<div class="subtitle">
+								{{subtitleAlert  | translate:ts.GetLang}}
+							</div>
+						</div>
+					</div>
+					<app-close-button (click)="closeAlert()">
+
+					</app-close-button>
+				</div>
+			</div>
+		}
+		@if(position ==='top-center'){
+			<div class="alert-md-container-top-center">
+				<div class="alert-md-box">
+					<div class="alert-md-img">
+						@if(imgType === 'success'){
+							<img [src]="urlSuccess" alt="Success">
+						}
+						@if(imgType === 'error'){
+							<img [src]="urlError" alt="error">
+						}
+						@if(imgType === 'info'){
+							<img [src]="urlInfo" alt="info">
+						}
+						@if(imgType === 'zap'){
+							<img [src]="urlZap" alt="Zap">
+						}
+						<div class="textBox">
+							<div class="text">
+								{{textAlert  | translate:ts.GetLang}}
+							</div>
+							<div class="subtitle">
+								{{subtitleAlert  | translate:ts.GetLang}}
+							</div>
+						</div>
+					</div>
+					<app-close-button (click)="closeAlert()">
+
+					</app-close-button>
+				</div>
+			</div>
+		}
+		@if(position ==='top-left'){
+			<div class="alert-md-container-top-left">
+				<div class="alert-md-box">
+					<div class="alert-md-img">
+						@if(imgType === 'success'){
+							<img [src]="urlSuccess" alt="Success">
+						}
+						@if(imgType === 'error'){
+							<img [src]="urlError" alt="error">
+						}
+						@if(imgType === 'info'){
+							<img [src]="urlInfo" alt="info">
+						}
+						@if(imgType === 'zap'){
+							<img [src]="urlZap" alt="Zap">
+						}
+						<div class="textBox">
+							<div class="text">
+								{{textAlert  | translate:ts.GetLang}}
+							</div>
+							<div class="subtitle">
+								{{subtitleAlert  | translate:ts.GetLang}}
+							</div>
+						</div>
+					</div>
+					<app-close-button (click)="closeAlert()">
+
+					</app-close-button>
+				</div>
+			</div>
+		}
+	}
+
+	@if(alertType === 'large'){
+		@if(position ==='bottom-right'){
+			<div class="alert-lg-container-right-bottom">
+				<div class="alert-lg-box">
+					<div class="alert-md-img">
+						@if(imgType === 'success'){
+							<img [src]="urlSuccess" alt="Success">
+						}
+						@if(imgType === 'error'){
+							<img [src]="urlError" alt="error">
+						}
+						@if(imgType === 'info'){
+							<img [src]="urlInfo" alt="info">
+						}
+						@if(imgType === 'zap'){
+							<img [src]="urlZap" alt="Zap">
+						}
+						<div class="textBox">
+							<div class="text">
+								{{textAlert  | translate:ts.GetLang}}
+							</div>
+							<div class="subtitle">
+								{{subtitleAlert  | translate:ts.GetLang}}
+							</div>
+							<div class="actionBox">
+								<div class="secondary-action" [routerLink]="secondaryActionUrl">
+									{{secondaryActionTxt  | translate:ts.GetLang}}
+								</div>
+								<div class="primary-action" [routerLink]="primaryActionUrl">
+									{{primaryActionTxt  | translate:ts.GetLang}}
+								</div>
+							</div>
+						</div>
+					</div>
+					<app-close-button (click)="closeAlert()">
+					</app-close-button>
+				</div>
+
+			</div>
+		}
+		@if(position ==='bottom-center'){
+			<div class="alert-lg-container-center-bottom">
+				<div class="alert-lg-box">
+					<div class="alert-md-img">
+						@if(imgType === 'success'){
+							<img [src]="urlSuccess" alt="Success">
+						}
+						@if(imgType === 'error'){
+							<img [src]="urlError" alt="error">
+						}
+						@if(imgType === 'info'){
+							<img [src]="urlInfo" alt="info">
+						}
+						@if(imgType === 'zap'){
+							<img [src]="urlZap" alt="Zap">
+						}
+						<div class="textBox">
+							<div class="text">
+								{{textAlert  | translate:ts.GetLang}}
+							</div>
+							<div class="subtitle">
+								{{subtitleAlert  | translate:ts.GetLang}}
+							</div>
+							<div class="actionBox">
+								<div class="secondary-action" [routerLink]="secondaryActionUrl">
+									{{secondaryActionTxt  | translate:ts.GetLang}}
+								</div>
+								<div class="primary-action" [routerLink]="primaryActionUrl">
+									{{primaryActionTxt  | translate:ts.GetLang}}
+								</div>
+							</div>
+						</div>
+					</div>
+					<app-close-button (click)="closeAlert()">
+					</app-close-button>
+				</div>
+
+			</div>
+		}
+		@if(position ==='bottom-left'){
+			<div class="alert-lg-container-left-bottom">
+				<div class="alert-lg-box">
+					<div class="alert-md-img">
+						@if(imgType === 'success'){
+							<img [src]="urlSuccess" alt="Success">
+						}
+						@if(imgType === 'error'){
+							<img [src]="urlError" alt="error">
+						}
+						@if(imgType === 'info'){
+							<img [src]="urlInfo" alt="info">
+						}
+						@if(imgType === 'zap'){
+							<img [src]="urlZap" alt="Zap">
+						}
+						<div class="textBox">
+							<div class="text">
+								{{textAlert  | translate:ts.GetLang}}
+							</div>
+							<div class="subtitle">
+								{{subtitleAlert  | translate:ts.GetLang}}
+							</div>
+							<div class="actionBox">
+								<div class="secondary-action" [routerLink]="secondaryActionUrl">
+									{{secondaryActionTxt  | translate:ts.GetLang}}
+								</div>
+								<div class="primary-action" [routerLink]="primaryActionUrl">
+									{{primaryActionTxt  | translate:ts.GetLang}}
+								</div>
+							</div>
+						</div>
+					</div>
+					<app-close-button (click)="closeAlert()">
+					</app-close-button>
+				</div>
+			</div>
+		}
+		@if(position ==='right-center'){
+			<div class="alert-lg-container-right-center">
+				<div class="alert-lg-box">
+					<div class="alert-md-img">
+						@if(imgType === 'success'){
+							<img [src]="urlSuccess" alt="Success">
+						}
+						@if(imgType === 'error'){
+							<img [src]="urlError" alt="error">
+						}
+						@if(imgType === 'info'){
+							<img [src]="urlInfo" alt="info">
+						}
+						@if(imgType === 'zap'){
+							<img [src]="urlZap" alt="Zap">
+						}
+						<div class="textBox">
+							<div class="text">
+								{{textAlert  | translate:ts.GetLang}}
+							</div>
+							<div class="subtitle">
+								{{subtitleAlert  | translate:ts.GetLang}}
+							</div>
+							<div class="actionBox">
+								<div class="secondary-action" [routerLink]="secondaryActionUrl">
+									{{secondaryActionTxt  | translate:ts.GetLang}}
+								</div>
+								<div class="primary-action" [routerLink]="primaryActionUrl">
+									{{primaryActionTxt  | translate:ts.GetLang}}
+								</div>
+							</div>
+						</div>
+					</div>
+					<app-close-button (click)="closeAlert()">
+
+					</app-close-button>
+				</div>
+			</div>
+		}
+		@if(position ==='center'){
+			<div class="alert-lg-container-center">
+				<div class="alert-lg-box">
+					<div class="alert-md-img">
+						@if(imgType === 'success'){
+							<img [src]="urlSuccess" alt="Success">
+						}
+						@if(imgType === 'error'){
+							<img [src]="urlError" alt="error">
+						}
+						@if(imgType === 'info'){
+							<img [src]="urlInfo" alt="info">
+						}
+						@if(imgType === 'zap'){
+							<img [src]="urlZap" alt="Zap">
+						}
+						<div class="textBox">
+							<div class="text">
+								{{textAlert  | translate:ts.GetLang}}
+							</div>
+							<div class="subtitle">
+								{{subtitleAlert  | translate:ts.GetLang}}
+							</div>
+							<div class="actionBox">
+								<div class="secondary-action" [routerLink]="secondaryActionUrl">
+									{{secondaryActionTxt  | translate:ts.GetLang}}
+								</div>
+								<div class="primary-action" [routerLink]="primaryActionUrl">
+									{{primaryActionTxt  | translate:ts.GetLang}}
+								</div>
+							</div>
+						</div>
+					</div>
+					<app-close-button (click)="closeAlert()">
+
+					</app-close-button>
+				</div>
+			</div>
+		}
+		@if(position ==='left-center'){
+			<div class="alert-lg-container-left-center">
+				<div class="alert-lg-box">
+					<div class="alert-md-img">
+						@if(imgType === 'success'){
+							<img [src]="urlSuccess" alt="Success">
+						}
+						@if(imgType === 'error'){
+							<img [src]="urlError" alt="error">
+						}
+						@if(imgType === 'info'){
+							<img [src]="urlInfo" alt="info">
+						}
+						@if(imgType === 'zap'){
+							<img [src]="urlZap" alt="Zap">
+						}
+						<div class="textBox">
+							<div class="text">
+								{{textAlert  | translate:ts.GetLang}}
+							</div>
+							<div class="subtitle">
+								{{subtitleAlert  | translate:ts.GetLang}}
+							</div>
+							<div class="actionBox">
+								<div class="secondary-action" [routerLink]="secondaryActionUrl">
+									{{secondaryActionTxt  | translate:ts.GetLang}}
+								</div>
+								<div class="primary-action" [routerLink]="primaryActionUrl">
+									{{primaryActionTxt  | translate:ts.GetLang}}
+								</div>
+							</div>
+						</div>
+					</div>
+					<app-close-button (click)="closeAlert()">
+
+					</app-close-button>
+				</div>
+			</div>
+		}
+		@if(position ==='top-right'){
+			<div class="alert-lg-container-top-right">
+				<div class="alert-lg-box">
+					<div class="alert-md-img">
+						@if(imgType === 'success'){
+							<img [src]="urlSuccess" alt="Success">
+						}
+						@if(imgType === 'error'){
+							<img [src]="urlError" alt="error">
+						}
+						@if(imgType === 'info'){
+							<img [src]="urlInfo" alt="info">
+						}
+						@if(imgType === 'zap'){
+							<img [src]="urlZap" alt="Zap">
+						}
+						<div class="textBox">
+							<div class="text">
+								{{textAlert  | translate:ts.GetLang}}
+							</div>
+							<div class="subtitle">
+								{{subtitleAlert  | translate:ts.GetLang}}
+							</div>
+							<div class="actionBox">
+								<div class="secondary-action" [routerLink]="secondaryActionUrl">
+									{{secondaryActionTxt  | translate:ts.GetLang}}
+								</div>
+								<div class="primary-action" [routerLink]="primaryActionUrl">
+									{{primaryActionTxt  | translate:ts.GetLang}}
+								</div>
+							</div>
+						</div>
+					</div>
+					<app-close-button (click)="closeAlert()">
+
+					</app-close-button>
+				</div>
+
+			</div>
+		}
+		@if(position ==='top-center'){
+			<div class="alert-lg-container-top-center">
+				<div class="alert-lg-box">
+					<div class="alert-md-img">
+						@if(imgType === 'success'){
+							<img [src]="urlSuccess" alt="Success">
+						}
+						@if(imgType === 'error'){
+							<img [src]="urlError" alt="error">
+						}
+						@if(imgType === 'info'){
+							<img [src]="urlInfo" alt="info">
+						}
+						@if(imgType === 'zap'){
+							<img [src]="urlZap" alt="Zap">
+						}
+						<div class="textBox">
+							<div class="text">
+								{{textAlert  | translate:ts.GetLang}}
+							</div>
+							<div class="subtitle">
+								{{subtitleAlert  | translate:ts.GetLang}}
+							</div>
+							<div class="actionBox">
+								<div class="secondary-action" [routerLink]="secondaryActionUrl">
+									{{secondaryActionTxt  | translate:ts.GetLang}}
+								</div>
+								<div class="primary-action" [routerLink]="primaryActionUrl">
+									{{primaryActionTxt  | translate:ts.GetLang}}
+								</div>
+							</div>
+						</div>
+					</div>
+					<app-close-button (click)="closeAlert()">
+
+					</app-close-button>
+				</div>
+
+			</div>
+		}
+		@if(position ==='top-left'){
+			<div class="alert-lg-container-top-left">
+				<div class="alert-lg-box">
+					<div class="alert-md-img">
+						@if(imgType === 'success'){
+							<img [src]="urlSuccess" alt="Success">
+						}
+						@if(imgType === 'error'){
+							<img [src]="urlError" alt="error">
+						}
+						@if(imgType === 'info'){
+							<img [src]="urlInfo" alt="info">
+						}
+						@if(imgType === 'zap'){
+							<img [src]="urlZap" alt="Zap">
+						}
+						<div class="textBox">
+							<div class="text">
+								{{textAlert  | translate:ts.GetLang}}
+							</div>
+							<div class="subtitle">
+								{{subtitleAlert  | translate:ts.GetLang}}
+							</div>
+							<div class="actionBox">
+								<div class="secondary-action" [routerLink]="secondaryActionUrl">
+									{{secondaryActionTxt  | translate:ts.GetLang}}
+								</div>
+								<div class="primary-action" [routerLink]="primaryActionUrl">
+									{{primaryActionTxt  | translate:ts.GetLang}}
+								</div>
+							</div>
+						</div>
+					</div>
+					<app-close-button (click)="closeAlert()">
+
+					</app-close-button>
+				</div>
+			</div>
+		}
+	}
+}
+

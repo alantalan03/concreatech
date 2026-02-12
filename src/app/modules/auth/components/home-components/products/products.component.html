@@ -1,0 +1,82 @@
+<section class="products" id="productos">
+  <div class="products-container">
+
+    <!-- Header -->
+    <div class="section-header">
+      <div class="section-tag">
+        {{ 'PRODUCTS.TAG' | translate }}
+      </div>
+
+      <h2 class="section-title">
+        {{ 'PRODUCTS.TITLE' | translate }}
+      </h2>
+
+      <p class="section-subtitle">
+        {{ 'PRODUCTS.SUBTITLE' | translate }}
+      </p>
+    </div>
+
+    <!-- Grid -->
+    <div class="products-grid">
+
+      <!-- COS -->
+      <article class="product-card">
+        <div class="product-icon">COS</div>
+
+        <h3 class="product-title">
+          {{ 'PRODUCTS.COS.TITLE' | translate }}
+        </h3>
+
+        <p class="product-subtitle">
+          {{ 'PRODUCTS.COS.TYPE' | translate }}
+        </p>
+
+        <p class="product-description">
+          {{ 'PRODUCTS.COS.DESCRIPTION' | translate }}
+        </p>
+
+        <ul class="product-features">
+          <li *ngFor="let feature of [
+            'FEATURE_1','FEATURE_2','FEATURE_3','FEATURE_4','FEATURE_5'
+          ]">
+            {{ ('PRODUCTS.COS.' + feature) | translate }}
+          </li>
+        </ul>
+
+        <a class="learn-more" routerLink="/concreatech/cos">
+          {{ 'PRODUCTS.LEARN_MORE' | translate }} →
+        </a>
+      </article>
+
+      <!-- CAS -->
+      <article class="product-card highlighted">
+        <div class="product-icon">CAS</div>
+
+        <h3 class="product-title">
+          {{ 'PRODUCTS.CAS.TITLE' | translate }}
+        </h3>
+
+        <p class="product-subtitle">
+          {{ 'PRODUCTS.CAS.TYPE' | translate }}
+        </p>
+
+        <p class="product-description">
+          {{ 'PRODUCTS.CAS.DESCRIPTION' | translate }}
+        </p>
+
+        <ul class="product-features">
+          <li *ngFor="let feature of [
+            'FEATURE_1','FEATURE_2','FEATURE_3','FEATURE_4','FEATURE_5'
+          ]">
+            {{ ('PRODUCTS.CAS.' + feature) | translate }}
+          </li>
+        </ul>
+
+        <a class="learn-more" routerLink="/concreatech/cas">
+          {{ 'PRODUCTS.LEARN_MORE' | translate }} →
+        </a>
+      </article>
+
+    </div>
+  </div>
+</section>

@@ -1,0 +1,41 @@
+.main-cont {
+    display: grid;
+    gap: var(--dashboard-gap);
+    padding-top:1.125rem;
+    padding-right: 3.125rem;
+	.block {
+		display: flex;
+		flex-direction: column;
+		gap: var(--dashboard-gap);
+		.title {
+			height: 2.5rem;
+			width: 22.8125rem;
+		}
+		.cards {
+			display: grid;
+			grid-template-columns:repeat(4,1fr) ;
+			gap: var(--dashboard-gap);
+			.card {
+				border-radius: var(--radius-lg);
+				min-height: 8.1875rem;
+				border: none;
+			}
+		}
+		.content {
+			min-height: 25.625rem;
+		}
+		.content-footer {
+			display: grid;
+			grid-template-columns:repeat(2,1fr) ;
+			gap: var(--dashboard-gap);
+			.content-page-size{
+				min-height: 2rem;
+				width: 11.18rem;
+			}
+			.content-paginator{
+				min-height: 2rem;
+				width: 100%;
+			}
+		}
+	}
+}
