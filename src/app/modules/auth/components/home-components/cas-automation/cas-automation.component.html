@@ -1,50 +1,89 @@
 <section class="cas-automation" id="cas-automation">
 
   <div class="section-header">
-    <div class="section-tag">SERVICIO ESPECIALIZADO</div>
-    <h2 class="section-title">Automatización de Plantas de Concreto</h2>
+
+    <div class="section-tag">
+      Servicio Especializado
+    </div>
+
+    <h2 class="section-title">
+      Automatización de Plantas de Concreto
+    </h2>
+
     <p class="section-subtitle">
       Proceso profesional para transformar tu planta con tecnología industrial
     </p>
+
   </div>
 
-  <div class="cas-grid">
-    <div class="cas-card" *ngFor="let step of steps; let i = index">
 
-      <div class="cas-badge">
-        PASO {{ i + 1 }}
+  <div class="cas-process-wrapper">
+
+    <div class="cas-process-carousel">
+
+      <div class="cas-step" *ngFor="let step of steps">
+
+        <div class="cas-step-content">
+
+          <div class="cas-step-header">
+
+            <div class="cas-step-number">
+              {{step.number}}
+            </div>
+
+            <h3 class="cas-step-title">
+              {{step.title}}
+            </h3>
+
+          </div>
+
+
+          <p class="cas-step-description">
+            {{step.description}}
+          </p>
+
+
+          <ul class="cas-step-list">
+
+            <li *ngFor="let item of step.items">
+              {{item}}
+            </li>
+
+          </ul>
+
+        </div>
+
       </div>
 
-      <h3 class="cas-title">
-        {{ step.title }}
-      </h3>
-
-      <p class="cas-description">
-        {{ step.description }}
-      </p>
-
-      <ul class="cas-list">
-        <li *ngFor="let item of step.items">
-          {{ item }}
-        </li>
-      </ul>
-
     </div>
+
   </div>
 
-  <!-- CTA -->
+
   <div class="cas-cta">
-    <h3>¿Listo para automatizar tu planta?</h3>
-    <p>Agenda una visita técnica gratuita y recibe un diagnóstico personalizado</p>
+
+    <h3>
+      ¿Listo para automatizar tu planta?
+    </h3>
+
+    <p>
+      Agenda una visita técnica gratuita y recibe un diagnóstico personalizado
+    </p>
 
     <a
       href="https://calendly.com/concreatech-mx/30min"
       target="_blank"
       rel="noopener noreferrer"
-      class="cas-button"
+      class="cas-cta-button"
     >
+
+      <app-icon name="calendar" color="light" size="md" strokeWidth="semibold">
+      </app-icon>
+
       Agendar Visita Técnica Gratuita
+
     </a>
+
   </div>
 
 </section>

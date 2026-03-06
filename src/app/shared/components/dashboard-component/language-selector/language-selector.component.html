@@ -1,16 +1,32 @@
 <div class="language-selector">
-  <button class="language-trigger" (click)="toggle()">
-    {{ currentLabel }}
+
+  <button class="language-btn" (click)="toggleDropdown()">
+    <span class="flag">{{ currentLang?.flag }}</span>
+    <span class="lang-text">{{ currentLang?.code | uppercase }}</span>
+
+    <svg viewBox="0 0 24 24">
+      <path
+        d="M6 9L12 15L18 9"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
   </button>
 
-  <div class="language-dropdown" *ngIf="open">
+  <div class="language-dropdown" *ngIf="isOpen">
+
     <button
+      *ngFor="let lang of languages"
       class="language-option"
-      *ngFor="let opt of options"
-      (click)="select(opt.code)"
+      [class.active]="lang.code === langService.currentLang"
+      (click)="changeLang(lang.code)"
     >
-      <span class="country">{{ opt.country }}</span>
-      <span class="label">{{ opt.label }}</span>
+      <span class="flag">{{ lang.flag }}</span>
+      <span>{{ lang.label }}</span>
     </button>
+
   </div>
+
 </div>

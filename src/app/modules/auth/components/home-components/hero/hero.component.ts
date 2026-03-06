@@ -1,6 +1,7 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { ButtonComponent } from 'src/app/shared/components/dashboard-component/button/button.component';
+import { AnimationService } from './animations.service';
 
 @Component({
   selector: 'app-hero',
@@ -12,11 +13,15 @@ import { ButtonComponent } from 'src/app/shared/components/dashboard-component/b
   ],
   encapsulation: ViewEncapsulation.None // ⬅️ CLAVE
 })
-export class HeroComponent implements OnInit {
+export class HeroComponent implements AfterViewInit {
 
-  constructor() { }
+  constructor(private animationService: AnimationService) { }
 
-  ngOnInit() {
+   ngAfterViewInit(): void {
+
+    // Inicializa animaciones scroll
+    this.animationService.initScrollAnimations();
+
   }
 
 }

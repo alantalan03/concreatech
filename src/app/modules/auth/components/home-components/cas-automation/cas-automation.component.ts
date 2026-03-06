@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
+import { IconComponent } from 'src/app/shared/components/dashboard-component/icon/icon.component';
 
 interface CasStep {
   number: string;
@@ -10,8 +11,7 @@ interface CasStep {
 
 @Component({
   selector: 'app-cas-automation',
-  standalone: true,
-  imports: [CommonModule],
+  imports:[CommonModule, IconComponent],
   templateUrl: './cas-automation.component.html',
   styleUrls: ['./cas-automation.component.scss']
 })
@@ -74,4 +74,5 @@ export class CasAutomationComponent {
       ]
     }
   ];
+
 }

@@ -1,38 +1,48 @@
 //
-// ?                            PRIMITIVES
+// ======================================================
+// PRIMITIVES
+// Raw design values (colors, scales, numeric values)
+// ======================================================
 //
-// ?                            Primitives
-//
-// * -------------------------- Grey ----------------------------------
-$gray-25	: #FCFCFD ;
-$gray-50	: #F9FAFB;
-$gray-100	: #F2F4F7;
-$gray-200	: #EAECF0;
-$gray-300	: #D0D5DD;
-$gray-400	: #98A2B3;
-$gray-500	: #667085;
-$gray-600	: #475467;
-$gray-700	: #344054;
-$gray-800	: #182230;
-$gray-900	: #101828;
-$gray-950	: #0C111D ;
-/* -------------------------- Brand --------------------------------- */
-// Brand – ConcreaTech
-$brand-25   : #F1FBF7;
-$brand-50   : #E6F7F0;
-$brand-100  : #C8EFE0;
-$brand-200  : #A4E4CC;
-$brand-300  : #6FD5AE;
-$brand-400  : #3AC495;
-$brand-500  : #10B981; // 🔑 COLOR PRINCIPAL
-$brand-600  : #0E9A6C;
-$brand-700  : #0B7654;
-$brand-800  : #08523B;
-$brand-900  : #053628;
-$brand-950  : #031F17;
+
+/* ======================================================
+   GRAY SCALE
+====================================================== */
+
+$gray-25  : #FCFCFD;
+$gray-50  : #F9FAFB;
+$gray-100 : #F2F4F7;
+$gray-200 : #EAECF0;
+$gray-300 : #D0D5DD;
+$gray-400 : #98A2B3;
+$gray-500 : #667085;
+$gray-600 : #475467;
+$gray-700 : #344054;
+$gray-800 : #182230;
+$gray-900 : #101828;
+$gray-950 : #0C111D;
+
+
+/* ======================================================
+   BRAND – ConcreaTech
+====================================================== */
+
+$brand-25  : #F1FBF7;
+$brand-50  : #E6F7F0;
+$brand-100 : #C8EFE0;
+$brand-200 : #A4E4CC;
+$brand-300 : #6FD5AE;
+$brand-400 : #3AC495;
+$brand-500 : #10B981; // PRIMARY BRAND
+$brand-600 : #0E9A6C;
+$brand-700 : #0B7654;
+$brand-800 : #08523B;
+$brand-900 : #053628;
+$brand-950 : #031F17;
+
+
 /* ======================================================
    PRIMARY – ConcreaTech Blue
-   Base: #0D3B66
 ====================================================== */
 
 $primary-25  : #F2F6FB;
@@ -41,279 +51,182 @@ $primary-100 : #C9DAEC;
 $primary-200 : #A8C3DF;
 $primary-300 : #7EA4CB;
 $primary-400 : #4F83B6;
-$primary-500 : #0D3B66; // 🔑 COLOR PRINCIPAL
+$primary-500 : #0D3B66; // PRIMARY
 $primary-600 : #0B3257;
 $primary-700 : #092949;
 $primary-800 : #071F3A;
 $primary-900 : #05162C;
 $primary-950 : #030D1A;
-// * -------------------------- Success ---------------------------------
-$success-25   : #ECFDF3; // fondo ultra suave
-$success-50   : #D1FAE5;
-$success-100  : #A7F3D0;
-$success-200  : #6EE7B7;
-$success-300  : #34D399;
-$success-400  : #22C55E;
-$success-500  : #1CC95C; // 🎯 color principal
-$success-600  : #16A34A;
-$success-700  : #15803D;
-$success-800  : #166534;
-$success-900  : #14532D;
-$success-950  : #052E16;
-/* -------------------------- Info --------------------------------- */
-$info-25   : #F2FBFF;
-$info-50   : #E4F6FE;
-$info-100  : #C6EBFD;
-$info-200  : #A7E0FC;
-$info-300  : #7ED4FC; // principal
-$info-400  : #4FC5F6;
-$info-500  : #22AEEB;
-$info-600  : #178CC2;
-$info-700  : #116A95;
-$info-800  : #0B4867;
-$info-900  : #062D40;
-$info-950  : #041C2A;
-// * -------------------------- Danger --------------------------------
-$danger-25	: #FFFBFA;
-$danger-50	: #FEF3F2;
-$danger-100	: #FEE4E2;
-$danger-200	: #FECDCA;
-$danger-300	: #FDA29B;
-$danger-400	: #F97066;
-$danger-500	: #F04438;
-$danger-600	: #D92D20;
-$danger-700	: #B42318;
-$danger-800	: #912018;
-$danger-900	: #7A1A1A;
-$danger-950	: #55160C;
-// * -------------------------- Warning -------------------------------
-$warning-25	: #FFFCF5;
-$warning-50	: #FFFAEB;
-$warning-100: #FEF0C7;
-$warning-200: #FEDF89;
-$warning-300: #FEC84B;
-$warning-400: #FDB022;
-$warning-500: #F79009;
-$warning-600: #DC6803;
-$warning-700: #B54708;
-$warning-800: #93370D;
-$warning-900: #7A2E0E;
-$warning-950: #4E1D09;
-//
-// ?                            Utility
-//
-// * -------------------------- Silver --------------------------------
-$silver-25 : #FCFCFC;
-$silver-50 : #FAFAFA;
-$silver-100: #F5F5F5;
-$silver-200: #E5E5E5;
-$silver-300: #D6D6D6;
-$silver-400: #A3A3A3;
-$silver-500: #737373;
-$silver-600: #525252;
-$silver-700: #424242;
-$silver-800: #333333;
-$silver-900: #292929;
-$silver-950: #141414;
-// * -------------------------- Green ---------------------------------
-$green-25 : #FAFEF5;
-$green-50 : #F3FEE7;
-$green-100: #E3FBCC;
-$green-200: #D0F8AB;
-$green-300: #A6EF67;
-$green-400: #85E13A;
-$green-500: #66C61C;
-$green-600: #4CA30D;
-$green-700: #3B7C0F;
-$green-800: #326212;
-$green-900: #2B5314;
-$green-950: #15290A;
-// * -------------------------- Esmerald ------------------------------
-$esmerald-25 : #F6FEF9;
-$esmerald-50 : #EDFCF2;
-$esmerald-100: #D3F8DF;
-$esmerald-200: #AAF0C4;
-$esmerald-300: #73E2A3;
-$esmerald-400: #3CCB7F;
-$esmerald-500: #16B364;
-$esmerald-600: #099250;
-$esmerald-700: #087443;
-$esmerald-800: #095C37;
-$esmerald-900: #084C2E;
-$esmerald-950: #052E1C;
-// * -------------------------- Blue ----------------------------------
-$blue-25   : #EEF4FF; // fondo ultra suave
-$blue-50   : #E0EAFF;
-$blue-100  : #C7D7FE;
-$blue-200  : #A5BEFD;
-$blue-300  : #7CA0FB;
-$blue-400  : #4F7FF8;
-$blue-500  : #2A6DF4; // 🎯 color principal
-$blue-600  : #1E56D8;
-$blue-700  : #1A46B8;
-$blue-800  : #163A97;
-$blue-900  : #112D78;
-$blue-950  : #0B1C4F;
-// * -------------------------- Indigo --------------------------------
-$indigo-25 : #F5F8FF;
-$indigo-50 : #EEF4FF;
-$indigo-100: #E0EAFF;
-$indigo-200: #C7D7FE;
-$indigo-300: #A4BCFD;
-$indigo-400: #8098F9;
-$indigo-500: #6172F3;
-$indigo-600: #444CE7;
-$indigo-700: #3538CD;
-$indigo-800: #2D31A6;
-$indigo-900: #2D3282;
-$indigo-950: #1F235B;
-// * -------------------------- Purple --------------------------------
-$purple-25 : #FAFAFF;
-$purple-50 : #F4F3FF;
-$purple-100: #EBE9FE;
-$purple-200: #D9D6FE;
-$purple-300: #BDB4FE;
-$purple-400: #98A2B3;
-$purple-500: #667085;
-$purple-600: #475467;
-$purple-700: #5925DC;
-$purple-800: #4A1FB8;
-$purple-900: #3E1C96;
-$purple-950: #27115F;
-// * -------------------------- Fuschia -------------------------------
-$fuschia-25: #FEFAFF;
-$fuschia-50: #FDF4FF;
-$fuschia-100: #FBE8FF;
-$fuschia-200: #F6D0FE;
-$fuschia-300: #EEAAFD;
-$fuschia-400: #E478FA;
-$fuschia-500: #D444F1;
-$fuschia-600: #BA24D5;
-$fuschia-700: #9F1AB1;
-$fuschia-800: #821890;
-$fuschia-900: #6F1877;
-$fuschia-950: #47104C;
-// * -------------------------- Yellow --------------------------------
-$yellow-25 : #FEFDF0;
-$yellow-50 : #FEFBE8;
-$yellow-100: #FEF7C3;
-$yellow-200: #FEEE95;
-$yellow-300: #FDE272;
-$yellow-400: #FAC515;
-$yellow-500: #EAAA08;
-$yellow-600: #CA8504;
-$yellow-700: #A15C07;
-$yellow-800: #854A0E;
-$yellow-900: #713B12;
-$yellow-950: #542C0D;
-//
-// ?                            Utility
-//
-// * -------------------------- Silver --------------------------------
-$opacity-silver-25: rgba(41, 41, 41, 0.03);
-$opacity-silver-50: rgba(41, 41, 41, 0.05);
-$opacity-silver-100: rgba(41, 41, 41, 0.1);
-$opacity-silver-200: rgba(41, 41, 41, 0.2) ;
-$opacity-silver-300: rgba(41, 41, 41, 0.3);
-$opacity-silver-400: rgba(41, 41, 41, 0.4);
-$opacity-silver-500: rgba(41, 41, 41, 0.5);
-$opacity-silver-600: rgba(41, 41, 41, 0.6);
-$opacity-silver-700: rgba(41, 41, 41, 0.7);
-$opacity-silver-800: rgba(41, 41, 41, 0.8);
-$opacity-silver-900: rgba(41, 41, 41, 0.9);
-$opacity-silver-950: rgba(41, 41, 41, 0.95);
-// * -------------------------- Brand --------------------------------
-$opacity-brand-25 : rgba(67, 97, 130, 0.03);
-$opacity-brand-50 : rgba(67, 97, 130, 0.05);
-$opacity-brand-100: rgba(67, 97, 130, 0.1);
-$opacity-brand-200: rgba(67, 97, 130, 0.2);
-$opacity-brand-300: rgba(67, 97, 130, 0.3);
-$opacity-brand-400: rgba(67, 97, 130, 0.4);
-$opacity-brand-500: rgba(67, 97, 130, 0.5);
-$opacity-brand-600: rgba(67, 97, 130, 0.6);
-$opacity-brand-700: rgba(67, 97, 130, 0.7);
-$opacity-brand-800: rgba(67, 97, 130, 0.8);
-$opacity-brand-900: rgba(67, 97, 130, 0.9);
-$opacity-brand-950: rgba(67, 97, 130, 0.95);
-// * -------------------------- Success --------------------------------
-$opacity-success-25: rgba(7, 148, 85, 0.03);
-$opacity-success-50: rgba(7, 148, 85, 0.05);
-$opacity-success-100: rgba(7, 148, 85, 0.1);
-$opacity-success-200: rgba(7, 148, 85, 0.2);
-$opacity-success-300: rgba(7, 148, 85, 0.3);
-$opacity-success-400: rgba(7, 148, 85, 0.4);
-$opacity-success-500: rgba(7, 148, 85, 0.5);
-$opacity-success-600: rgba(7, 148, 85, 0.6);
-$opacity-success-700: rgba(7, 148, 85, 0.7);
-$opacity-success-800: rgba(7, 148, 85, 0.8);
-$opacity-success-900: rgba(7, 148, 85, 0.9);
-$opacity-success-950: rgba(7, 148, 85, 0.95);
-// * -------------------------- Danger --------------------------------
-$opacity-danger-25 : rgba(217, 45, 32, 0.03);
-$opacity-danger-50 : rgba(217, 45, 32, 0.05);
-$opacity-danger-100: rgba(217, 45, 32, 0.1);
-$opacity-danger-200: rgba(217, 45, 32, 0.2);
-$opacity-danger-300: rgba(217, 45, 32, 0.3);
-$opacity-danger-400: rgba(217, 45, 32, 0.4);
-$opacity-danger-500: rgba(217, 45, 32, 0.5);
-$opacity-danger-600: rgba(217, 45, 32, 0.6);
-$opacity-danger-700: rgba(217, 45, 32, 0.7);
-$opacity-danger-800: rgba(217, 45, 32, 0.8);
-$opacity-danger-900: rgba(217, 45, 32, 0.9);
-$opacity-danger-950: rgba(217, 45, 32, 0.95);
-// * -------------------------- Warning --------------------------------
-$opacity-warning-25 : rgba(220, 104, 3, 0.03);
-$opacity-warning-50 : rgba(220, 104, 3, 0.05);
-$opacity-warning-100: rgba(220, 104, 3, 0.1);
-$opacity-warning-200: rgba(220, 104, 3, 0.2);
-$opacity-warning-300: rgba(220, 104, 3, 0.3);
-$opacity-warning-400: rgba(220, 104, 3, 0.4);
-$opacity-warning-500: rgba(220, 104, 3, 0.5);
-$opacity-warning-600: rgba(220, 104, 3, 0.6);
-$opacity-warning-700: rgba(220, 104, 3, 0.7);
-$opacity-warning-800: rgba(220, 104, 3, 0.8);
-$opacity-warning-900: rgba(220, 104, 3, 0.9);
-$opacity-warning-950: rgba(220, 104, 3, 0.95                          );
-// * -------------------------- Info --------------------------------
-$opacity-info-25: rgba(21, 112, 239, 0.03);
-$opacity-info-50: rgba(21, 112, 239, 0.05);
-$opacity-info-100: rgba(21, 112, 239, 0.1);
-$opacity-info-200: rgba(21, 112, 239, 0.2);
-$opacity-info-300: rgba(21, 112, 239, 0.3);
-$opacity-info-400: rgba(21, 112, 239, 0.4);
-$opacity-info-500: rgba(21, 112, 239, 0.5);
-$opacity-info-600: rgba(21, 112, 239, 0.6);
-$opacity-info-700: rgba(21, 112, 239, 0.7);
-$opacity-info-800: rgba(21, 112, 239, 0.8);
-$opacity-info-900: rgba(21, 112, 239, 0.9);
-$opacity-info-950: rgba(21, 112, 239, 0.95);
-//
-// ?                            Numeric Values
-//
-$auxunit-1: 0.0625rem;
-$auxunit-2: 0.0781rem;
-$auxunit-3: 0.0938rem;
-$auxunit-4: 0.1094rem;
-$auxunit-5: 0.125rem;
-$baseunit-1: 0;
-$baseunit-2: 0.125rem;
-$baseunit-3: 0.25rem;
-$baseunit-4: 0.5rem;
-$baseunit-5: 0.75rem;
-$baseunit-6: 1rem;
-$baseunit-7: 1.25rem;
-$baseunit-8: 1.5rem;
-$baseunit-9: 1.75rem;
-$baseunit-10: 2rem;
-$baseunit-11: 2.5rem;
-$baseunit-12: 2.75rem;
-$baseunit-13: 3rem;
-$baseunit-14: 3.5rem;
-$baseunit-15: 4rem;
-$baseunit-16: 4.5rem;
-$baseunit-17: 5rem;
-$baseunit-18: 5.5rem;
-$baseunit-19: 6rem;
-$baseunit-20: 6.5rem;
-$baseunit-21: 7.5rem;
-$baseunit-22: 10rem;
+
+
+/* ======================================================
+   SUCCESS
+====================================================== */
+
+$success-25  : #ECFDF3;
+$success-50  : #D1FAE5;
+$success-100 : #A7F3D0;
+$success-200 : #6EE7B7;
+$success-300 : #34D399;
+$success-400 : #22C55E;
+$success-500 : #1CC95C;
+$success-600 : #16A34A;
+$success-700 : #15803D;
+$success-800 : #166534;
+$success-900 : #14532D;
+$success-950 : #052E16;
+
+
+/* ======================================================
+   INFO
+====================================================== */
+
+$info-25  : #F2FBFF;
+$info-50  : #E4F6FE;
+$info-100 : #C6EBFD;
+$info-200 : #A7E0FC;
+$info-300 : #7ED4FC;
+$info-400 : #4FC5F6;
+$info-500 : #22AEEB;
+$info-600 : #178CC2;
+$info-700 : #116A95;
+$info-800 : #0B4867;
+$info-900 : #062D40;
+$info-950 : #041C2A;
+
+$blue-25  : #EEF4FF;
+$blue-50  : #E0EAFF;
+$blue-100 : #C7D7FE;
+$blue-200 : #A5BEFD;
+$blue-300 : #7CA0FB;
+$blue-400 : #4F7FF8;
+$blue-500 : #2A6DF4;
+$blue-600 : #1E56D8;
+$blue-700 : #1A46B8;
+$blue-800 : #163A97;
+$blue-900 : #112D78;
+$blue-950 : #0B1C4F;
+
+
+/* ======================================================
+   DANGER
+====================================================== */
+
+$danger-25  : #FFFBFA;
+$danger-50  : #FEF3F2;
+$danger-100 : #FEE4E2;
+$danger-200 : #FECDCA;
+$danger-300 : #FDA29B;
+$danger-400 : #F97066;
+$danger-500 : #F04438;
+$danger-600 : #D92D20;
+$danger-700 : #B42318;
+$danger-800 : #912018;
+$danger-900 : #7A1A1A;
+$danger-950 : #55160C;
+
+
+/* ======================================================
+   WARNING
+====================================================== */
+
+$warning-25  : #FFFCF5;
+$warning-50  : #FFFAEB;
+$warning-100 : #FEF0C7;
+$warning-200 : #FEDF89;
+$warning-300 : #FEC84B;
+$warning-400 : #FDB022;
+$warning-500 : #F79009;
+$warning-600 : #DC6803;
+$warning-700 : #B54708;
+$warning-800 : #93370D;
+$warning-900 : #7A2E0E;
+$warning-950 : #4E1D09;
+
+
+/* ======================================================
+   NEUTRAL UTILITY SCALE
+====================================================== */
+
+$silver-25  : #FCFCFC;
+$silver-50  : #FAFAFA;
+$silver-100 : #F5F5F5;
+$silver-200 : #E5E5E5;
+$silver-300 : #D6D6D6;
+$silver-400 : #A3A3A3;
+$silver-500 : #737373;
+$silver-600 : #525252;
+$silver-700 : #424242;
+$silver-800 : #333333;
+$silver-900 : #292929;
+$silver-950 : #141414;
+
+
+/* ======================================================
+   EXTRA COLOR SCALES
+====================================================== */
+
+$green-500   : #66C61C;
+$emerald-500 : #16B364;
+$blue-500    : #2A6DF4;
+$indigo-500  : #6172F3;
+$purple-500  : #7F56D9;
+$fuchsia-500 : #D444F1;
+$yellow-500  : #EAAA08;
+
+
+/* ======================================================
+   OPACITY TOKENS
+====================================================== */
+
+$opacity-25  : 0.03;
+$opacity-50  : 0.05;
+$opacity-100 : 0.1;
+$opacity-200 : 0.2;
+$opacity-300 : 0.3;
+$opacity-400 : 0.4;
+$opacity-500 : 0.5;
+$opacity-600 : 0.6;
+$opacity-700 : 0.7;
+$opacity-800 : 0.8;
+$opacity-900 : 0.9;
+$opacity-950 : 0.95;
+
+
+/* ======================================================
+   NUMERIC SCALE
+====================================================== */
+
+$auxunit-1 : 0.0625rem;
+$auxunit-2 : 0.0781rem;
+$auxunit-3 : 0.0938rem;
+$auxunit-4 : 0.1094rem;
+$auxunit-5 : 0.125rem;
+
+
+/* ======================================================
+   SPACING SCALE
+====================================================== */
+
+$baseunit-1  : 0;
+$baseunit-2  : 0.125rem;
+$baseunit-3  : 0.25rem;
+$baseunit-4  : 0.5rem;
+$baseunit-5  : 0.75rem;
+$baseunit-6  : 1rem;
+$baseunit-7  : 1.25rem;
+$baseunit-8  : 1.5rem;
+$baseunit-9  : 1.75rem;
+$baseunit-10 : 2rem;
+$baseunit-11 : 2.5rem;
+$baseunit-12 : 2.75rem;
+$baseunit-13 : 3rem;
+$baseunit-14 : 3.5rem;
+$baseunit-15 : 4rem;
+$baseunit-16 : 4.5rem;
+$baseunit-17 : 5rem;
+$baseunit-18 : 5.5rem;
+$baseunit-19 : 6rem;
+$baseunit-20 : 6.5rem;
+$baseunit-21 : 7.5rem;
+$baseunit-22 : 10rem;

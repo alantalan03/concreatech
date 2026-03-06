@@ -1,119 +1,88 @@
 .stats {
-  width: 100%;
-  background: #fff;
-  padding: 3.5rem 1.5rem;
+  background: #ffffff;
+  padding: 32px 16px;
+  border-top: 1px solid rgba(13, 59, 102, 0.1);
+  border-bottom: 1px solid rgba(13, 59, 102, 0.1);
+  position: relative;
+  overflow: hidden;
 }
+
+/* ========================= */
+/* CONTAINER */
+/* ========================= */
 
 .stats-container {
-  max-width: 1280px;
+  max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2.5rem;
+  grid-template-columns: 1fr;
+  gap: 24px;
 }
 
-/* ===============================
-   Item base
-================================ */
+/* ========================= */
+/* STAT ITEM */
+/* ========================= */
+
 .stat-item {
+  text-align: left;
+  padding-left: 24px;
+  border-left: 3px solid transparent;
+  background: transparent;
+  transition: all 0.4s ease;
   position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  padding-left: 1.25rem;
-  cursor: default;
-  transition: all 0.25s ease;
 }
 
-/* Línea izquierda (oculta por defecto) */
-.stat-item::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0.25rem;
-  width: 3px;
-  height: 0%;
-  background: var(--color-fg-brand);
-  border-radius: 2px;
-  transition: height 0.3s ease;
-}
-
-/* Número */
-.stat-number {
-  font-family: 'Sora', sans-serif;
-  font-size: clamp(2.5rem, 4vw, 3.2rem);
-  font-weight: 700;
-  line-height: 1;
-  color: var(--color-fg-primary);
-  transition: color 0.25s ease;
-}
-
-/* Texto */
-.stat-label {
-  font-size: 0.95rem;
-  color: var(--color-fg-secondary);
-  line-height: 1.5;
-  max-width: 220px;
-  transition: color 0.25s ease;
-}
-
-/* ===============================
-   Hover = seleccionado
-================================ */
 .stat-item:hover {
-  .stat-number {
-    color: var(--color-fg-brand);
-  }
-
-  .stat-label {
-    color: var(--color-fg-primary);
-    font-weight: 500;
-  }
-
-  &::before {
-    height: 100%;
-  }
+  transform: translateX(8px);
+  border-left-color: #0d3b66;
 }
 
-/* ===============================
-   Highlight inicial (opcional)
-================================ */
-.stat-item--highlight {
-  .stat-number {
-    color: var(--color-fg-brand);
-  }
+/* ========================= */
+/* NUMBER */
+/* ========================= */
 
-  .stat-label {
-    color: var(--color-fg-primary);
-    font-weight: 500;
-  }
-
-  &::before {
-    height: 100%;
-  }
+.stat-number {
+  font-size: 40px;
+  font-weight: 700;
+  color: #0d3b66;
+  line-height: 1;
+  margin-bottom: 8px;
 }
 
-/* ===============================
-   Responsive
-================================ */
-@media (max-width: 1024px) {
+/* ========================= */
+/* LABEL */
+/* ========================= */
+
+.stat-label {
+  font-size: 16px;
+  color: #6b7280;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
+@media (min-width: 640px) {
   .stats-container {
     grid-template-columns: repeat(2, 1fr);
-    row-gap: 3rem;
   }
 }
 
-@media (max-width: 640px) {
+@media (min-width: 768px) {
   .stats {
-    padding: 2.5rem 1.25rem;
+    padding: 40px 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .stats {
+    padding: 48px 32px;
   }
 
   .stats-container {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
-  .stat-label {
-    max-width: none;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
   }
 }

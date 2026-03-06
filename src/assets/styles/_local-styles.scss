@@ -1,90 +1,153 @@
-* {
-    //
-    // ?                            Local Styles
-    //
-    // * -------------------------- Text Styles -------------------------------------
-    --font--primary: 'Sora', sans-serif;
-    --font--secondary: 'Sora', sans-serif;
-    --font-code: 'Space Mono', monospace;
+:root {
 
-    // * -------------------------- Big Headlines --------------------
-    --big-headlines: 'Sora', sans-serif;
+  /* ======================================================
+     FONTS
+  ====================================================== */
 
-    --font-bh1: 80px;
-    --font-lh-bh1: 88px;
+  --font--primary: 'Sora', sans-serif;
+  --font--secondary: 'Sora', sans-serif;
+  --font-code: 'Space Mono', monospace;
 
-    --font-bh2: 64px;
-    --font-lh-bh2: 68px;
 
-    --font-bh3: 48px;
-    --font-lh-bh3: 52px;
+  /* ======================================================
+     BIG HEADLINES
+  ====================================================== */
 
-    --font-bh4: 36px;
-    --font-lh-bh4: 44px;
+  --font-bh1: 80px;
+  --font-lh-bh1: 88px;
 
-    --font-bh5: 34px;
-    --font-lh-bh5: 42px;
+  --font-bh2: 64px;
+  --font-lh-bh2: 72px;
 
-    --font-bh6: 30px;
-    --font-lh-bh6: 34px;
+  --font-bh3: 48px;
+  --font-lh-bh3: 56px;
 
-    --font-spacing-bh: -1%;
+  --font-bh4: 36px;
+  --font-lh-bh4: 44px;
 
-    // * -------------------------- Headlines --------------------------
-    --headlines: 'Sora', sans-serif;
+  --font-bh5: 32px;
+  --font-lh-bh5: 40px;
 
-    --font-h1: 24px;
-    --font-lh-h1: 28px;
+  --font-bh6: 28px;
+  --font-lh-bh6: 36px;
 
-    --font-h2: 22px;
-    --font-lh-h2: 26px;
+  --font-spacing-bh: -0.02em;
 
-    --font-h3: 20px;
-    --font-lh-h3: 24px;
 
-    --font-h4: 18px;
-    --font-lh-h4: 22px; // 👈 corregido (tenía 22ppx)
+  /* ======================================================
+     HEADLINES
+  ====================================================== */
 
-    --font-spacing-h: -0.8%;
+  --font-h1: 24px;
+  --font-lh-h1: 32px;
 
-    // * -------------------------- Body -----------------------------
-    --body: 'Sora', sans-serif;
+  --font-h2: 22px;
+  --font-lh-h2: 30px;
 
-    --font-b1: 16px;
-    --font-lh-b1: 24px;
+  --font-h3: 20px;
+  --font-lh-h3: 28px;
 
-    --font-b2: 14px;
-    --font-lh-b2: 22px;
+  --font-h4: 18px;
+  --font-lh-h4: 26px;
 
-    --font-spacing-b: -0.6%;
+  --font-spacing-h: -0.01em;
 
-    // * -------------------------- Captions -----------------------------
-    --captions: 'Sora', sans-serif;
 
-    --font-c1: 12px;
-    --font-lh-c1: 20px;
+  /* ======================================================
+     BODY TEXT
+  ====================================================== */
 
-    --font-c2: 10px;
-    --font-lh-c2: 18px;
+  --font-b1: 16px;
+  --font-lh-b1: 24px;
 
-    --font-spacing-c: -0.4%;
+  --font-b2: 14px;
+  --font-lh-b2: 22px;
 
-    //
-    // ?                            Helpers
-    //
-    // * -------------------------- Containers --------------------------
-    --dashboard--width: 82.45%;
-    --sidebar--width: 18rem;
-    --auth__form--width: 36rem;
+  --font-spacing-b: 0;
 
-    // * -------------------------- Transitions ---------------------------------------------------
-    --transition--bg-color: background-color 0.2s ease-in-out;
 
-    // * -------------------------- Font Weights -----------------------
-    --black: 900;
-    --extrabold: 800;
-    --bold: 700;
-    --semibold: 600;
-    --medium: 500;
-    --regular: 400;
+  /* ======================================================
+     CAPTIONS
+  ====================================================== */
+
+  --font-c1: 12px;
+  --font-lh-c1: 20px;
+
+  --font-c2: 11px;
+  --font-lh-c2: 18px;
+
+  --font-spacing-c: 0;
+
+
+  /* ======================================================
+     FONT WEIGHTS
+  ====================================================== */
+
+  --black: 900;
+  --extrabold: 800;
+  --bold: 700;
+  --semibold: 600;
+  --medium: 500;
+  --regular: 400;
+
+
+  /* ======================================================
+     LAYOUT
+  ====================================================== */
+
+  --dashboard--width: 82.45%;
+  --sidebar--width: 18rem;
+  --auth__form--width: 36rem;
+
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+
+
+  /* ======================================================
+     SPACING SCALE
+  ====================================================== */
+
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-5: 1.5rem;
+  --spacing-6: 2rem;
+  --spacing-7: 3rem;
+  --spacing-8: 4rem;
+
+
+  /* ======================================================
+     RADIUS
+  ====================================================== */
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-pill: 999px;
+
+
+  /* ======================================================
+     ICON SIZES
+  ====================================================== */
+
+  --size-icon-xs: 12px;
+  --size-icon-sm: 16px;
+  --size-icon-md: 20px;
+  --size-icon-lg: 24px;
+
+
+  /* ======================================================
+     TRANSITIONS
+  ====================================================== */
+
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s ease;
+  --transition-slow: 0.4s ease;
+
+  --transition--bg-color: background-color 0.2s ease-in-out;
+
 }

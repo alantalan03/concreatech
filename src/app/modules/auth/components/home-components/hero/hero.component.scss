@@ -132,8 +132,8 @@
 
 .hero-visual-float {
     width: 450px;
-    height: 450px;
-    will-change: transform;
+  height: 450px;
+  animation: heroFloat 6s ease-in-out infinite;
 }
 
 /* ===============================

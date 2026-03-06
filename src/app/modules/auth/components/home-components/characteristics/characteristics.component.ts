@@ -6,7 +6,7 @@ import { IconComponent } from 'src/app/shared/components/dashboard-component/ico
 @Component({
   selector: 'app-characteristics',
   standalone:true,
-  imports: [CommonModule, TranslateModule,IconComponent],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './characteristics.component.html',
   styleUrls: ['./characteristics.component.scss'],
 })

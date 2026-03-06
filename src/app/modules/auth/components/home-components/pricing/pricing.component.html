@@ -1,59 +1,110 @@
 <section class="pricing" id="precios">
 
-  <div class="section-header">
-    <div class="section-tag">
-      {{ 'pricing.tag' | translate }}
-    </div>
+  <header class="section-header">
 
-    <div class="cos-badge">
-      ✔ {{ 'pricing.badge' | translate }}
+    <span class="section-tag">
+      Planes de Licenciamiento
+    </span>
+    <br>
+
+    <div class="cos-pricing-badge">
+
+
+      <span>COS - Control Operativo Software</span>
+
     </div>
 
     <h2 class="section-title">
-      {{ 'pricing.title' | translate }}
+      Sistematiza tu planta con COS
     </h2>
 
     <p class="section-subtitle">
-      {{ 'pricing.subtitle' | translate }}
+      Potencializa la eficiencia operativa con nuestras licencias modulares.
+      Elige el plan que se adapte a tu crecimiento.
     </p>
-  </div>
+
+  </header>
+
+
 
   <div class="pricing-grid">
 
-    <div
+    <article
       class="pricing-card"
       *ngFor="let plan of plans"
       [class.featured]="plan.featured"
     >
 
-      <div class="badge" *ngIf="plan.badge">
-        {{ plan.badge | translate }}
+      <div
+        class="pricing-badge"
+        *ngIf="plan.badge"
+        [style.background]="plan.badgeColor ? 'var(--secondary)' : ''"
+      >
+        {{plan.badge}}
       </div>
 
-      <h3 class="name">
-        {{ plan.name | translate }}
+      <h3 class="pricing-name">
+        {{plan.name}}
       </h3>
 
-      <div class="price">
-        {{ plan.price }}
+      <div class="pricing-price">
+        {{plan.price}}
       </div>
 
-      <div class="period">
-        {{ plan.period | translate }}
+      <div class="pricing-period">
+        {{plan.period}}
       </div>
 
-      <ul>
-        <li *ngFor="let f of plan.features">
-          ✔ {{ f | translate }}
+      <ul class="pricing-features">
+
+        <li *ngFor="let feature of plan.features">
+          {{feature}}
         </li>
+
       </ul>
 
-      <button class="btn">
-        {{ 'pricing.cta' | translate }}
+      <button
+        class="pricing-button"
+        (click)="startPlan(plan)"
+      >
+        Empezar ahora
       </button>
+
+    </article>
+
+  </div>
+
+
+
+  <!-- CTA SECTION -->
+
+  <section class="cta-section">
+
+    <div class="cta-content">
+
+      <h3 class="cta-title">
+        ¿Quieres una demo personalizada?
+      </h3>
+
+      <p class="cta-description">
+        Agenda una llamada con nuestro equipo y descubre cómo COS puede
+        optimizar la operación de tu planta de concreto.
+      </p>
+
+      <div class="cta-buttons">
+
+        <a
+          class="calendly-btn"
+          href="https://calendly.com/concreatech-mx/30min"
+          target="_blank"
+        >
+          Agendar Demo
+        </a>
+
+      </div>
 
     </div>
 
-  </div>
+  </section>
 
 </section>

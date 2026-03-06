@@ -1,173 +1,84 @@
-<nav class="navbar">
-	<div class="nav-container">
-		<!-- Logo -->
-		<div class="logo" routerLink="/">
-			<span class="logo-text"> Concrea<span>Tech</span> </span>
-		</div>
+<nav class="navbar" [class.scrolled]="isScrolled">
 
-		<!-- Desktop links -->
-		<div class="nav-links desktop-only">
-			<a
-				routerLink="/concreatech/home"
-				routerLinkActive="active"
-				[routerLinkActiveOptions]="{ exact: true }"
-			>
-				{{ 'NAV.HOME' | translate }}
-			</a>
+  <div class="nav-container">
 
-			<a routerLink="/concreatech/solutions" routerLinkActive="active">
-				{{ 'NAV.SOLUTIONS' | translate }}
-			</a>
+    <!-- LOGO -->
+    <div class="logo" (click)="scrollTo('inicio')">
+      <img src="assets/logos/logotipo.png" class="logo-image">
+    </div>
 
-			<a routerLink="/concreatech/benefits" routerLinkActive="active">
-				{{ 'NAV.BENEFITS' | translate }}
-			</a>
+    <!-- LINKS DESKTOP -->
+    <ul class="nav-links desktop-only" style="  margin-bottom: 0rem !important;">
 
-			<a routerLink="/concreatech/cas" routerLinkActive="active">
-				{{ 'NAV.CAS' | translate }}
-			</a>
+      <li
+        *ngFor="let item of navItems"
+        [class.active]="activeSection === item.id"
+        (click)="scrollTo(item.id)"
+      >
+        {{ item.label | translate }}
+      </li>
 
-			<a routerLink="/concreatech/cos" routerLinkActive="active">
-				{{ 'NAV.COS' | translate }}
-			</a>
+    </ul>
 
-			<a routerLink="/concreatech/licenses" routerLinkActive="active">
-				{{ 'NAV.LICENSES' | translate }}
-			</a>
+    <!-- ACTIONS -->
+    <div class="nav-actions">
 
-			<a routerLink="/concreatech/contact" routerLinkActive="active">
-				{{ 'NAV.CONTACT' | translate }}
-			</a>
-		</div>
+      
 
-		<!-- Actions -->
-		<div class="nav-actions">
-			<!-- Language -->
-			<!-- <div class="language-selector desktop-only">
-        <button class="language-btn" (click)="toggleLang()">
-          {{ langService.currentLang | uppercase }}
-        </button>
+      <a
+        href="https://cos.concreatech.com.mx/login"
+        class="login-button desktop-only"
+      >
+        {{ 'NAV.LOGIN' | translate }}
+      </a>
 
-        <div class="language-dropdown" *ngIf="langOpen">
-          <button (click)="changeLang('es')">🇲🇽 ES</button>
-          <button (click)="changeLang('en')">🇺🇸 EN</button>
-        </div>
-      </div> -->
-			<app-language-selector class="desktop-only"></app-language-selector>
+      <a
+        href="https://calendly.com/concreatech-mx/30min"
+        target="_blank"
+        class="cta-button desktop-only"
+      >
+        {{ 'NAV.DEMO' | translate }}
+      </a>
 
-			<!-- Login -->
+      <app-language-selector class="desktop-only"></app-language-selector>
 
-			<app-button
-				class="desktop-only"
-				buttonClass="btn-md-secondary-full"
-				[label]="'NAV.DEMO' | translate"
-				[showIcon]="false"
-				colorIcon="color-fg-primary-inverted"
-			>
-			</app-button>
+      <!-- MOBILE BUTTON -->
+      <div
+        class="menu-toggle mobile-only"
+        [class.open]="menuOpen"
+        (click)="toggleMenu()"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
 
-			<!-- CTA -->
+    </div>
 
-			<app-button
-				class="desktop-only"
-				buttonClass="btn-md-primary-full"
-				[label]="'NAV.DEMO' | translate"
-				[showIcon]="false"
-				colorIcon="color-fg-primary-inverted"
-			>
-			</app-button>
+  </div>
 
-			<!-- Hamburger -->
-			<button class="menu-toggle mobile-only" (click)="toggleMenu()">☰</button>
-		</div>
-	</div>
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" [class.open]="menuOpen">
 
-	<!-- Mobile Menu -->
-	<!-- Overlay -->
-	<div class="mobile-overlay" *ngIf="menuOpen" (click)="closeMenu()"></div>
+    <nav class="mobile-links">
 
-	<!-- Mobile Menu -->
-	<div class="mobile-menu" *ngIf="menuOpen">
-		<nav class="mobile-links">
-			<a
-				routerLink="/concreatech/home"
-				routerLinkActive="active"
-				(click)="closeMenu()"
-			>
-				{{ 'NAV.HOME' | translate }}
-			</a>
+      <a
+        *ngFor="let item of navItems"
+        (click)="scrollTo(item.id)"
+        [class.active]="activeSection === item.id"
+      >
+        {{ item.label | translate }}
+      </a>
 
-			<a
-				routerLink="/concreatech/solutions"
-				routerLinkActive="active"
-				(click)="closeMenu()"
-			>
-				{{ 'NAV.SOLUTIONS' | translate }}
-			</a>
+    </nav>
 
-			<a
-				routerLink="/concreatech/benefits"
-				routerLinkActive="active"
-				(click)="closeMenu()"
-			>
-				{{ 'NAV.BENEFITS' | translate }}
-			</a>
+    <div class="mobile-divider"></div>
 
-			<a
-				routerLink="/concreatech/cas"
-				routerLinkActive="active"
-				(click)="closeMenu()"
-			>
-				{{ 'NAV.CAS' | translate }}
-			</a>
+    <div class="mobile-lang">
+      <button (click)="changeLang('es')">🇲🇽 Español</button>
+      <button (click)="changeLang('en')">🇺🇸 English</button>
+    </div>
 
-			<a
-				routerLink="/concreatech/cos"
-				routerLinkActive="active"
-				(click)="closeMenu()"
-			>
-				{{ 'NAV.COS' | translate }}
-			</a>
+  </div>
 
-			<a
-				routerLink="/concreatech/licenses"
-				routerLinkActive="active"
-				(click)="closeMenu()"
-			>
-				{{ 'NAV.LICENSES' | translate }}
-			</a>
-
-			<a
-				routerLink="/concreatech/contact"
-				routerLinkActive="active"
-				(click)="closeMenu()"
-			>
-				{{ 'NAV.CONTACT' | translate }}
-			</a>
-		</nav>
-
-		<div class="mobile-divider"></div>
-
-		<!-- Language -->
-		<div class="mobile-lang">
-			<button (click)="changeLang('es')">🇲🇽 Español</button>
-			<button (click)="changeLang('en')">🇺🇸 English</button>
-		</div>
-
-		<div class="mobile-actions">
-			<app-button
-				buttonClass="btn-md-secondary-full"
-				[label]="'NAV.LOGIN' | translate"
-				[showIcon]="false"
-			>
-			</app-button>
-
-			<app-button
-				buttonClass="btn-md-primary-full"
-				[label]="'NAV.DEMO' | translate"
-				[showIcon]="false"
-			>
-			</app-button>
-		</div>
-	</div>
 </nav>

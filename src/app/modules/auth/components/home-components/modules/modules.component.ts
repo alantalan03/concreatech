@@ -1,94 +1,135 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TranslateModule } from '@ngx-translate/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { IconComponent } from 'src/app/shared/components/dashboard-component/icon/icon.component';
 
 interface ModuleItem {
   number: string;
   category: string;
   title: string;
   description: string;
+  image?: string;
   features: string[];
-  image: string;
 }
 
 @Component({
   selector: 'app-modules',
-  standalone: true,
-  imports: [CommonModule, TranslateModule],
+  imports:[CommonModule,IconComponent],
   templateUrl: './modules.component.html',
   styleUrls: ['./modules.component.scss']
 })
 export class ModulesComponent implements OnInit, OnDestroy {
 
   currentIndex = 0;
+
   intervalId: any;
 
   modules: ModuleItem[] = [
     {
       number: '01',
-      category: 'modules.dashboard.category',
-      title: 'modules.dashboard.title',
-      description: 'modules.dashboard.description',
+      category: 'Monitoreo',
+      title: 'Dashboard Operativo',
+      description:
+        'Visualiza el estado de tu planta en tiempo real. Monitorea producción, inventarios de materiales, volúmenes diarios y proyecciones mensuales desde un solo panel intuitivo.',
+      image: 'assets/modules/dashboard.png',
       features: [
-        'modules.dashboard.f1',
-        'modules.dashboard.f2',
-        'modules.dashboard.f3',
-        'modules.dashboard.f4'
-      ],
-      image: 'assets/dashboard.png'
+        'KPIs en tiempo real de producción',
+        'Control de inventarios por material',
+        'Gráficas de volumen acumulado y proyectado',
+        'Vista multi-planta consolidada'
+      ]
     },
+
     {
       number: '02',
-      category: 'modules.orders.category',
-      title: 'modules.orders.title',
-      description: 'modules.orders.description',
+      category: 'Gestión',
+      title: 'Generación de Remisiones',
+      description:
+        'Crea y gestiona pedidos de forma digital con seguimiento completo. Desde la captura inicial hasta la ubicación de entrega, cada detalle bajo control con integración directa al sistema CAS.',
+      image: 'assets/modules/remisiones.png',
       features: [
-        'modules.orders.f1',
-        'modules.orders.f2',
-        'modules.orders.f3',
-        'modules.orders.f4'
-      ],
-      image: 'assets/remisiones.png'
+        'Captura rápida de pedidos y clientes',
+        'Configuración técnica de mezclas',
+        'Geolocalización de obras en tiempo real',
+        'Control de temperatura y humedad del material'
+      ]
     },
+
     {
       number: '03',
-      category: 'modules.analytics.category',
-      title: 'modules.analytics.title',
-      description: 'modules.analytics.description',
+      category: 'Analytics',
+      title: 'Reportes y Analytics',
+      description:
+        'Sistema avanzado de reportes con filtros inteligentes. Genera reportes de producción, inventarios, clientes y análisis operativos con exportación a múltiples formatos.',
+      image: 'assets/modules/reportes.png',
       features: [
-        'modules.analytics.f1',
-        'modules.analytics.f2',
-        'modules.analytics.f3',
-        'modules.analytics.f4'
-      ],
-      image: 'assets/reportes.png'
+        'Reportes de producción por periodo',
+        'Control diario de inventarios de materiales',
+        'Análisis por cliente, proyecto y vendedor',
+        'Exportación a Excel y PDF'
+      ]
     }
   ];
 
+
+
   ngOnInit(): void {
-    this.autoPlay();
+    this.startAutoSlide();
   }
+
+
 
   ngOnDestroy(): void {
     clearInterval(this.intervalId);
   }
 
-  next(): void {
-    this.currentIndex = (this.currentIndex + 1) % this.modules.length;
-  }
 
-  prev(): void {
+
+  move(direction: number): void {
+
     this.currentIndex =
-      (this.currentIndex - 1 + this.modules.length) % this.modules.length;
+      (this.currentIndex + direction + this.modules.length) %
+      this.modules.length;
+
   }
 
-  goTo(i: number): void {
-    this.currentIndex = i;
+
+
+  goTo(index: number): void {
+    this.currentIndex = index;
   }
 
-  autoPlay(): void {
+
+
+  trackByIndex(index: number): number {
+    return index;
+  }
+
+
+
+  /* ==========================
+  AUTOPLAY
+  ========================== */
+
+  startAutoSlide(): void {
+
     this.intervalId = setInterval(() => {
-      this.next();
-    }, 7000);
+
+      this.move(1);
+
+    }, 6000);
+
   }
+
+
+
+  pauseAutoSlide(): void {
+    clearInterval(this.intervalId);
+  }
+
+
+
+  resumeAutoSlide(): void {
+    this.startAutoSlide();
+  }
+
 }

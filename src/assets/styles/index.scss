@@ -1,6 +1,14 @@
-@use './local-styles.scss';
-@use './variables-primitives.scss';
-@use './variables-tokens.scss';
-@use './classes.scss';
-@use './variables-light.scss';
-@use './variables-dark.scss';
+/* =====================================================
+   DESIGN SYSTEM ENTRY
+   ===================================================== */
+
+@forward './variables-primitives';
+@forward './variables-tokens';
+
+@forward './variables-light';
+@forward './variables-dark';
+
+@forward './local-styles';
+@forward './animations';
+
+@forward './classes';

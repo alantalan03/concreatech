@@ -1,75 +1,240 @@
 <section class="modules" id="modulos">
 
-  <div class="section-header">
-    <div class="section-tag">
-      {{ 'modules.tag' | translate }}
-    </div>
+  <!-- =============================
+  HEADER
+  ============================== -->
 
-    <div class="badge">
-      ✔ {{ 'modules.badge' | translate }}
+  <header class="section-header">
+
+    <span class="section-tag">
+      Módulos del Sistema
+    </span>
+    <br>
+
+    <div class="cos-pricing-badge">
+
+      <app-icon name="check-square" color="#FFFFFF" size="md" strokeWidth="semibold">
+      </app-icon>
+
+      <span>Módulos dentro de la plataforma COS</span>
+
     </div>
 
     <h2 class="section-title">
-      {{ 'modules.title' | translate }}
+      Funcionalidades por Licencia
     </h2>
 
     <p class="section-subtitle">
-      {{ 'modules.subtitle' | translate }}
+      Cada licencia desbloquea módulos específicos para digitalizar aspectos clave de tu operación
     </p>
-  </div>
 
-  <div class="carousel">
+  </header>
 
-    <div
-      class="slide"
-      *ngFor="let m of modules; let i = index"
-      [class.active]="i === currentIndex"
-    >
 
-      <div class="slide-content">
 
-        <div class="info">
-          <div class="module-badge">
-            <span>{{ m.number }}</span>
-            <small>{{ m.category | translate }}</small>
-          </div>
+  <!-- =============================
+  CAROUSEL
+  ============================== -->
 
-          <h3>{{ m.title | translate }}</h3>
+  <div class="carousel-wrapper">
 
-          <p class="description">
-            {{ m.description | translate }}
-          </p>
+    <!-- Decorative Background -->
 
-          <ul>
-            <li *ngFor="let f of m.features">
-              ✔ {{ f | translate }}
-            </li>
-          </ul>
-        </div>
+    <div class="carousel-decoration">
 
-        <div class="image">
-          <div class="image-frame">
-            <img [src]="m.image" alt="">
-          </div>
-        </div>
+      <svg class="deco-circle deco-1" viewBox="0 0 200 200">
+        <circle cx="100" cy="100" r="80" fill="none" stroke="currentColor" stroke-width="2" opacity="0.1"/>
+        <circle cx="100" cy="100" r="60" fill="none" stroke="currentColor" stroke-width="2" opacity="0.15"/>
+        <circle cx="100" cy="100" r="40" fill="none" stroke="currentColor" stroke-width="2" opacity="0.2"/>
+      </svg>
 
-      </div>
+      <svg class="deco-grid deco-2" viewBox="0 0 200 200">
+        <defs>
+          <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+            <path d="M20 0 L0 0 0 20" fill="none" stroke="currentColor" stroke-width="0.5"/>
+          </pattern>
+        </defs>
+        <rect width="200" height="200" fill="url(#grid)" opacity="0.3"/>
+      </svg>
+
+      <svg class="deco-dots deco-3" viewBox="0 0 200 200">
+        <circle cx="40" cy="40" r="3" fill="currentColor" opacity="0.4"/>
+        <circle cx="80" cy="60" r="2" fill="currentColor" opacity="0.3"/>
+        <circle cx="120" cy="40" r="3" fill="currentColor" opacity="0.5"/>
+        <circle cx="160" cy="70" r="2" fill="currentColor" opacity="0.3"/>
+        <circle cx="60" cy="120" r="3" fill="currentColor" opacity="0.4"/>
+        <circle cx="140" cy="140" r="2" fill="currentColor" opacity="0.3"/>
+      </svg>
+
+      <svg class="deco-line deco-4" viewBox="0 0 300 100">
+        <path d="M0 50 Q75 20 150 50 T300 50"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              opacity="0.2"/>
+      </svg>
 
     </div>
 
-    <!-- Nav -->
-    <button class="nav prev" (click)="prev()">‹</button>
-    <button class="nav next" (click)="next()">›</button>
 
-  </div>
 
-  <!-- Dots -->
-  <div class="dots">
-    <button
-      *ngFor="let m of modules; let i = index"
-      (click)="goTo(i)"
-      [class.active]="i === currentIndex"
-    ></button>
+    <!-- =============================
+    CAROUSEL CONTAINER
+    ============================== -->
+
+    <div class="carousel-container">
+
+      <div class="modules-carousel">
+
+        <article
+          class="module-slide"
+          *ngFor="let module of modules; let i = index; trackBy: trackByIndex"
+          [class.active]="i === currentIndex"
+        >
+
+          <div class="module-content">
+
+            <!-- MODULE INFO -->
+
+            <div class="module-info">
+
+              <div class="module-badge">
+
+                <span class="module-number">
+                  {{ module.number }}
+                </span>
+
+                <span class="module-category">
+                  {{ module.category }}
+                </span>
+
+              </div>
+
+
+              <h3 class="module-title">
+                {{ module.title }}
+              </h3>
+
+
+              <p class="module-description">
+                {{ module.description }}
+              </p>
+
+
+              <ul class="module-features">
+
+                <li *ngFor="let feature of module.features">
+
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M20 6L9 17L4 12"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+
+                  <span>
+                    {{ feature }}
+                  </span>
+
+                </li>
+
+              </ul>
+
+            </div>
+
+
+
+            <!-- MODULE IMAGE -->
+
+            <div class="module-image-wrapper">
+
+              <div class="image-frame">
+
+                <img
+                  *ngIf="module.image"
+                  [src]="module.image"
+                  [alt]="module.title"
+                  loading="lazy"
+                />
+
+                <div class="image-glow"></div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </article>
+
+      </div>
+
+
+
+      <!-- =============================
+      NAVIGATION BUTTONS
+      ============================== -->
+
+      <button
+        class="carousel-btn prev"
+        (click)="move(-1)"
+        aria-label="Slide anterior"
+      >
+
+        <svg viewBox="0 0 24 24">
+          <path
+            d="M15 18L9 12L15 6"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+
+      </button>
+
+
+      <button
+        class="carousel-btn next"
+        (click)="move(1)"
+        aria-label="Siguiente slide"
+      >
+
+        <svg viewBox="0 0 24 24">
+          <path
+            d="M9 18L15 12L9 6"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+
+      </button>
+
+    </div>
+
+
+
+    <!-- =============================
+    DOTS
+    ============================== -->
+
+    <div class="carousel-dots">
+
+      <button
+        class="dot"
+        *ngFor="let m of modules; let i = index"
+        [class.active]="i === currentIndex"
+        (click)="goTo(i)"
+        [attr.aria-label]="'Ir al módulo ' + (i + 1)"
+      ></button>
+
+    </div>
+
   </div>
 
 </section>

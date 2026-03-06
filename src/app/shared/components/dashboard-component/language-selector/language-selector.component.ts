@@ -1,52 +1,43 @@
 import { CommonModule } from '@angular/common';
-import { Component, HostListener } from '@angular/core';
+import { Component } from '@angular/core';
+import { AppLang } from 'src/app/core/models/lang.type';
 import { LanguageService } from 'src/app/core/services/translate/language.service';
 
-type LangOption = {
-  code: 'es' | 'en' | 'pt';
+interface LanguageOption {
+  code: AppLang;
   label: string;
-  country: string;
-};
+  flag: string;
+}
 
 @Component({
   selector: 'app-language-selector',
-  standalone: true,
-  imports: [CommonModule],
+  imports:[CommonModule],
   templateUrl: './language-selector.component.html',
-  styleUrls: ['./language-selector.component.scss'],
+  styleUrls: ['./language-selector.component.scss']
 })
 export class LanguageSelectorComponent {
-  open = false;
 
-  options: LangOption[] = [
-    { code: 'en', country: 'US', label: 'English' },
-    { code: 'es', country: 'ES', label: 'Español' },
-    { code: 'pt', country: 'BR', label: 'Português' },
+  isOpen = false;
+
+  languages: LanguageOption[] = [
+    { code: 'es', label: 'Español', flag: '🇲🇽' },
+    { code: 'en', label: 'English', flag: '🇺🇸' },
   ];
 
   constructor(public langService: LanguageService) {}
 
-  toggle() {
-    this.open = !this.open;
+  toggleDropdown() {
+    this.isOpen = !this.isOpen;
   }
 
-  select(lang: 'es' | 'en' | 'pt') {
-    this.langService.setLang(lang === 'pt' ? 'en' : lang); // si aún no soportas pt
-    this.open = false;
+  changeLang(lang: AppLang) {
+    this.langService.setLang(lang);
+    this.isOpen = false;
   }
 
-  get currentLabel() {
-    return this.langService.currentLang === 'es'
-      ? 'MX ES'
-      : 'US EN';
-  }
-
-  // 🔒 cerrar al click fuera
-  @HostListener('document:click', ['$event'])
-  onClickOutside(event: MouseEvent) {
-    const target = event.target as HTMLElement;
-    if (!target.closest('.language-selector')) {
-      this.open = false;
-    }
+  get currentLang() {
+    return this.languages.find(
+      l => l.code === this.langService.currentLang
+    );
   }
 }

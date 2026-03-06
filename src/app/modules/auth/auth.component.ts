@@ -11,7 +11,7 @@ import { environment } from 'src/environments/environment';
 	selector: 'app-auth',
 	imports: [RouterOutlet, CommonModule, NavbarComponent,FooterComponent],
 	templateUrl: './auth.component.html',
-	styleUrl: './auth.component.scss',
+	styleUrls: ['./auth.component.scss'],
 	standalone:true
 })
 export default class AuthComponent implements OnInit {

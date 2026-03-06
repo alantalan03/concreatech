@@ -1,48 +1,75 @@
 /* =====================================================
-   ANIMATIONS SYSTEM
-   ===================================================== */
+   ANIMATION TOKENS
+===================================================== */
 
-/* =====================
-   VARIABLES (TOKENS)
-   ===================== */
 :root {
-  /* Duraciones */
+
+  /* Durations */
+
   --anim-fast: 150ms;
   --anim-normal: 300ms;
   --anim-slow: 600ms;
 
   /* Easings */
-  --ease-in: cubic-bezier(0.4, 0, 1, 1);
-  --ease-out: cubic-bezier(0, 0, 0.2, 1);
-  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+
+  --ease-in: cubic-bezier(0.4,0,1,1);
+  --ease-out: cubic-bezier(0,0,0.2,1);
+  --ease-in-out: cubic-bezier(0.4,0,0.2,1);
+
 }
 
-/* =====================
+
+/* =====================================================
+   BASE PERFORMANCE
+===================================================== */
+
+.anim-gpu {
+  transform: translateZ(0);
+  will-change: transform, opacity;
+}
+
+
+/* =====================================================
    KEYFRAMES – BASIC
-   ===================== */
+===================================================== */
+
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from { opacity:0; }
+  to { opacity:1; }
 }
 
 @keyframes fadeOut {
-  from { opacity: 1; }
-  to { opacity: 0; }
+  from { opacity:1; }
+  to { opacity:0; }
 }
 
 @keyframes slideUp {
-  from { transform: translateY(20px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
+  from {
+    transform: translateY(20px);
+    opacity:0;
+  }
+  to {
+    transform: translateY(0);
+    opacity:1;
+  }
 }
 
 @keyframes slideDown {
-  from { transform: translateY(0); opacity: 1; }
-  to { transform: translateY(20px); opacity: 0; }
+  from {
+    transform: translateY(0);
+    opacity:1;
+  }
+  to {
+    transform: translateY(20px);
+    opacity:0;
+  }
 }
 
-/* =====================
+
+/* =====================================================
    ENTRY / EXIT
-   ===================== */
+===================================================== */
+
 .fade-in {
   animation: fadeIn var(--anim-normal) var(--ease-in-out) forwards;
 }
@@ -59,111 +86,160 @@
   animation: slideDown var(--anim-fast) var(--ease-in) forwards;
 }
 
-/* =====================
-   SCALE & FADE
-   ===================== */
+
+/* =====================================================
+   SCALE
+===================================================== */
+
 @keyframes scaleFadeIn {
+
   from {
-    opacity: 0;
-    transform: scale(0.96);
+    opacity:0;
+    transform:scale(.96);
   }
+
   to {
-    opacity: 1;
-    transform: scale(1);
+    opacity:1;
+    transform:scale(1);
   }
+
 }
 
 .scale-fade-in {
   animation: scaleFadeIn var(--anim-normal) var(--ease-out) forwards;
 }
 
+
 @keyframes scaleIn {
-  from { transform: scale(0.95); }
-  to { transform: scale(1); }
+
+  from { transform:scale(.95); }
+  to { transform:scale(1); }
+
 }
 
 .animate-scale-in {
   animation: scaleIn var(--anim-fast) var(--ease-out);
 }
 
-/* =====================
-   SLIDE COMBINED
-   ===================== */
+
+/* =====================================================
+   COMBINED MOTION
+===================================================== */
+
 @keyframes fadeSlideUp {
+
   from {
-    opacity: 0;
-    transform: translateY(12px);
+    opacity:0;
+    transform:translateY(12px);
   }
+
   to {
-    opacity: 1;
-    transform: translateY(0);
+    opacity:1;
+    transform:translateY(0);
   }
+
 }
 
 .fade-slide-up {
   animation: fadeSlideUp var(--anim-normal) var(--ease-out) forwards;
 }
 
+
 @keyframes slideInBottom {
+
   from {
-    opacity: 0;
-    transform: translateY(16px);
+    opacity:0;
+    transform:translateY(16px);
   }
+
   to {
-    opacity: 1;
-    transform: translateY(0);
+    opacity:1;
+    transform:translateY(0);
   }
+
 }
 
 .slide-in-bottom {
   animation: slideInBottom var(--anim-normal) var(--ease-out) forwards;
 }
 
-/* =====================
-   FEEDBACK – ERROR / SUCCESS
-   ===================== */
+
+/* =====================================================
+   FEEDBACK
+===================================================== */
+
 @keyframes shakeX {
-  0% { transform: translateX(0); }
-  25% { transform: translateX(-4px); }
-  50% { transform: translateX(4px); }
-  75% { transform: translateX(-4px); }
-  100% { transform: translateX(0); }
+
+  0% { transform:translateX(0); }
+
+  25% { transform:translateX(-4px); }
+
+  50% { transform:translateX(4px); }
+
+  75% { transform:translateX(-4px); }
+
+  100% { transform:translateX(0); }
+
 }
 
 .shake {
   animation: shakeX var(--anim-fast) var(--ease-in-out);
 }
 
+
 @keyframes shakeY {
-  0% { transform: translateY(0); }
-  25% { transform: translateY(-3px); }
-  50% { transform: translateY(3px); }
-  75% { transform: translateY(-3px); }
-  100% { transform: translateY(0); }
+
+  0% { transform:translateY(0); }
+
+  25% { transform:translateY(-3px); }
+
+  50% { transform:translateY(3px); }
+
+  75% { transform:translateY(-3px); }
+
+  100% { transform:translateY(0); }
+
 }
 
 .shake-y {
   animation: shakeY var(--anim-fast) var(--ease-in-out);
 }
 
+
 @keyframes popSuccess {
-  0% { transform: scale(0.9); opacity: 0; }
-  70% { transform: scale(1.05); }
-  100% { transform: scale(1); opacity: 1; }
+
+  0% {
+    transform:scale(.9);
+    opacity:0;
+  }
+
+  70% {
+    transform:scale(1.05);
+  }
+
+  100% {
+    transform:scale(1);
+    opacity:1;
+  }
+
 }
 
 .success-pop {
   animation: popSuccess var(--anim-fast) var(--ease-out);
 }
 
-/* =====================
-   MICRO-INTERACTIONS
-   ===================== */
+
+/* =====================================================
+   MICRO INTERACTIONS
+===================================================== */
+
 .interactive {
+
   transition:
     transform var(--anim-fast) var(--ease-out),
     box-shadow var(--anim-fast) var(--ease-out),
     opacity var(--anim-fast) var(--ease-out);
+
 }
 
 .interactive:hover {
@@ -171,20 +247,40 @@
 }
 
 .interactive:active {
-  transform: scale(0.98);
+  transform: scale(.98);
 }
 
-/* =====================
+
+/* =====================================================
    COLLAPSE / EXPAND
-   ===================== */
+===================================================== */
+
 @keyframes expand {
-  from { max-height: 0; opacity: 0; }
-  to { max-height: 500px; opacity: 1; }
+
+  from {
+    max-height:0;
+    opacity:0;
+  }
+
+  to {
+    max-height:500px;
+    opacity:1;
+  }
+
 }
 
 @keyframes collapse {
-  from { max-height: 500px; opacity: 1; }
-  to { max-height: 0; opacity: 0; }
+
+  from {
+    max-height:500px;
+    opacity:1;
+  }
+
+  to {
+    max-height:0;
+    opacity:0;
+  }
+
 }
 
 .expand {
@@ -195,12 +291,17 @@
   animation: collapse var(--anim-fast) var(--ease-in) forwards;
 }
 
-/* =====================
-   MODAL / OVERLAY
-   ===================== */
+
+/* =====================================================
+   MODALS / OVERLAYS
+===================================================== */
+
 @keyframes overlayFade {
-  from { opacity: 0; }
-  to { opacity: 1; }
+
+  from { opacity:0; }
+
+  to { opacity:1; }
+
 }
 
 .overlay-enter {
@@ -211,53 +312,91 @@
   animation: scaleFadeIn var(--anim-normal) var(--ease-out) forwards;
 }
 
-/* =====================
-   SKELETON LOADING
-   ===================== */
+
+/* =====================================================
+   SKELETON
+===================================================== */
+
 @keyframes skeleton {
-  0% { background-position: -200px 0; }
-  100% { background-position: calc(200px + 100%) 0; }
+
+  0% {
+    background-position:-200px 0;
+  }
+
+  100% {
+    background-position:calc(200px + 100%) 0;
+  }
+
 }
 
 .skeleton {
+
   background: linear-gradient(
     90deg,
     var(--color-bg-secondary) 25%,
     var(--color-bg-tertiary) 37%,
     var(--color-bg-secondary) 63%
   );
-  background-size: 400% 100%;
-  animation: skeleton 1.4s ease infinite;
+
+  background-size:400% 100%;
+
+  animation:skeleton 1.4s linear infinite;
+
 }
 
-/* =====================
+
+/* =====================================================
    SPEED UTILITIES
-   ===================== */
+===================================================== */
+
 .anim-fast   { animation-duration: var(--anim-fast); }
+
 .anim-normal { animation-duration: var(--anim-normal); }
+
 .anim-slow   { animation-duration: var(--anim-slow); }
 
-/* =====================
-   DELAYS
-   ===================== */
-.delay-50  { animation-delay: 50ms; }
-.delay-100 { animation-delay: 100ms; }
-.delay-200 { animation-delay: 200ms; }
-.delay-300 { animation-delay: 300ms; }
 
-/* =====================
+/* =====================================================
+   DELAYS
+===================================================== */
+
+.delay-50  { animation-delay:50ms; }
+
+.delay-100 { animation-delay:100ms; }
+
+.delay-200 { animation-delay:200ms; }
+
+.delay-300 { animation-delay:300ms; }
+
+
+/* =====================================================
    ACCESSIBILITY
-   ===================== */
+===================================================== */
+
 @media (prefers-reduced-motion: reduce) {
+
   * {
-    animation: none !important;
-    transition: none !important;
+    animation:none !important;
+    transition:none !important;
   }
+
 }
 
+
+/* =====================================================
+   FOCUS RING
+===================================================== */
+
 @keyframes focusRing {
-  from { box-shadow: 0 0 0 0 rgba(0,0,0,0); }
-  to { box-shadow: 0 0 0 4px rgba(46,144,250,.3); }
+
+  from {
+    box-shadow:0 0 0 0 rgba(0,0,0,0);
+  }
+
+  to {
+    box-shadow:0 0 0 4px rgba(46,144,250,.3);
+  }
+
 }
 
 .focus-ring {

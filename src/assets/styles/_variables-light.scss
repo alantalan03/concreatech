@@ -1,115 +1,173 @@
 @use './variables-primitives' as primitives;
 
+/* ======================================================
+   THEME – LIGHT
+   Semantic tokens for UI in light mode
+====================================================== */
+
 .theme--light {
 
-  /* ----------------------------------
-     Background
-  ---------------------------------- */
+  /* ======================================================
+     BACKGROUND
+  ====================================================== */
+
   --color-bg-primary:        #{primitives.$silver-25};
   --color-bg-secondary:      #{primitives.$silver-100};
   --color-bg-tertiary:       #{primitives.$gray-200};
   --color-bg-quaternary:     #{primitives.$gray-300};
+
   --color-bg-brand:          #{primitives.$brand-50};
   --color-bg-disabled:       #{primitives.$silver-100};
   --color-bg-elevation:      #{primitives.$silver-25};
   --color-bg-focus:          #{primitives.$brand-100};
 
-  /* ----------------------------------
-     Foreground
-  ---------------------------------- */
-  --color-fg-primary:                #{primitives.$gray-900};
-  --color-fg-primary-inverted:       #{primitives.$silver-25};
-  --color-fg-secondary:              #{primitives.$gray-700};
-  --color-fg-tertiary:               #{primitives.$gray-600};
-  --color-fg-quaternary:             #{primitives.$gray-500};
-  --color-fg-brand:                  #{primitives.$brand-600};
-  --color-fg-disabled:               #{primitives.$gray-400};
-  --color-fg-link:                   #{primitives.$brand-700};
-  --color-fg-danger:                 #{primitives.$danger-600};
-  --color-fg-warning:                #{primitives.$warning-600};
 
-  /* ----------------------------------
-     Borders
-  ---------------------------------- */
-  --color-border-brand:              #{primitives.$primary-500};
-  --color-border-enabled:            #{primitives.$silver-200};
-  --color-border-hover:              #{primitives.$silver-400};
-  --color-border-active:             #{primitives.$silver-600};
-  --color-border-disabled:           #{primitives.$silver-300};
-  --color-divider:                   #{primitives.$gray-200};
+  /* ======================================================
+     FOREGROUND
+  ====================================================== */
+
+  --color-fg-primary:          #{primitives.$gray-900};
+  --color-fg-primary-inverted: #{primitives.$silver-25};
+
+  --color-fg-secondary:        #{primitives.$gray-700};
+  --color-fg-tertiary:         #{primitives.$gray-600};
+  --color-fg-quaternary:       #{primitives.$gray-500};
+
+  --color-fg-brand:            #{primitives.$brand-600};
+  --color-fg-link:             #{primitives.$brand-700};
+
+  --color-fg-disabled:         #{primitives.$gray-400};
+
+  --color-fg-danger:           #{primitives.$danger-600};
+  --color-fg-warning:          #{primitives.$warning-600};
+
+
+  /* ======================================================
+     BORDERS
+  ====================================================== */
+
+  --color-border-brand:     #{primitives.$primary-500};
+
+  --color-border-enabled:   #{primitives.$silver-200};
+  --color-border-hover:     #{primitives.$silver-400};
+  --color-border-active:    #{primitives.$silver-600};
+  --color-border-disabled:  #{primitives.$silver-300};
+
+  --color-divider:          #{primitives.$gray-200};
+
+
+  /* ======================================================
+     ELEVATION
+  ====================================================== */
 
   --shadow-elevated: 0 6px 18px rgba(0, 0, 0, 0.08);
 
-  /* ----------------------------------
-     Buttons – Primary (BRAND)
-  ---------------------------------- */
-  --color-btn-primary-enabled:        #{primitives.$brand-500};
-  --color-btn-primary-hover:          #{primitives.$brand-600};
-  --color-btn-primary-active:         #{primitives.$brand-700};
 
-  /* Danger */
+  /* ======================================================
+     BUTTONS — PRIMARY
+  ====================================================== */
+
+  --color-btn-primary-enabled: #{primitives.$brand-500};
+  --color-btn-primary-hover:   #{primitives.$brand-600};
+  --color-btn-primary-active:  #{primitives.$brand-700};
+
+
+  /* ======================================================
+     BUTTONS — PRIMARY (DANGER)
+  ====================================================== */
+
   --color-btn-primary-danger-enabled: #{primitives.$danger-500};
   --color-btn-primary-danger-hover:   #{primitives.$danger-600};
   --color-btn-primary-danger-active:  #{primitives.$danger-700};
 
-  /* Warning */
+
+  /* ======================================================
+     BUTTONS — PRIMARY (WARNING)
+  ====================================================== */
+
   --color-btn-primary-warning-enabled: #{primitives.$warning-500};
   --color-btn-primary-warning-hover:   #{primitives.$warning-600};
   --color-btn-primary-warning-active:  #{primitives.$warning-700};
 
-  /* ----------------------------------
-     Buttons – Secondary
-  ---------------------------------- */
-  --color-btn-secondary-hover:        #{primitives.$primary-25};
-  --color-btn-secondary-active:       #{primitives.$primary-500};
 
-  /* ----------------------------------
-     Buttons – Link
-  ---------------------------------- */
-  --color-btn-link-hover:             #{primitives.$brand-600};
-  --color-btn-link-active:            #{primitives.$brand-700};
+  /* ======================================================
+     BUTTONS — SECONDARY
+  ====================================================== */
 
-  /* ----------------------------------
-     Chips
-  ---------------------------------- */
-  --color-chip-bg-brand:              #{primitives.$brand-50};
-  --color-chip-outline-brand:         #{primitives.$brand-200};
-  --color-chip-fg-brand:              #{primitives.$brand-900};
+  --color-btn-secondary-hover:  #{primitives.$primary-25};
+  --color-btn-secondary-active: #{primitives.$primary-500};
 
-  --color-chip-bg-info:               #{primitives.$blue-50};
-  --color-chip-outline-info:          #{primitives.$blue-200};
-  --color-chip-fg-info:               #{primitives.$blue-900};
 
-  --color-chip-bg-success:            #{primitives.$success-50};
-  --color-chip-outline-success:       #{primitives.$success-200};
-  --color-chip-fg-success:            #{primitives.$success-900};
+  /* ======================================================
+     BUTTONS — LINK
+  ====================================================== */
 
-  --color-chip-bg-gray:               #{primitives.$silver-100};
-  --color-chip-outline-gray:          #{primitives.$silver-300};
-  --color-chip-fg-gray:               #{primitives.$silver-900};
+  --color-btn-link-hover:  #{primitives.$brand-600};
+  --color-btn-link-active: #{primitives.$brand-700};
 
-  /* ----------------------------------
-     System
-  ---------------------------------- */
-  --color-system-success-100:          #{primitives.$success-200};
-  --color-system-success-200:          #{primitives.$success-400};
-  --color-system-success-300:          #{primitives.$success-600};
 
-  --color-system-danger-100:           #{primitives.$opacity-danger-200};
-  --color-system-danger-200:           #{primitives.$opacity-danger-500};
-  --color-system-danger-300:           #{primitives.$danger-600};
+  /* ======================================================
+     CHIPS
+  ====================================================== */
 
-  --color-system-warning-100:          #{primitives.$warning-200};
-  --color-system-warning-200:          #{primitives.$warning-400};
-  --color-system-warning-300:          #{primitives.$warning-600};
+  /* Brand */
 
-  --color-system-info-100:             #{primitives.$opacity-info-200};
-  --color-system-info-200:             #{primitives.$opacity-info-500};
-  --color-system-info-300:             #{primitives.$blue-600};
+  --color-chip-bg-brand:      #{primitives.$brand-50};
+  --color-chip-outline-brand: #{primitives.$brand-200};
+  --color-chip-fg-brand:      #{primitives.$brand-900};
 
-  /* ----------------------------------
-     Charts
-  ---------------------------------- */
+  /* Info */
+
+  --color-chip-bg-info:      #{primitives.$primary-50};
+  --color-chip-outline-info: #{primitives.$primary-200};
+  --color-chip-fg-info:      #{primitives.$primary-900};
+
+  /* Success */
+
+  --color-chip-bg-success:      #{primitives.$success-50};
+  --color-chip-outline-success: #{primitives.$success-200};
+  --color-chip-fg-success:      #{primitives.$success-900};
+
+  /* Gray */
+
+  --color-chip-bg-gray:      #{primitives.$silver-100};
+  --color-chip-outline-gray: #{primitives.$silver-300};
+  --color-chip-fg-gray:      #{primitives.$silver-900};
+
+
+  /* ======================================================
+     SYSTEM COLORS
+  ====================================================== */
+
+  /* Success */
+
+  --color-system-success-100: #{primitives.$success-200};
+  --color-system-success-200: #{primitives.$success-400};
+  --color-system-success-300: #{primitives.$success-600};
+
+  /* Danger */
+
+  --color-system-danger-100: #{primitives.$danger-200};
+  --color-system-danger-200: #{primitives.$danger-500};
+  --color-system-danger-300: #{primitives.$danger-600};
+
+  /* Warning */
+
+  --color-system-warning-100: #{primitives.$warning-200};
+  --color-system-warning-200: #{primitives.$warning-400};
+  --color-system-warning-300: #{primitives.$warning-600};
+
+  /* Info */
+
+  --color-system-info-100: #{primitives.$info-200};
+  --color-system-info-200: #{primitives.$info-500};
+  --color-system-info-300: #{primitives.$info-600};
+
+
+  /* ======================================================
+     CHART COLORS
+  ====================================================== */
+
   --color-chart-100: #{primitives.$brand-100};
   --color-chart-200: #{primitives.$brand-200};
   --color-chart-300: #{primitives.$brand-300};

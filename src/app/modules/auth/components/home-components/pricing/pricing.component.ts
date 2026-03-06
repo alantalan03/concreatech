@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TranslateModule } from '@ngx-translate/core';
+import { Component } from '@angular/core';
 
 interface PricingPlan {
   name: string;
@@ -9,74 +8,94 @@ interface PricingPlan {
   features: string[];
   featured?: boolean;
   badge?: string;
+  badgeColor?: string;
 }
 
 @Component({
   selector: 'app-pricing',
-  standalone: true,
-  imports: [CommonModule, TranslateModule],
+  imports:[CommonModule],
   templateUrl: './pricing.component.html',
   styleUrls: ['./pricing.component.scss']
 })
 export class PricingComponent {
 
   plans: PricingPlan[] = [
+
     {
-      name: 'pricing.basic.name',
+      name: 'Básica',
       price: '$5,000',
-      period: 'pricing.period',
+      period: 'MXN por planta / mes',
       features: [
-        'pricing.basic.f1',
-        'pricing.basic.f2',
-        'pricing.basic.f3',
-        'pricing.basic.f4',
-        'pricing.basic.f5',
-        'pricing.basic.f6',
-        'pricing.basic.f7'
+        'Gestión de pedidos',
+        'Diseño de mezclas',
+        'Control de inventarios',
+        'Remisiones automáticas',
+        'Automatización de carga (CAS)',
+        'Usuarios ilimitados',
+        'Soporte comercial'
       ]
     },
+
     {
-      name: 'pricing.intermediate.name',
+      name: 'Intermedia',
       price: '$7,000',
-      period: 'pricing.period',
+      period: 'MXN por planta / mes',
       features: [
-        'pricing.intermediate.f1',
-        'pricing.intermediate.f2',
-        'pricing.intermediate.f3',
-        'pricing.intermediate.f4',
-        'pricing.intermediate.f5',
-        'pricing.intermediate.f6'
+        'Todo lo de Básica +',
+        'Control de calidad completo',
+        'Mantenimiento de equipos',
+        'Nómina semanal',
+        'Reportes de productividad',
+        'Soporte prioritario'
       ]
     },
+
     {
-      name: 'pricing.advanced.name',
+      name: 'Avanzada',
       price: '$9,000',
-      period: 'pricing.period',
-      badge: 'pricing.coming',
+      period: 'MXN por planta / mes',
       featured: true,
+      badge: 'COMING SOON',
       features: [
-        'pricing.advanced.f1',
-        'pricing.advanced.f2',
-        'pricing.advanced.f3',
-        'pricing.advanced.f4',
-        'pricing.advanced.f5',
-        'pricing.advanced.f6'
+        'Todo lo de Intermedia +',
+        'Ventas y CxC',
+        'Compras y CxP',
+        'Estados financieros',
+        'Análisis de rentabilidad',
+        'Dashboards ejecutivos'
       ]
     },
+
     {
-      name: 'pricing.plus.name',
+      name: 'Plus',
       price: '$15,000',
-      period: 'pricing.period',
-      badge: 'pricing.coming',
+      period: 'MXN por planta / mes',
+      badge: 'COMING SOON',
+      badgeColor: 'secondary',
       features: [
-        'pricing.plus.f1',
-        'pricing.plus.f2',
-        'pricing.plus.f3',
-        'pricing.plus.f4',
-        'pricing.plus.f5',
-        'pricing.plus.f6',
-        'pricing.plus.f7'
+        'Todo lo de Avanzada +',
+        'Control de flotilla GPS',
+        'Gestión multi-planta',
+        'Optimización de rutas',
+        'Analytics avanzado (BI)',
+        'Soporte 24/7 premium',
+        'Gerente de cuenta dedicado'
       ]
     }
+
   ];
+
+
+  startPlan(plan: PricingPlan) {
+
+    console.log('Plan seleccionado:', plan.name);
+
+    // Aquí puedes integrar:
+    // Stripe
+    // Checkout
+    // Calendly
+    // Formulario
+
+  }
+
 }
