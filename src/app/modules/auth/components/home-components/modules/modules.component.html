@@ -1,4 +1,4 @@
-<section class="modules" id="modules">
+<section class="modules" id="modules" aria-labelledby="modules-title">
 
   <header class="section-header">
 
@@ -98,10 +98,13 @@
               <div class="image-frame">
 
                 <img
-                  *ngIf="module.image"
-                  [src]="module.image"
-                  [alt]="module.title | translate"
-                  loading="lazy"
+                  	*ngIf="module.image"
+                  	[src]="module.image"
+                  	[alt]="module.title | translate"
+                 	loading="lazy"
+					decoding="async"
+					width="600"
+  					height="400"
                 />
 
                 <div class="image-glow"></div>
@@ -148,6 +151,8 @@
         *ngFor="let m of modules; let i = index"
         [class.active]="i === currentIndex"
         (click)="goTo(i)"
+		[attr.aria-label]="'Ir al módulo ' + (i + 1)"
+  		[attr.aria-current]="i === currentIndex ? 'true' : null"
       ></button>
 
     </div>
