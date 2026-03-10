@@ -94,9 +94,9 @@
 						],
 						"scripts": [],
 						"extractLicenses": false,
-						"sourceMap": true,
-						"optimization": false,
-						"namedChunks": true,
+						"optimization": true,
+						"sourceMap": false,
+						"namedChunks": false,
 						"browser": "src/main.ts"
 					},
 					"configurations": {

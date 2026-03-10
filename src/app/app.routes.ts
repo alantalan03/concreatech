@@ -10,15 +10,9 @@ export const routes: Routes = [
         path: '',
         loadComponent: () =>
           import('./modules/auth/pages/home/home.component')
-      },
-      {
-        path: '',
-        redirectTo: 'home',
-        pathMatch: 'full'
       }
     ]
   },
 
-  { path: '', redirectTo: 'concreatech', pathMatch: 'full' },
-  { path: '**', redirectTo: 'concreatech' }
+  { path: '**', redirectTo: '' }
 ];
