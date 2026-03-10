@@ -1,146 +1,120 @@
-<section class="testimonials" id="testimonios">
+<section class="testimonials" id="testimonials">
+	<div class="testimonials-container">
+		<div class="section-header">
+			<div class="section-tag">
+				{{ 'TESTIMONIALS.TAG' | translate }}
+			</div>
 
-  <div class="testimonials-container">
+			<h2 class="section-title">
+				{{ 'TESTIMONIALS.TITLE' | translate }}
+			</h2>
 
-    <div class="section-header">
+			<p class="section-subtitle">
+				{{ 'TESTIMONIALS.SUBTITLE' | translate }}
+			</p>
+		</div>
 
-      <div class="section-tag">
-        Casos de Éxito
-      </div>
+		<div
+			class="testimonials-carousel-wrapper"
+			(mouseenter)="pause()"
+			(mouseleave)="resume()"
+		>
+			<div class="testimonials-carousel">
+				<div
+					class="testimonial-card"
+					*ngFor="let t of testimonials; let i = index"
+					[class.active]="i === currentIndex"
+				>
+					<div class="testimonial-content">
+						<div class="quote-icon">
+							<svg viewBox="0 0 48 48">
+								<path
+									d="M12 24C12 19.5817 15.5817 16 20 16V20C17.7909 20 16 21.7909 16 24V28H24V36H12V24Z"
+									fill="currentColor"
+								/>
 
-      <h2 class="section-title">
-        Lo que dicen nuestros clientes
-      </h2>
+								<path
+									d="M28 24C28 19.5817 31.5817 16 36 16V20C33.7909 20 32 21.7909 32 24V28H40V36H28V24Z"
+									fill="currentColor"
+								/>
+							</svg>
+						</div>
 
-      <p class="section-subtitle">
-        Empresas líderes del sector confían en ConcreaTech para transformar sus operaciones
-      </p>
+						<p class="testimonial-text">"{{ t.text | translate }}"</p>
 
-    </div>
+						<div class="testimonial-author">
+							<div class="author-info">
+								<h4 class="author-name">
+									{{ t.name | translate }}
+								</h4>
 
+								<p class="author-position">
+									{{ t.position | translate }}
+								</p>
+							</div>
 
-    <div
-      class="testimonials-carousel-wrapper"
-      (mouseenter)="pause()"
-      (mouseleave)="resume()"
-    >
+							<div class="company-logo">
+								<div class="logo-placeholder">
+									{{ t.company | translate }}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 
-      <div class="testimonials-carousel">
+			<button class="testimonial-nav prev" (click)="move(-1)">
+				<svg viewBox="0 0 24 24">
+					<path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" />
+				</svg>
+			</button>
 
-        <div
-          class="testimonial-card"
-          *ngFor="let t of testimonials; let i = index"
-          [class.active]="i === currentIndex"
-        >
+			<button class="testimonial-nav next" (click)="move(1)">
+				<svg viewBox="0 0 24 24">
+					<path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" />
+				</svg>
+			</button>
 
-          <div class="testimonial-content">
+			<div class="testimonial-dots">
+				<button
+					class="testimonial-dot"
+					*ngFor="let t of testimonials; let i = index"
+					[class.active]="i === currentIndex"
+					(click)="goTo(i)"
+				></button>
+			</div>
+		</div>
 
-            <div class="quote-icon">
+		<div class="clients-logos">
+			<h3 class="clients-title">
+				{{ 'TESTIMONIALS.TRUSTED' | translate }}
+			</h3>
 
-              <svg viewBox="0 0 48 48">
+			<div class="logos-scroll">
+				<div class="logo-item">
+					{{ 'TESTIMONIALS.CLIENTS.CEMEX' | translate }}
+				</div>
 
-                <path d="M12 24C12 19.5817 15.5817 16 20 16V20C17.7909 20 16 21.7909 16 24V28H24V36H12V24Z" fill="currentColor"/>
+				<div class="logo-item">
+					{{ 'TESTIMONIALS.CLIENTS.HOLCIM' | translate }}
+				</div>
 
-                <path d="M28 24C28 19.5817 31.5817 16 36 16V20C33.7909 20 32 21.7909 32 24V28H40V36H28V24Z" fill="currentColor"/>
+				<div class="logo-item">
+					{{ 'TESTIMONIALS.CLIENTS.APASCO' | translate }}
+				</div>
 
-              </svg>
+				<div class="logo-item">
+					{{ 'TESTIMONIALS.CLIENTS.GCC' | translate }}
+				</div>
 
-            </div>
+				<div class="logo-item">
+					{{ 'TESTIMONIALS.CLIENTS.MOCTEZUMA' | translate }}
+				</div>
 
-
-            <p class="testimonial-text">
-              "{{t.text}}"
-            </p>
-
-
-            <div class="testimonial-author">
-
-              <div class="author-info">
-
-                <h4 class="author-name">
-                  {{t.name}}
-                </h4>
-
-                <p class="author-position">
-                  {{t.position}}
-                </p>
-
-              </div>
-
-
-              <div class="company-logo">
-
-                <div class="logo-placeholder">
-                  {{t.company}}
-                </div>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <button class="testimonial-nav prev" (click)="move(-1)">
-
-        <svg viewBox="0 0 24 24">
-
-          <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2"/>
-
-        </svg>
-
-      </button>
-
-
-      <button class="testimonial-nav next" (click)="move(1)">
-
-        <svg viewBox="0 0 24 24">
-
-          <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2"/>
-
-        </svg>
-
-      </button>
-
-
-      <div class="testimonial-dots">
-
-        <button
-          class="testimonial-dot"
-          *ngFor="let t of testimonials; let i = index"
-          [class.active]="i === currentIndex"
-          (click)="goTo(i)"
-        >
-        </button>
-
-      </div>
-
-    </div>
-
-
-    <div class="clients-logos">
-
-      <h3 class="clients-title">
-        Confían en nosotros
-      </h3>
-
-      <div class="logos-scroll">
-
-        <div class="logo-item">CEMEX</div>
-        <div class="logo-item">HOLCIM</div>
-        <div class="logo-item">APASCO</div>
-        <div class="logo-item">GCC</div>
-        <div class="logo-item">CEMENTOS MOCTEZUMA</div>
-        <div class="logo-item">GRUPO CONSTRUCTOR</div>
-
-      </div>
-
-    </div>
-
-  </div>
-
+				<div class="logo-item">
+					{{ 'TESTIMONIALS.CLIENTS.CONSTRUCTOR' | translate }}
+				</div>
+			</div>
+		</div>
+	</div>
 </section>

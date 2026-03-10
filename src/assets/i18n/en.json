@@ -1,29 +1,329 @@
 {
-  "NAV": {
-    "HOME": "Home",
-    "SOLUTIONS": "Solutions",
-    "BENEFITS": "Benefits",
-    "CAS": "CAS",
-    "COS": "COS",
-    "LICENSES": "Licenses",
-    "CONTACT": "Contact",
-    "LOGIN": "Login",
-    "DEMO": "Request Demo"
-  },
-  "HERO": {
-    "TAG": "CONTECH INNOVATION",
-    "TITLE_LINE_1": "The future of",
-    "TITLE_HIGHLIGHT": "ready-mix concrete",
-    "TITLE_LINE_2": "is digital",
-    "SUBTITLE": "Complete systematization and automation for ready-mix concrete plants. Cloud platform that maximizes your operational efficiency and transforms your business.",
-    "CTA_PRIMARY": "Request demo",
-    "CTA_SECONDARY": "See success stories"
-  },
-  
-  "STATS": {
-    "PRECISION": "Dosing accuracy",
-    "COST_REDUCTION": "Reduction in operating costs",
-    "REAL_TIME": "Real-time monitoring",
-    "PROFITABILITY": "Increase in profitability"
-  }
+	"NAV": {
+		"HOME": "Home",
+		"SOLUTIONS": "Solutions",
+		"BENEFITS": "Benefits",
+		"CAS": "CAS",
+		"COS": "COS",
+		"LICENSES": "Licenses",
+		"CONTACT": "Contact",
+		"LOGIN": "Login",
+		"DEMO": "Request Demo"
+	},
+	"HERO": {
+		"TAG": "CONTECH INNOVATION",
+		"TITLE_LINE_1": "The future of",
+		"TITLE_HIGHLIGHT": "ready-mix concrete",
+		"TITLE_LINE_2": "is digital",
+		"SUBTITLE": "Complete systematization and automation for ready-mix concrete plants. Cloud platform that maximizes your operational efficiency and transforms your business.",
+		"CTA_PRIMARY": "Request demo",
+		"CTA_SECONDARY": "See success stories"
+	},
+	"STATS": {
+		"PRECISION": "Dosing accuracy",
+		"COST_REDUCTION": "Reduction in operating costs",
+		"REAL_TIME": "Real-time monitoring",
+		"PROFITABILITY": "Increase in profitability"
+	},
+	"PRODUCTS": {
+		"TAG": "Our solutions",
+		"TITLE": "Cutting-edge technology",
+		"SUBTITLE": "Two integrated systems that revolutionize the operation of ready-mix concrete plants",
+		"LEARN_MORE": "Explore",
+		"COS": {
+			"TITLE": "Concrete Operating System",
+			"TYPE": "Cloud-Based SaaS Software",
+			"DESCRIPTION": "Comprehensive cloud management platform that systematizes every aspect of your plant.",
+			"FEATURE_1": "Order management and digital delivery tickets",
+			"FEATURE_2": "Automated quality control",
+			"FEATURE_3": "Real-time financial status",
+			"FEATURE_4": "Operational reports and dashboards",
+			"FEATURE_5": "Multi-plant and fleet management"
+		},
+		"CAS": {
+			"TITLE": "Concrete Automation System",
+			"TYPE": "IoT Hardware & Implementation",
+			"DESCRIPTION": "Physical automation system with IoT sensors and full remote control.",
+			"FEATURE_1": "Full loading automation",
+			"FEATURE_2": "High-precision IoT sensors",
+			"FEATURE_3": "Remote scale control",
+			"FEATURE_4": "Native integration with COS",
+			"FEATURE_5": "Turnkey installation"
+		}
+	},
+	"FEATURES": {
+		"TAG": "COMPETITIVE ADVANTAGES",
+		"TITLE": "Why ConcreaTech?",
+		"SUBTITLE": "Proven technology that maximizes the operational efficiency of your ready-mix concrete plant",
+
+		"FEATURE_1": {
+			"TITLE": "Full Automation",
+			"DESCRIPTION": "Eliminate manual processes and human errors. From order reception to delivery, everything is automated and connected."
+		},
+
+		"FEATURE_2": {
+			"TITLE": "Cloud Platform",
+			"DESCRIPTION": "100% cloud-based system with access from any device. Secure data and seamless updates."
+		},
+
+		"FEATURE_3": {
+			"TITLE": "Business Intelligence",
+			"DESCRIPTION": "Real-time executive dashboards with deep analysis of profitability, efficiency, and KPIs."
+		},
+
+		"FEATURE_4": {
+			"TITLE": "Real-Time IoT",
+			"DESCRIPTION": "Instant monitoring of all operations with sensors that send critical data every second."
+		},
+
+		"FEATURE_5": {
+			"TITLE": "Modular Scalability",
+			"DESCRIPTION": "Start with the basics and add more functionalities as your business grows."
+		},
+
+		"FEATURE_6": {
+			"TITLE": "Multi-Plant Management",
+			"DESCRIPTION": "Centralized management of multiple plants with consolidated visibility and corporate reports."
+		},
+
+		"FEATURE_7": {
+			"TITLE": "Enterprise Security",
+			"DESCRIPTION": "Certified storage, automatic backups, and guaranteed recovery."
+		},
+
+		"FEATURE_8": {
+			"TITLE": "Machine Learning <span class='soon'>[Coming Soon]</span>",
+			"DESCRIPTION": "Smart projections, route optimization, and predictive maintenance."
+		}
+	},
+	"TESTIMONIALS": {
+		"TAG": "Success Stories",
+		"TITLE": "What our clients say",
+		"SUBTITLE": "Leading companies in the industry trust ConcreaTech to transform their operations",
+
+		"ITEM_1": {
+			"TEXT": "ConcreaTech completely transformed our operations. The silo automation and real-time control allowed us to reduce waste by 35% and improve the accuracy of our mixes.",
+			"NAME": "Eng. Roberto Martínez",
+			"POSITION": "Operations Director",
+			"COMPANY": "CONCRETOS DEL NORTE"
+		},
+
+		"ITEM_2": {
+			"TEXT": "The COS platform gave us full visibility of our operations. We can now make decisions based on real data and increased our profitability by 28% in just six months.",
+			"NAME": "Lic. María González",
+			"POSITION": "General Manager",
+			"COMPANY": "PREMEZCLADOS MTY"
+		},
+
+		"ITEM_3": {
+			"TEXT": "The automatic delivery ticket system and GPS fleet control revolutionized our logistics. We reduced delivery times by 40% and significantly improved customer satisfaction.",
+			"NAME": "Eng. Carlos Hernández",
+			"POSITION": "Logistics Manager",
+			"COMPANY": "GRUPO CONSTRUCTOR"
+		},
+		"TRUSTED": "Trusted By",
+
+		"CLIENTS": {
+			"CEMEX": "CEMEX",
+			"HOLCIM": "HOLCIM",
+			"APASCO": "APASCO",
+			"GCC": "GCC",
+			"MOCTEZUMA": "CEMENTOS MOCTEZUMA",
+			"CONSTRUCTOR": "CONSTRUCTION GROUP"
+		}
+	},
+	"CAS": {
+		"TAG": "Specialized Service",
+		"TITLE": "Concrete Plant Automation",
+		"SUBTITLE": "A professional process to transform your plant with industrial technology",
+
+		"CTA_TITLE": "Ready to automate your plant?",
+		"CTA_SUBTITLE": "Schedule a free technical visit and receive a personalized assessment",
+		"CTA_BUTTON": "Schedule Free Technical Visit",
+
+		"STEP_1": {
+			"NUMBER": "STEP 1",
+			"TITLE": "On-Site Diagnosis",
+			"DESCRIPTION": "We visit your plant to conduct a comprehensive analysis of operational processes.",
+			"ITEM_1": "Material flow analysis",
+			"ITEM_2": "Critical point detection",
+			"ITEM_3": "Infrastructure evaluation",
+			"ITEM_4": "Recommendation report"
+		},
+
+		"STEP_2": {
+			"NUMBER": "STEP 2",
+			"TITLE": "Technical Proposal",
+			"DESCRIPTION": "We design a customized solution with detailed technical specifications.",
+			"ITEM_1": "Automation architecture",
+			"ITEM_2": "Certified hardware selection",
+			"ITEM_3": "Sensors and PLC specifications",
+			"ITEM_4": "Implementation timeline"
+		},
+
+		"STEP_3": {
+			"NUMBER": "STEP 3",
+			"TITLE": "Project Quotation",
+			"DESCRIPTION": "We provide a detailed quotation with different implementation options.",
+			"ITEM_1": "Complete investment breakdown",
+			"ITEM_2": "Phased implementation options",
+			"ITEM_3": "Estimated ROI and savings",
+			"ITEM_4": "Commercial terms"
+		},
+
+		"STEP_4": {
+			"NUMBER": "STEP 4",
+			"TITLE": "Implementation",
+			"DESCRIPTION": "We install IoT hardware and configure the control systems.",
+			"ITEM_1": "Sensor installation",
+			"ITEM_2": "PLC programming",
+			"ITEM_3": "Integration with existing systems",
+			"ITEM_4": "Testing and commissioning"
+		},
+
+		"STEP_5": {
+			"NUMBER": "STEP 5",
+			"TITLE": "Training & Support",
+			"DESCRIPTION": "We train your team and provide continuous support.",
+			"ITEM_1": "Complete technical training",
+			"ITEM_2": "Operation manuals",
+			"ITEM_3": "24/7 remote support",
+			"ITEM_4": "Preventive maintenance"
+		}
+	},
+	"MODULES": {
+		"TAG": "System Modules",
+		"BADGE": "Modules inside the COS platform",
+		"TITLE": "Features by License",
+		"SUBTITLE": "Each license unlocks specific modules to digitize key aspects of your operation",
+
+		"MODULE_1": {
+			"CATEGORY": "Monitoring",
+			"TITLE": "Operational Dashboard",
+			"DESCRIPTION": "View the real-time status of your plant. Monitor production, material inventories and daily volumes from a single dashboard.",
+			"FEATURE_1": "Real-time production KPIs",
+			"FEATURE_2": "Material inventory control",
+			"FEATURE_3": "Production volume charts",
+			"FEATURE_4": "Multi-plant consolidated view"
+		},
+
+		"MODULE_2": {
+			"CATEGORY": "Management",
+			"TITLE": "Delivery Ticket Management",
+			"DESCRIPTION": "Create and manage orders digitally with full tracking from capture to delivery.",
+			"FEATURE_1": "Quick order and client capture",
+			"FEATURE_2": "Technical mix configuration",
+			"FEATURE_3": "Real-time job site geolocation",
+			"FEATURE_4": "Material temperature and humidity control"
+		},
+
+		"MODULE_3": {
+			"CATEGORY": "Analytics",
+			"TITLE": "Reports & Analytics",
+			"DESCRIPTION": "Advanced reporting system with smart filters and multi-format export.",
+			"FEATURE_1": "Production reports by period",
+			"FEATURE_2": "Daily material inventory tracking",
+			"FEATURE_3": "Analysis by client and project",
+			"FEATURE_4": "Export to Excel and PDF"
+		}
+	},
+	"PRICING": {
+		"TAG": "Licensing Plans",
+		"BADGE": "COS - Operational Control Software",
+		"TITLE": "Systematize your plant with COS",
+		"SUBTITLE": "Boost operational efficiency with our modular licenses. Choose the plan that fits your growth.",
+		"BUTTON": "Start Now",
+		"PERIOD": "MXN per plant / month",
+
+		"CTA_TITLE": "Want a personalized demo?",
+		"CTA_DESCRIPTION": "Schedule a call with our team and discover how COS can optimize your concrete plant operations.",
+		"CTA_BUTTON": "Schedule Demo",
+
+		"BADGES": {
+			"SOON": "COMING SOON"
+		},
+
+		"PLANS": {
+			"BASIC": {
+				"NAME": "Basic",
+				"FEATURE_1": "Order management",
+				"FEATURE_2": "Mix design",
+				"FEATURE_3": "Inventory control",
+				"FEATURE_4": "Automatic delivery tickets",
+				"FEATURE_5": "Loading automation (CAS)",
+				"FEATURE_6": "Unlimited users",
+				"FEATURE_7": "Commercial support"
+			},
+
+			"MID": {
+				"NAME": "Intermediate",
+				"FEATURE_1": "Everything in Basic +",
+				"FEATURE_2": "Complete quality control",
+				"FEATURE_3": "Equipment maintenance",
+				"FEATURE_4": "Weekly payroll",
+				"FEATURE_5": "Productivity reports",
+				"FEATURE_6": "Priority support"
+			},
+
+			"ADVANCED": {
+				"NAME": "Advanced",
+				"FEATURE_1": "Everything in Intermediate +",
+				"FEATURE_2": "Sales & Accounts Receivable",
+				"FEATURE_3": "Purchases & Accounts Payable",
+				"FEATURE_4": "Financial statements",
+				"FEATURE_5": "Profitability analysis",
+				"FEATURE_6": "Executive dashboards"
+			},
+
+			"PLUS": {
+				"NAME": "Plus",
+				"FEATURE_1": "Everything in Advanced +",
+				"FEATURE_2": "GPS fleet management",
+				"FEATURE_3": "Multi-plant management",
+				"FEATURE_4": "Route optimization",
+				"FEATURE_5": "Advanced analytics (BI)",
+				"FEATURE_6": "24/7 premium support",
+				"FEATURE_7": "Dedicated account manager"
+			}
+		}
+	},
+	"CTA": {
+		"TITLE": "Ready to digitize your plant?",
+		"DESCRIPTION": "Join the <strong>100+ plants</strong> that have already transformed their operations with ConcreaTech. Try it free for 30 days with no commitment.",
+		"BUTTON_DEMO": "Request Free Demo",
+		"BUTTON_MEETING": "Schedule Meeting"
+	},
+	"FOOTER": {
+		"DESCRIPTION": "Driving the digital transformation of the <strong>ready-mix concrete industry in Latin America</strong> with cutting-edge technology.",
+		"PRODUCT_1": "Concrete Operating System",
+		"PRODUCT_2": "Concrete Automation System",
+
+		"PRODUCTS_TITLE": "Products",
+		"RESOURCES_TITLE": "Resources",
+		"COMPANY_TITLE": "Company",
+
+		"PRODUCTS": {
+			"COS": "COS - SaaS Software",
+			"CAS": "CAS - IoT Hardware",
+			"INTEGRATION": "Full Integration",
+			"CASES": "Success Stories"
+		},
+
+		"RESOURCES": {
+			"DOCS": "Documentation",
+			"HELP": "Help Center",
+			"BLOG": "ConTech Blog",
+			"WEBINARS": "Webinars"
+		},
+
+		"COMPANY": {
+			"ABOUT": "About Us",
+			"CAREERS": "Careers",
+			"CONTACT": "Contact",
+			"PRIVACY": "Privacy"
+		},
+
+		"RIGHTS": "All rights reserved.",
+		"LOCATION": "Monterrey, Nuevo León, Mexico"
+	}
 }

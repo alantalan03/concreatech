@@ -3,12 +3,11 @@
   <div class="cta-content">
 
     <h2 class="cta-title">
-      ¿Listo para digitalizar tu planta?
+      {{ 'CTA.TITLE' | translate }}
     </h2>
 
     <p class="cta-description">
-      Únete a las <strong>100+ plantas</strong> que ya transformaron su operación con ConcreaTech.
-      Prueba gratis por 30 días sin compromiso.
+      <span [innerHTML]="'CTA.DESCRIPTION' | translate"></span>
     </p>
 
     <div class="cta-buttons">
@@ -19,7 +18,7 @@
         rel="noopener noreferrer"
         class="btn-primary"
       >
-        Solicitar demostración gratuita
+        {{ 'CTA.BUTTON_DEMO' | translate }}
       </a>
 
       <a
@@ -37,7 +36,7 @@
                 stroke-linecap="round"/>
         </svg>
 
-        Agendar reunión
+        {{ 'CTA.BUTTON_MEETING' | translate }}
 
       </a>
 

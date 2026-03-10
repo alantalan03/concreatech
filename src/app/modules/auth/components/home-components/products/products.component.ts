@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
@@ -7,6 +7,7 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './products.component.html',
   standalone: true,
   imports: [CommonModule, TranslateModule],
+  encapsulation: ViewEncapsulation.None, // ⬅️ CLAVE
   styleUrls: ['./products.component.scss']
 })
 export class ProductsComponent implements OnInit {

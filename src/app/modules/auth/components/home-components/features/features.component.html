@@ -1,26 +1,35 @@
 <section class="features" id="caracteristicas">
-  <div class="section-header">
-    <div class="section-tag">VENTAJAS COMPETITIVAS</div>
-    <h2 class="section-title">¿Por qué ConcreaTech?</h2>
-    <p class="section-subtitle">
-      Tecnología probada que maximiza la eficiencia operativa de tu planta de concreto premezclado
-    </p>
-  </div>
+	<div class="section-header">
+		<div class="section-tag">
+			{{ 'FEATURES.TAG' | translate }}
+		</div>
 
-  <div class="features-grid">
-    <div class="feature-card" *ngFor="let feature of features">
-      <div class="feature-icon">
-       <app-icon
-        [name]="feature.icon"
-        [color]="'color-fg-primary'"
-        size="4xl"
-        strokeWidth="semibold">
-      </app-icon>
-      </div>
-      <h3 class="feature-title" [innerHTML]="feature.title"></h3>
-      <p class="feature-description">
-        {{ feature.description }}
-      </p>
-    </div>
-  </div>
+		<h2 class="section-title">
+			{{ 'FEATURES.TITLE' | translate }}
+		</h2>
+
+		<p class="section-subtitle">
+			{{ 'FEATURES.SUBTITLE' | translate }}
+		</p>
+	</div>
+
+	<div class="features-grid">
+		<div class="feature-card" *ngFor="let feature of features">
+			<div class="feature-icon">
+				<app-icon
+					[name]="feature.icon"
+					[color]="'#000000'"
+					size="4xl"
+					strokeWidth="semibold"
+				>
+				</app-icon>
+			</div>
+
+			<h3 class="feature-title" [innerHTML]="feature.title | translate"></h3>
+
+			<p class="feature-description">
+				{{ feature.description | translate }}
+			</p>
+		</div>
+	</div>
 </section>

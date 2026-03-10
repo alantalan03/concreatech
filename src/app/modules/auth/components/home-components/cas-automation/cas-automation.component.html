@@ -1,89 +1,69 @@
 <section class="cas-automation" id="cas-automation">
+	<div class="section-header">
+		<div class="section-tag">
+			{{ 'CAS.TAG' | translate }}
+		</div>
 
-  <div class="section-header">
+		<h2 class="section-title">
+			{{ 'CAS.TITLE' | translate }}
+		</h2>
 
-    <div class="section-tag">
-      Servicio Especializado
-    </div>
+		<p class="section-subtitle">
+			{{ 'CAS.SUBTITLE' | translate }}
+		</p>
+	</div>
 
-    <h2 class="section-title">
-      Automatización de Plantas de Concreto
-    </h2>
+	<div class="cas-process-wrapper">
+		<div class="cas-process-carousel">
+			<div class="cas-step" *ngFor="let step of steps">
+				<div class="cas-step-content">
+					<div class="cas-step-header">
+						<div class="cas-step-number">
+							{{ step.number | translate }}
+						</div>
 
-    <p class="section-subtitle">
-      Proceso profesional para transformar tu planta con tecnología industrial
-    </p>
+						<h3 class="cas-step-title">
+							{{ step.title | translate }}
+						</h3>
+					</div>
 
-  </div>
+					<p class="cas-step-description">
+						{{ step.description | translate }}
+					</p>
 
+					<ul class="cas-step-list">
+						<li *ngFor="let item of step.items">
+							{{ item | translate }}
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
 
-  <div class="cas-process-wrapper">
+	<div class="cas-cta">
+		<h3>
+			{{ 'CAS.CTA_TITLE' | translate }}
+		</h3>
 
-    <div class="cas-process-carousel">
+		<p>
+			{{ 'CAS.CTA_SUBTITLE' | translate }}
+		</p>
 
-      <div class="cas-step" *ngFor="let step of steps">
+		<a
+			href="https://calendly.com/concreatech-mx/30min"
+			target="_blank"
+			rel="noopener noreferrer"
+			class="cas-cta-button"
+		>
+			<app-icon
+				name="calendar"
+				color="light"
+				size="md"
+				strokeWidth="semibold"
+			></app-icon>
 
-        <div class="cas-step-content">
-
-          <div class="cas-step-header">
-
-            <div class="cas-step-number">
-              {{step.number}}
-            </div>
-
-            <h3 class="cas-step-title">
-              {{step.title}}
-            </h3>
-
-          </div>
-
-
-          <p class="cas-step-description">
-            {{step.description}}
-          </p>
-
-
-          <ul class="cas-step-list">
-
-            <li *ngFor="let item of step.items">
-              {{item}}
-            </li>
-
-          </ul>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-
-  <div class="cas-cta">
-
-    <h3>
-      ¿Listo para automatizar tu planta?
-    </h3>
-
-    <p>
-      Agenda una visita técnica gratuita y recibe un diagnóstico personalizado
-    </p>
-
-    <a
-      href="https://calendly.com/concreatech-mx/30min"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="cas-cta-button"
-    >
-
-      <app-icon name="calendar" color="light" size="md" strokeWidth="semibold">
-      </app-icon>
-
-      Agendar Visita Técnica Gratuita
-
-    </a>
-
-  </div>
-
+			{{ 'CAS.CTA_BUTTON' | translate }}
+		</a>
+	</div>
 </section>

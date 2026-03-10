@@ -1,146 +1,4 @@
-<!-- <footer class="footer">
-
-  <div class="footer-content">
-    <div class="footer-col">
-
-      <div class="footer-brand">
-
-        <img
-          src="assets/logos/logotipo.png"
-          alt="ConcreaTech"
-          class="footer-logo"
-        />
-
-      </div>
-
-      <p class="footer-description">
-        {{ 'footer.description' | translate }}
-      </p>
-
-      <p class="footer-systems">
-        <strong>Concrete Operating System</strong><br>
-        <strong>Concrete Automation System</strong>
-      </p>
-
-    </div>
-    <div class="footer-col">
-
-      <h4 class="footer-title">
-        {{ 'footer.products.title' | translate }}
-      </h4>
-
-      <ul class="footer-links">
-
-        <li>
-          <a href="#cos">COS - Software SaaS</a>
-        </li>
-
-        <li>
-          <a href="#cas">CAS - Hardware IoT</a>
-        </li>
-
-        <li>
-          <a href="#integracion">
-            {{ 'footer.products.integration' | translate }}
-          </a>
-        </li>
-
-        <li>
-          <a href="#testimonios">
-            {{ 'footer.products.cases' | translate }}
-          </a>
-        </li>
-
-      </ul>
-
-    </div>
-    <div class="footer-col">
-
-      <h4 class="footer-title">
-        {{ 'footer.resources.title' | translate }}
-      </h4>
-
-      <ul class="footer-links">
-
-        <li>
-          <a href="#">
-            {{ 'footer.resources.docs' | translate }}
-          </a>
-        </li>
-
-        <li>
-          <a href="#">
-            {{ 'footer.resources.help' | translate }}
-          </a>
-        </li>
-
-        <li>
-          <a href="#">
-            {{ 'footer.resources.blog' | translate }}
-          </a>
-        </li>
-
-        <li>
-          <a href="#">
-            {{ 'footer.resources.webinars' | translate }}
-          </a>
-        </li>
-
-      </ul>
-
-    </div>
-    <div class="footer-col">
-
-      <h4 class="footer-title">
-        {{ 'footer.company.title' | translate }}
-      </h4>
-
-      <ul class="footer-links">
-
-        <li>
-          <a href="#">
-            {{ 'footer.company.about' | translate }}
-          </a>
-        </li>
-
-        <li>
-          <a href="#">
-            {{ 'footer.company.careers' | translate }}
-          </a>
-        </li>
-
-        <li>
-          <a href="#contacto">
-            {{ 'footer.company.contact' | translate }}
-          </a>
-        </li>
-
-        <li>
-          <a href="#">
-            {{ 'footer.company.privacy' | translate }}
-          </a>
-        </li>
-
-      </ul>
-
-    </div>
-
-  </div>
-
-  <div class="footer-bottom">
-
-    <p>
-      © {{ currentYear }} ConcreaTech.
-      {{ 'footer.rights' | translate }}
-      | Monterrey, Nuevo León, MX
-    </p>
-
-  </div>
-
-</footer> -->
-
-
-<footer class="footer">
+<section class="footer">
 
   <div class="footer-content">
 
@@ -158,44 +16,42 @@
       </div>
 
       <p class="footer-description">
-        Impulsando la transformación digital de la industria del
-        <strong>concreto premezclado en Latinoamérica</strong>
-        con tecnología de vanguardia.
+        <span [innerHTML]="'FOOTER.DESCRIPTION' | translate"></span>
       </p>
 
       <p class="footer-description footer-products">
 
-        <strong>Concrete Operating System</strong><br>
-        <strong>Concrete Automation System</strong>
+        <strong>{{ 'FOOTER.PRODUCT_1' | translate }}</strong><br>
+        <strong>{{ 'FOOTER.PRODUCT_2' | translate }}</strong>
 
       </p>
 
     </div>
 
 
-    <!-- PRODUCTOS -->
+    <!-- PRODUCTS -->
     <div>
 
       <h4 class="footer-title">
-        Productos
+        {{ 'FOOTER.PRODUCTS_TITLE' | translate }}
       </h4>
 
       <ul class="footer-links">
 
         <li>
-          <a href="#">COS - Software SaaS</a>
+          <a href="#">{{ 'FOOTER.PRODUCTS.COS' | translate }}</a>
         </li>
 
         <li>
-          <a href="#">CAS - Hardware IoT</a>
+          <a href="#">{{ 'FOOTER.PRODUCTS.CAS' | translate }}</a>
         </li>
 
         <li>
-          <a href="#">Integración Completa</a>
+          <a href="#">{{ 'FOOTER.PRODUCTS.INTEGRATION' | translate }}</a>
         </li>
 
         <li>
-          <a href="#">Casos de Éxito</a>
+          <a href="#">{{ 'FOOTER.PRODUCTS.CASES' | translate }}</a>
         </li>
 
       </ul>
@@ -203,29 +59,29 @@
     </div>
 
 
-    <!-- RECURSOS -->
+    <!-- RESOURCES -->
     <div>
 
       <h4 class="footer-title">
-        Recursos
+        {{ 'FOOTER.RESOURCES_TITLE' | translate }}
       </h4>
 
       <ul class="footer-links">
 
         <li>
-          <a href="#">Documentación</a>
+          <a href="#">{{ 'FOOTER.RESOURCES.DOCS' | translate }}</a>
         </li>
 
         <li>
-          <a href="#">Centro de Ayuda</a>
+          <a href="#">{{ 'FOOTER.RESOURCES.HELP' | translate }}</a>
         </li>
 
         <li>
-          <a href="#">Blog ConTech</a>
+          <a href="#">{{ 'FOOTER.RESOURCES.BLOG' | translate }}</a>
         </li>
 
         <li>
-          <a href="#">Webinars</a>
+          <a href="#">{{ 'FOOTER.RESOURCES.WEBINARS' | translate }}</a>
         </li>
 
       </ul>
@@ -233,29 +89,29 @@
     </div>
 
 
-    <!-- EMPRESA -->
+    <!-- COMPANY -->
     <div>
 
       <h4 class="footer-title">
-        Empresa
+        {{ 'FOOTER.COMPANY_TITLE' | translate }}
       </h4>
 
       <ul class="footer-links">
 
         <li>
-          <a href="#">Sobre Nosotros</a>
+          <a href="#">{{ 'FOOTER.COMPANY.ABOUT' | translate }}</a>
         </li>
 
         <li>
-          <a href="#">Carreras</a>
+          <a href="#">{{ 'FOOTER.COMPANY.CAREERS' | translate }}</a>
         </li>
 
         <li>
-          <a href="#">Contacto</a>
+          <a href="#">{{ 'FOOTER.COMPANY.CONTACT' | translate }}</a>
         </li>
 
         <li>
-          <a href="#">Privacidad</a>
+          <a href="#">{{ 'FOOTER.COMPANY.PRIVACY' | translate }}</a>
         </li>
 
       </ul>
@@ -270,10 +126,11 @@
   <div class="footer-bottom">
 
     <p>
-      © {{year}} ConcreaTech. Todos los derechos reservados.
-      | Monterrey, Nuevo León, México
+      © {{year}} ConcreaTech.
+      {{ 'FOOTER.RIGHTS' | translate }}
+      | {{ 'FOOTER.LOCATION' | translate }}
     </p>
 
   </div>
 
-</footer>
+</section>

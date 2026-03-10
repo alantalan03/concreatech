@@ -7,6 +7,7 @@ import { AnimationService } from './animations.service';
   selector: 'app-hero',
   templateUrl: './hero.component.html',
   styleUrls: ['./hero.component.scss'],
+  standalone: true,
   imports:[
     TranslateModule,
     ButtonComponent

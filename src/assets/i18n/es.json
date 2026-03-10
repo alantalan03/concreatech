@@ -19,7 +19,6 @@
 		"CTA_PRIMARY": "Solicitar demo",
 		"CTA_SECONDARY": "Ver casos de éxito"
 	},
-
 	"STATS": {
 		"PRECISION": "Precisión en dosificación",
 		"COST_REDUCTION": "Reducción de costos operativos",
@@ -52,101 +51,270 @@
 			"FEATURE_5": "Instalación llave en mano"
 		}
 	},
-	"modules": {
-		"tag": "Módulos del Sistema",
-		"badge": "Módulos dentro de la plataforma COS",
-		"title": "Funcionalidades por Licencia",
-		"subtitle": "Cada licencia desbloquea módulos específicos para digitalizar aspectos clave de tu operación",
-
-		"dashboard": {
-		"category": "Monitoreo",
-		"title": "Dashboard Operativo",
-		"description": "Visualiza el estado de tu planta en tiempo real...",
-		"f1": "KPIs en tiempo real de producción",
-		"f2": "Control de inventarios por material",
-		"f3": "Gráficas de volumen acumulado y proyectado",
-		"f4": "Vista multi-planta consolidada"
+	"FEATURES": {
+		"TAG": "VENTAJAS COMPETITIVAS",
+		"TITLE": "¿Por qué ConcreaTech?",
+		"SUBTITLE": "Tecnología probada que maximiza la eficiencia operativa de tu planta de concreto premezclado",
+		"FEATURE_1": {
+			"TITLE": "Automatización Completa",
+			"DESCRIPTION": "Elimina procesos manuales y errores humanos. Desde la recepción del pedido hasta la entrega, todo está automatizado y conectado."
+		},
+		"FEATURE_2": {
+			"TITLE": "Plataforma en la Nube",
+			"DESCRIPTION": "Sistema 100% basado en la nube con acceso desde cualquier dispositivo. Datos seguros y actualizaciones sin interrupciones."
+		},
+		"FEATURE_3": {
+			"TITLE": "Business Intelligence",
+			"DESCRIPTION": "Dashboards ejecutivos en tiempo real con análisis profundo de rentabilidad, eficiencia y KPIs."
+		},
+		"FEATURE_4": {
+			"TITLE": "IoT en Tiempo Real",
+			"DESCRIPTION": "Monitoreo instantáneo de todas las operaciones con sensores que envían datos críticos cada segundo."
+		},
+		"FEATURE_5": {
+			"TITLE": "Escalabilidad Modular",
+			"DESCRIPTION": "Comienza con lo básico y agrega nuevas funcionalidades conforme tu negocio crece."
+		},
+		"FEATURE_6": {
+			"TITLE": "Gestión Multi-Planta",
+			"DESCRIPTION": "Administración centralizada de múltiples plantas con visibilidad consolidada y reportes corporativos."
+		},
+		"FEATURE_7": {
+			"TITLE": "Seguridad Empresarial",
+			"DESCRIPTION": "Almacenamiento certificado, respaldos automáticos y recuperación garantizada."
+		},
+		"FEATURE_8": {
+			"TITLE": "Machine Learning <span class='soon'>[Próximamente]</span>",
+			"DESCRIPTION": "Proyecciones inteligentes, optimización de rutas y predicción de mantenimiento."
 		}
 	},
+	"TESTIMONIALS": {
+		"TAG": "Casos de Éxito",
+		"TITLE": "Lo que dicen nuestros clientes",
+		"SUBTITLE": "Empresas líderes del sector confían en ConcreaTech para transformar sus operaciones",
 
-  "pricing": {
-    "tag": "Planes de Licenciamiento",
-    "badge": "COS - Control Operativo Software",
-    "title": "Sistematiza tu planta con COS",
-    "subtitle": "Potencializa la eficiencia operativa con nuestras licencias modulares. Elige el plan que se adapte a tu crecimiento.",
-    "period": "MXN por planta / mes",
-    "cta": "Empezar ahora",
-    "coming": "PRÓXIMAMENTE",
+		"ITEM_1": {
+			"TEXT": "ConcreaTech transformó completamente nuestra operación. La automatización de silos y el control en tiempo real nos permitió reducir desperdicios en un 35% y mejorar la precisión en nuestras mezclas.",
+			"NAME": "Ing. Roberto Martínez",
+			"POSITION": "Director de Operaciones",
+			"COMPANY": "CONCRETOS DEL NORTE"
+		},
 
-    "basic": {
-      "name": "Básica",
-      "f1": "Gestión de pedidos",
-      "f2": "Diseño de mezclas",
-      "f3": "Control de inventarios",
-      "f4": "Remisiones automáticas",
-      "f5": "Automatización de carga (CAS)",
-      "f6": "Usuarios ilimitados",
-      "f7": "Soporte comercial"
-    },
+		"ITEM_2": {
+			"TEXT": "La plataforma COS nos dio visibilidad total de nuestra operación. Ahora podemos tomar decisiones basadas en datos reales y hemos incrementado nuestra rentabilidad en un 28% en solo 6 meses.",
+			"NAME": "Lic. María González",
+			"POSITION": "Gerente General",
+			"COMPANY": "PREMEZCLADOS MTY"
+		},
 
-    "intermediate": {
-      "name": "Intermedia",
-      "f1": "Todo lo de Básica +",
-      "f2": "Control de calidad completo",
-      "f3": "Mantenimiento de equipos",
-      "f4": "Nómina semanal",
-      "f5": "Reportes de productividad",
-      "f6": "Soporte prioritario"
-    },
+		"ITEM_3": {
+			"TEXT": "El sistema de remisiones automáticas y el control de flotilla GPS revolucionaron nuestra logística. Reducimos tiempos de entrega en 40% y mejoramos significativamente la satisfacción de nuestros clientes.",
+			"NAME": "Ing. Carlos Hernández",
+			"POSITION": "Gerente de Logística",
+			"COMPANY": "GRUPO CONSTRUCTOR"
+		},
+		"TRUSTED": "Confían en nosotros",
+		"CLIENTS": {
+			"CEMEX": "CEMEX",
+			"HOLCIM": "HOLCIM",
+			"APASCO": "APASCO",
+			"GCC": "GCC",
+			"MOCTEZUMA": "CEMENTOS MOCTEZUMA",
+			"CONSTRUCTOR": "GRUPO CONSTRUCTOR"
+		}
+	},
+	"CAS": {
+		"TAG": "Servicio Especializado",
+		"TITLE": "Automatización de Plantas de Concreto",
+		"SUBTITLE": "Proceso profesional para transformar tu planta con tecnología industrial",
 
-    "advanced": {
-      "name": "Avanzada",
-      "f1": "Todo lo de Intermedia +",
-      "f2": "Ventas y CxC",
-      "f3": "Compras y CxP",
-      "f4": "Estados financieros",
-      "f5": "Análisis de rentabilidad",
-      "f6": "Dashboards ejecutivos"
-    },
+		"CTA_TITLE": "¿Listo para automatizar tu planta?",
+		"CTA_SUBTITLE": "Agenda una visita técnica gratuita y recibe un diagnóstico personalizado",
+		"CTA_BUTTON": "Agendar Visita Técnica Gratuita",
 
-    "plus": {
-      "name": "Plus",
-      "f1": "Todo lo de Avanzada +",
-      "f2": "Control de flotilla GPS",
-      "f3": "Gestión multi-planta",
-      "f4": "Optimización de rutas",
-      "f5": "Analytics avanzado (BI)",
-      "f6": "Soporte 24/7 premium",
-      "f7": "Gerente de cuenta dedicado"
-    }
-  },
-  "cta": {
-    "title": "¿Listo para digitalizar tu planta?",
-    "description": "Únete a las 100+ plantas que ya transformaron su operación con ConcreaTech. Prueba gratis por 30 días sin compromiso.",
-    "primary": "Solicitar demostración gratuita",
-    "secondary": "Agendar reunión"
-  },
-  "footer": {
-    "description": "Impulsando la transformación digital de la industria del concreto premezclado en Latinoamérica con tecnología de vanguardia.",
-    "rights": "Todos los derechos reservados.",
-    "products": {
-      "title": "Productos",
-      "integration": "Integración Completa",
-      "cases": "Casos de Éxito"
-    },
-    "resources": {
-      "title": "Recursos",
-      "docs": "Documentación",
-      "help": "Centro de Ayuda",
-      "blog": "Blog ConTech",
-      "webinars": "Webinars"
-    },
-    "company": {
-      "title": "Empresa",
-      "about": "Sobre Nosotros",
-      "careers": "Carreras",
-      "contact": "Contacto",
-      "privacy": "Privacidad"
-    }
-  }
+		"STEP_1": {
+			"NUMBER": "PASO 1",
+			"TITLE": "Diagnóstico en Sitio",
+			"DESCRIPTION": "Visitamos tu planta para realizar un análisis exhaustivo de los procesos operativos.",
+			"ITEM_1": "Análisis de flujo de materiales",
+			"ITEM_2": "Detección de puntos críticos",
+			"ITEM_3": "Evaluación de infraestructura",
+			"ITEM_4": "Reporte con recomendaciones"
+		},
+
+		"STEP_2": {
+			"NUMBER": "PASO 2",
+			"TITLE": "Propuesta Técnica",
+			"DESCRIPTION": "Diseñamos una solución personalizada con especificaciones técnicas detalladas.",
+			"ITEM_1": "Arquitectura de automatización",
+			"ITEM_2": "Selección de hardware certificado",
+			"ITEM_3": "Especificaciones de sensores y PLCs",
+			"ITEM_4": "Cronograma de implementación"
+		},
+
+		"STEP_3": {
+			"NUMBER": "PASO 3",
+			"TITLE": "Cotización del Proyecto",
+			"DESCRIPTION": "Presentamos una cotización detallada con diferentes opciones de implementación.",
+			"ITEM_1": "Desglose completo de inversión",
+			"ITEM_2": "Opciones de implementación por fases",
+			"ITEM_3": "ROI y ahorros estimados",
+			"ITEM_4": "Términos comerciales"
+		},
+
+		"STEP_4": {
+			"NUMBER": "PASO 4",
+			"TITLE": "Implementación",
+			"DESCRIPTION": "Instalamos el hardware IoT y configuramos los sistemas de control.",
+			"ITEM_1": "Instalación de sensores",
+			"ITEM_2": "Programación de PLCs",
+			"ITEM_3": "Integración con sistemas existentes",
+			"ITEM_4": "Pruebas y puesta en marcha"
+		},
+
+		"STEP_5": {
+			"NUMBER": "PASO 5",
+			"TITLE": "Capacitación y Soporte",
+			"DESCRIPTION": "Entrenamos a tu equipo y brindamos soporte continuo.",
+			"ITEM_1": "Capacitación técnica completa",
+			"ITEM_2": "Manuales de operación",
+			"ITEM_3": "Soporte remoto 24/7",
+			"ITEM_4": "Mantenimiento preventivo"
+		}
+	},
+	"MODULES": {
+		"TAG": "Módulos del Sistema",
+		"BADGE": "Módulos dentro de la plataforma COS",
+		"TITLE": "Funcionalidades por Licencia",
+		"SUBTITLE": "Cada licencia desbloquea módulos específicos para digitalizar aspectos clave de tu operación",
+
+		"MODULE_1": {
+			"CATEGORY": "Monitoreo",
+			"TITLE": "Dashboard Operativo",
+			"DESCRIPTION": "Visualiza el estado de tu planta en tiempo real. Monitorea producción, inventarios de materiales y volúmenes diarios desde un solo panel.",
+			"FEATURE_1": "KPIs en tiempo real de producción",
+			"FEATURE_2": "Control de inventarios por material",
+			"FEATURE_3": "Gráficas de volumen acumulado",
+			"FEATURE_4": "Vista multi-planta consolidada"
+		},
+
+		"MODULE_2": {
+			"CATEGORY": "Gestión",
+			"TITLE": "Generación de Remisiones",
+			"DESCRIPTION": "Crea y gestiona pedidos digitalmente con seguimiento completo desde captura hasta entrega.",
+			"FEATURE_1": "Captura rápida de pedidos y clientes",
+			"FEATURE_2": "Configuración técnica de mezclas",
+			"FEATURE_3": "Geolocalización de obras",
+			"FEATURE_4": "Control de temperatura y humedad"
+		},
+
+		"MODULE_3": {
+			"CATEGORY": "Analytics",
+			"TITLE": "Reportes y Analytics",
+			"DESCRIPTION": "Sistema avanzado de reportes con filtros inteligentes y exportación a múltiples formatos.",
+			"FEATURE_1": "Reportes de producción por periodo",
+			"FEATURE_2": "Control diario de inventarios",
+			"FEATURE_3": "Análisis por cliente y proyecto",
+			"FEATURE_4": "Exportación a Excel y PDF"
+		}
+	},
+	"PRICING": {
+		"TAG": "Planes de Licenciamiento",
+		"BADGE": "COS - Control Operativo Software",
+		"TITLE": "Sistematiza tu planta con COS",
+		"SUBTITLE": "Potencializa la eficiencia operativa con nuestras licencias modulares. Elige el plan que se adapte a tu crecimiento.",
+		"BUTTON": "Empezar ahora",
+		"PERIOD": "MXN por planta / mes",
+
+		"CTA_TITLE": "¿Quieres una demo personalizada?",
+		"CTA_DESCRIPTION": "Agenda una llamada con nuestro equipo y descubre cómo COS puede optimizar la operación de tu planta de concreto.",
+		"CTA_BUTTON": "Agendar Demo",
+
+		"BADGES": {
+			"SOON": "PRÓXIMAMENTE"
+		},
+
+		"PLANS": {
+			"BASIC": {
+				"NAME": "Básica",
+				"FEATURE_1": "Gestión de pedidos",
+				"FEATURE_2": "Diseño de mezclas",
+				"FEATURE_3": "Control de inventarios",
+				"FEATURE_4": "Remisiones automáticas",
+				"FEATURE_5": "Automatización de carga (CAS)",
+				"FEATURE_6": "Usuarios ilimitados",
+				"FEATURE_7": "Soporte comercial"
+			},
+
+			"MID": {
+				"NAME": "Intermedia",
+				"FEATURE_1": "Todo lo de Básica +",
+				"FEATURE_2": "Control de calidad completo",
+				"FEATURE_3": "Mantenimiento de equipos",
+				"FEATURE_4": "Nómina semanal",
+				"FEATURE_5": "Reportes de productividad",
+				"FEATURE_6": "Soporte prioritario"
+			},
+
+			"ADVANCED": {
+				"NAME": "Avanzada",
+				"FEATURE_1": "Todo lo de Intermedia +",
+				"FEATURE_2": "Ventas y CxC",
+				"FEATURE_3": "Compras y CxP",
+				"FEATURE_4": "Estados financieros",
+				"FEATURE_5": "Análisis de rentabilidad",
+				"FEATURE_6": "Dashboards ejecutivos"
+			},
+
+			"PLUS": {
+				"NAME": "Plus",
+				"FEATURE_1": "Todo lo de Avanzada +",
+				"FEATURE_2": "Control de flotilla GPS",
+				"FEATURE_3": "Gestión multi-planta",
+				"FEATURE_4": "Optimización de rutas",
+				"FEATURE_5": "Analytics avanzado (BI)",
+				"FEATURE_6": "Soporte 24/7 premium",
+				"FEATURE_7": "Gerente de cuenta dedicado"
+			}
+		}
+	},
+	"CTA": {
+		"TITLE": "¿Listo para digitalizar tu planta?",
+		"DESCRIPTION": "Únete a las <strong>100+ plantas</strong> que ya transformaron su operación con ConcreaTech. Prueba gratis por 30 días sin compromiso.",
+		"BUTTON_DEMO": "Solicitar demostración gratuita",
+		"BUTTON_MEETING": "Agendar reunión"
+	},
+	"FOOTER": {
+		"DESCRIPTION": "Impulsando la transformación digital de la industria del <strong>concreto premezclado en Latinoamérica</strong> con tecnología de vanguardia.",
+		"PRODUCT_1": "Concrete Operating System",
+		"PRODUCT_2": "Concrete Automation System",
+
+		"PRODUCTS_TITLE": "Productos",
+		"RESOURCES_TITLE": "Recursos",
+		"COMPANY_TITLE": "Empresa",
+
+		"PRODUCTS": {
+			"COS": "COS - Software SaaS",
+			"CAS": "CAS - Hardware IoT",
+			"INTEGRATION": "Integración Completa",
+			"CASES": "Casos de Éxito"
+		},
+
+		"RESOURCES": {
+			"DOCS": "Documentación",
+			"HELP": "Centro de Ayuda",
+			"BLOG": "Blog ConTech",
+			"WEBINARS": "Webinars"
+		},
+
+		"COMPANY": {
+			"ABOUT": "Sobre Nosotros",
+			"CAREERS": "Carreras",
+			"CONTACT": "Contacto",
+			"PRIVACY": "Privacidad"
+		},
+
+		"RIGHTS": "Todos los derechos reservados.",
+		"LOCATION": "Monterrey, Nuevo León, México"
+	}
 }

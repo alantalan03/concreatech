@@ -252,7 +252,7 @@ export class ThemeService {
 
 	// Método privado para aplicar clases de tema
 	private applyTheme(theme: string): void {
-		document.body.classList.toggle('theme--dark', theme === 'dark');
+		// document.body.classList.toggle('theme--dark', theme === 'dark');
 		document.body.classList.toggle('theme--light', theme === 'light');
 	}
 	onThemeChange(callback: (theme: string) => void) {

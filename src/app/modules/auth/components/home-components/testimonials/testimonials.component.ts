@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit, OnDestroy } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 interface Testimonial {
   text: string;
@@ -10,7 +11,7 @@ interface Testimonial {
 
 @Component({
   selector: 'app-testimonials',
-  imports:[CommonModule],
+  imports:[CommonModule, TranslateModule],
   templateUrl: './testimonials.component.html',
   styleUrls: ['./testimonials.component.scss']
 })
@@ -21,22 +22,22 @@ export class TestimonialsComponent implements OnInit, OnDestroy {
 
   testimonials: Testimonial[] = [
     {
-      text: 'ConcreaTech transformó completamente nuestra operación. La automatización de silos y el control en tiempo real nos permitió reducir desperdicios en un 35% y mejorar la precisión en nuestras mezclas.',
-      name: 'Ing. Roberto Martínez',
-      position: 'Director de Operaciones',
-      company: 'CONCRETOS DEL NORTE'
+      text: 'TESTIMONIALS.ITEM_1.TEXT',
+      name: 'TESTIMONIALS.ITEM_1.NAME',
+      position: 'TESTIMONIALS.ITEM_1.POSITION',
+      company: 'TESTIMONIALS.ITEM_1.COMPANY'
     },
     {
-      text: 'La plataforma COS nos dio visibilidad total de nuestra operación. Ahora podemos tomar decisiones basadas en datos reales y hemos incrementado nuestra rentabilidad en un 28% en solo 6 meses.',
-      name: 'Lic. María González',
-      position: 'Gerente General',
-      company: 'PREMEZCLADOS MTY'
+      text: 'TESTIMONIALS.ITEM_2.TEXT',
+      name: 'TESTIMONIALS.ITEM_2.NAME',
+      position: 'TESTIMONIALS.ITEM_2.POSITION',
+      company: 'TESTIMONIALS.ITEM_2.COMPANY'
     },
     {
-      text: 'El sistema de remisiones automáticas y el control de flotilla GPS revolucionaron nuestra logística. Reducimos tiempos de entrega en 40% y mejoramos significativamente la satisfacción de nuestros clientes.',
-      name: 'Ing. Carlos Hernández',
-      position: 'Gerente de Logística',
-      company: 'GRUPO CONSTRUCTOR'
+      text: 'TESTIMONIALS.ITEM_3.TEXT',
+      name: 'TESTIMONIALS.ITEM_3.NAME',
+      position: 'TESTIMONIALS.ITEM_3.POSITION',
+      company: 'TESTIMONIALS.ITEM_3.COMPANY'
     }
   ];
 

@@ -1,30 +1,25 @@
-<section class="pricing" id="precios">
+<section class="pricing" id="pricing">
 
   <header class="section-header">
 
     <span class="section-tag">
-      Planes de Licenciamiento
+      {{ 'PRICING.TAG' | translate }}
     </span>
     <br>
 
     <div class="cos-pricing-badge">
-
-
-      <span>COS - Control Operativo Software</span>
-
+      <span>{{ 'PRICING.BADGE' | translate }}</span>
     </div>
 
     <h2 class="section-title">
-      Sistematiza tu planta con COS
+      {{ 'PRICING.TITLE' | translate }}
     </h2>
 
     <p class="section-subtitle">
-      Potencializa la eficiencia operativa con nuestras licencias modulares.
-      Elige el plan que se adapte a tu crecimiento.
+      {{ 'PRICING.SUBTITLE' | translate }}
     </p>
 
   </header>
-
 
 
   <div class="pricing-grid">
@@ -40,25 +35,25 @@
         *ngIf="plan.badge"
         [style.background]="plan.badgeColor ? 'var(--secondary)' : ''"
       >
-        {{plan.badge}}
+        {{ plan.badge | translate }}
       </div>
 
       <h3 class="pricing-name">
-        {{plan.name}}
+        {{ plan.name | translate }}
       </h3>
 
       <div class="pricing-price">
-        {{plan.price}}
+        {{ plan.price }}
       </div>
 
       <div class="pricing-period">
-        {{plan.period}}
+        {{ plan.period | translate }}
       </div>
 
       <ul class="pricing-features">
 
         <li *ngFor="let feature of plan.features">
-          {{feature}}
+          {{ feature | translate }}
         </li>
 
       </ul>
@@ -67,7 +62,7 @@
         class="pricing-button"
         (click)="startPlan(plan)"
       >
-        Empezar ahora
+        {{ 'PRICING.BUTTON' | translate }}
       </button>
 
     </article>
@@ -75,20 +70,16 @@
   </div>
 
 
-
-  <!-- CTA SECTION -->
-
   <section class="cta-section">
 
     <div class="cta-content">
 
       <h3 class="cta-title">
-        ¿Quieres una demo personalizada?
+        {{ 'PRICING.CTA_TITLE' | translate }}
       </h3>
 
       <p class="cta-description">
-        Agenda una llamada con nuestro equipo y descubre cómo COS puede
-        optimizar la operación de tu planta de concreto.
+        {{ 'PRICING.CTA_DESCRIPTION' | translate }}
       </p>
 
       <div class="cta-buttons">
@@ -98,7 +89,7 @@
           href="https://calendly.com/concreatech-mx/30min"
           target="_blank"
         >
-          Agendar Demo
+          {{ 'PRICING.CTA_BUTTON' | translate }}
         </a>
 
       </div>

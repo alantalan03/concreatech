@@ -1,8 +1,11 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { TranslateService } from '@ngx-translate/core';
+
 import es from 'src/assets/i18n/es.json';
 import en from 'src/assets/i18n/en.json';
+import pt from 'src/assets/i18n/pt.json';
+
 import { AppLang } from '../../models/lang.type';
 
 @Injectable({ providedIn: 'root' })
@@ -12,17 +15,25 @@ export class LanguageService {
   lang$ = this.langSubject.asObservable();
 
   constructor(private ngxTranslate: TranslateService) {
-    // 👇 Cargar traducciones
+
+    // Cargar traducciones
     this.ngxTranslate.setTranslation('es', es, true);
     this.ngxTranslate.setTranslation('en', en, true);
+    this.ngxTranslate.setTranslation('pt', pt, true);
 
     const lang = this.resolveInitialLang();
     this.setLang(lang);
   }
 
   private resolveInitialLang(): AppLang {
+
     const storedLang = localStorage.getItem('lang');
-    return storedLang === 'en' ? 'en' : 'es';
+
+    if (storedLang === 'en' || storedLang === 'pt') {
+      return storedLang;
+    }
+
+    return 'es';
   }
 
   get currentLang(): AppLang {
@@ -34,4 +45,5 @@ export class LanguageService {
     this.ngxTranslate.use(lang);
     this.langSubject.next(lang);
   }
+
 }

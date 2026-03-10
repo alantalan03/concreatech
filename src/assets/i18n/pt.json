@@ -1,0 +1,167 @@
+{
+  "NAV": {
+    "HOME": "Início",
+    "SOLUTIONS": "Soluções",
+    "BENEFITS": "Benefícios",
+    "CAS": "CAS",
+    "COS": "COS",
+    "LICENSES": "Licenças",
+    "CONTACT": "Contato",
+    "LOGIN": "Entrar",
+    "DEMO": "Solicitar Demo"
+  },
+  "HERO": {
+    "TAG": "INOVAÇÃO CONTECH",
+    "TITLE_LINE_1": "O futuro do",
+    "TITLE_HIGHLIGHT": "concreto usinado",
+    "TITLE_LINE_2": "é digital",
+    "SUBTITLE": "Sistematização e automação completas para usinas de concreto usinado. Plataforma em nuvem que maximiza sua eficiência operacional e transforma seu negócio.",
+    "CTA_PRIMARY": "Solicitar demo",
+    "CTA_SECONDARY": "Ver casos de sucesso"
+  },
+  "STATS": {
+    "PRECISION": "Precisão na dosagem",
+    "COST_REDUCTION": "Redução de custos operacionais",
+    "REAL_TIME": "Monitoramento em tempo real",
+    "PROFITABILITY": "Aumento da rentabilidade"
+  },
+  "PRODUCTS": {
+    "TAG": "Nossas soluções",
+    "TITLE": "Tecnologia de ponta",
+    "SUBTITLE": "Dois sistemas integrados que revolucionam a operação de usinas de concreto usinado",
+    "LEARN_MORE": "Explorar",
+    "COS": {
+      "TITLE": "Concrete Operating System",
+      "TYPE": "Software SaaS baseado em nuvem",
+      "DESCRIPTION": "Plataforma completa de gestão em nuvem que sistematiza todos os aspectos da sua usina.",
+      "FEATURE_1": "Gestão de pedidos e remessas digitais",
+      "FEATURE_2": "Controle de qualidade automatizado",
+      "FEATURE_3": "Demonstrativos financeiros em tempo real",
+      "FEATURE_4": "Relatórios operacionais e dashboards",
+      "FEATURE_5": "Gestão multi-usina e de frota"
+    },
+    "CAS": {
+      "TITLE": "Concrete Automation System",
+      "TYPE": "Hardware IoT e Implementação",
+      "DESCRIPTION": "Sistema de automação física com sensores IoT e controle remoto total.",
+      "FEATURE_1": "Automação completa de carregamento",
+      "FEATURE_2": "Sensores IoT de alta precisão",
+      "FEATURE_3": "Controle remoto de balanças",
+      "FEATURE_4": "Integração nativa com o COS",
+      "FEATURE_5": "Instalação chave na mão"
+    }
+  },
+  "FEATURES": {
+    "TAG": "VANTAGENS COMPETITIVAS",
+    "TITLE": "Por que ConcreaTech?",
+    "SUBTITLE": "Tecnologia comprovada que maximiza a eficiência operacional da sua usina de concreto usinado",
+    "FEATURE_1": {
+      "TITLE": "Automação Completa",
+      "DESCRIPTION": "Elimine processos manuais e erros humanos. Do recebimento do pedido até a entrega, tudo automatizado e conectado."
+    },
+    "FEATURE_2": {
+      "TITLE": "Plataforma em Nuvem",
+      "DESCRIPTION": "Sistema 100% baseado em nuvem com acesso de qualquer dispositivo. Dados seguros e atualizações contínuas."
+    },
+    "FEATURE_3": {
+      "TITLE": "Business Intelligence",
+      "DESCRIPTION": "Dashboards executivos em tempo real com análise profunda de rentabilidade, eficiência e KPIs."
+    },
+    "FEATURE_4": {
+      "TITLE": "IoT em Tempo Real",
+      "DESCRIPTION": "Monitoramento instantâneo de todas as operações com sensores que enviam dados críticos a cada segundo."
+    },
+    "FEATURE_5": {
+      "TITLE": "Escalabilidade Modular",
+      "DESCRIPTION": "Comece com o básico e adicione funcionalidades conforme seu negócio cresce."
+    },
+    "FEATURE_6": {
+      "TITLE": "Gestão Multi-Usina",
+      "DESCRIPTION": "Administração centralizada de múltiplas usinas com visibilidade consolidada e relatórios corporativos."
+    },
+    "FEATURE_7": {
+      "TITLE": "Segurança Empresarial",
+      "DESCRIPTION": "Armazenamento certificado, backups automáticos e recuperação garantida."
+    },
+    "FEATURE_8": {
+      "TITLE": "Machine Learning <span class='soon'>[Em breve]</span>",
+      "DESCRIPTION": "Projeções inteligentes, otimização de rotas e previsão de manutenção."
+    }
+  },
+  "TESTIMONIALS": {
+    "TAG": "Casos de Sucesso",
+    "TITLE": "O que dizem nossos clientes",
+    "SUBTITLE": "Empresas líderes do setor confiam na ConcreaTech para transformar suas operações",
+    "TRUSTED": "Confiam em nós",
+    "CLIENTS": {
+      "CEMEX": "CEMEX",
+      "HOLCIM": "HOLCIM",
+      "APASCO": "APASCO",
+      "GCC": "GCC",
+      "MOCTEZUMA": "CEMENTOS MOCTEZUMA",
+      "CONSTRUCTOR": "GRUPO CONSTRUCTOR"
+    }
+  },
+  "CAS": {
+    "TAG": "Serviço Especializado",
+    "TITLE": "Automação de Usinas de Concreto",
+    "SUBTITLE": "Processo profissional para transformar sua usina com tecnologia industrial",
+    "CTA_TITLE": "Pronto para automatizar sua usina?",
+    "CTA_SUBTITLE": "Agende uma visita técnica gratuita e receba um diagnóstico personalizado",
+    "CTA_BUTTON": "Agendar visita técnica gratuita"
+  },
+  "MODULES": {
+    "TAG": "Módulos do Sistema",
+    "BADGE": "Módulos dentro da plataforma COS",
+    "TITLE": "Funcionalidades por Licença",
+    "SUBTITLE": "Cada licença desbloqueia módulos específicos para digitalizar aspectos chave da sua operação"
+  },
+  "PRICING": {
+    "TAG": "Planos de Licenciamento",
+    "BADGE": "COS - Software de Controle Operacional",
+    "TITLE": "Digitalize sua usina com COS",
+    "SUBTITLE": "Potencialize a eficiência operacional com nossas licenças modulares. Escolha o plano que se adapta ao seu crescimento.",
+    "BUTTON": "Começar agora",
+    "PERIOD": "MXN por usina / mês",
+    "CTA_TITLE": "Quer uma demonstração personalizada?",
+    "CTA_DESCRIPTION": "Agende uma chamada com nossa equipe e descubra como o COS pode otimizar a operação da sua usina de concreto.",
+    "CTA_BUTTON": "Agendar Demo",
+    "BADGES": {
+      "SOON": "EM BREVE"
+    }
+  },
+  "CTA": {
+    "TITLE": "Pronto para digitalizar sua usina?",
+    "DESCRIPTION": "Junte-se às <strong>100+ usinas</strong> que já transformaram sua operação com a ConcreaTech. Teste gratuitamente por 30 dias sem compromisso.",
+    "BUTTON_DEMO": "Solicitar demonstração gratuita",
+    "BUTTON_MEETING": "Agendar reunião"
+  },
+  "FOOTER": {
+    "DESCRIPTION": "Impulsionando a transformação digital da indústria de <strong>concreto usinado na América Latina</strong> com tecnologia de ponta.",
+    "PRODUCT_1": "Concrete Operating System",
+    "PRODUCT_2": "Concrete Automation System",
+    "PRODUCTS_TITLE": "Produtos",
+    "RESOURCES_TITLE": "Recursos",
+    "COMPANY_TITLE": "Empresa",
+    "PRODUCTS": {
+      "COS": "COS - Software SaaS",
+      "CAS": "CAS - Hardware IoT",
+      "INTEGRATION": "Integração completa",
+      "CASES": "Casos de sucesso"
+    },
+    "RESOURCES": {
+      "DOCS": "Documentação",
+      "HELP": "Central de ajuda",
+      "BLOG": "Blog ConTech",
+      "WEBINARS": "Webinars"
+    },
+    "COMPANY": {
+      "ABOUT": "Sobre nós",
+      "CAREERS": "Carreiras",
+      "CONTACT": "Contato",
+      "PRIVACY": "Privacidade"
+    },
+    "RIGHTS": "Todos os direitos reservados.",
+    "LOCATION": "Monterrey, Nuevo León, México"
+  }
+}

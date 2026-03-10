@@ -1,13 +1,9 @@
-<section class="modules" id="modulos">
-
-  <!-- =============================
-  HEADER
-  ============================== -->
+<section class="modules" id="modules">
 
   <header class="section-header">
 
     <span class="section-tag">
-      Módulos del Sistema
+      {{ 'MODULES.TAG' | translate }}
     </span>
     <br>
 
@@ -16,71 +12,24 @@
       <app-icon name="check-square" color="#FFFFFF" size="md" strokeWidth="semibold">
       </app-icon>
 
-      <span>Módulos dentro de la plataforma COS</span>
+      <span>
+        {{ 'MODULES.BADGE' | translate }}
+      </span>
 
     </div>
 
     <h2 class="section-title">
-      Funcionalidades por Licencia
+      {{ 'MODULES.TITLE' | translate }}
     </h2>
 
     <p class="section-subtitle">
-      Cada licencia desbloquea módulos específicos para digitalizar aspectos clave de tu operación
+      {{ 'MODULES.SUBTITLE' | translate }}
     </p>
 
   </header>
 
 
-
-  <!-- =============================
-  CAROUSEL
-  ============================== -->
-
   <div class="carousel-wrapper">
-
-    <!-- Decorative Background -->
-
-    <div class="carousel-decoration">
-
-      <svg class="deco-circle deco-1" viewBox="0 0 200 200">
-        <circle cx="100" cy="100" r="80" fill="none" stroke="currentColor" stroke-width="2" opacity="0.1"/>
-        <circle cx="100" cy="100" r="60" fill="none" stroke="currentColor" stroke-width="2" opacity="0.15"/>
-        <circle cx="100" cy="100" r="40" fill="none" stroke="currentColor" stroke-width="2" opacity="0.2"/>
-      </svg>
-
-      <svg class="deco-grid deco-2" viewBox="0 0 200 200">
-        <defs>
-          <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
-            <path d="M20 0 L0 0 0 20" fill="none" stroke="currentColor" stroke-width="0.5"/>
-          </pattern>
-        </defs>
-        <rect width="200" height="200" fill="url(#grid)" opacity="0.3"/>
-      </svg>
-
-      <svg class="deco-dots deco-3" viewBox="0 0 200 200">
-        <circle cx="40" cy="40" r="3" fill="currentColor" opacity="0.4"/>
-        <circle cx="80" cy="60" r="2" fill="currentColor" opacity="0.3"/>
-        <circle cx="120" cy="40" r="3" fill="currentColor" opacity="0.5"/>
-        <circle cx="160" cy="70" r="2" fill="currentColor" opacity="0.3"/>
-        <circle cx="60" cy="120" r="3" fill="currentColor" opacity="0.4"/>
-        <circle cx="140" cy="140" r="2" fill="currentColor" opacity="0.3"/>
-      </svg>
-
-      <svg class="deco-line deco-4" viewBox="0 0 300 100">
-        <path d="M0 50 Q75 20 150 50 T300 50"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              opacity="0.2"/>
-      </svg>
-
-    </div>
-
-
-
-    <!-- =============================
-    CAROUSEL CONTAINER
-    ============================== -->
 
     <div class="carousel-container">
 
@@ -94,8 +43,6 @@
 
           <div class="module-content">
 
-            <!-- MODULE INFO -->
-
             <div class="module-info">
 
               <div class="module-badge">
@@ -105,19 +52,19 @@
                 </span>
 
                 <span class="module-category">
-                  {{ module.category }}
+                  {{ module.category | translate }}
                 </span>
 
               </div>
 
 
               <h3 class="module-title">
-                {{ module.title }}
+                {{ module.title | translate }}
               </h3>
 
 
               <p class="module-description">
-                {{ module.description }}
+                {{ module.description | translate }}
               </p>
 
 
@@ -125,7 +72,7 @@
 
                 <li *ngFor="let feature of module.features">
 
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
                     <path
                       d="M20 6L9 17L4 12"
                       stroke="currentColor"
@@ -136,7 +83,7 @@
                   </svg>
 
                   <span>
-                    {{ feature }}
+                    {{ feature | translate }}
                   </span>
 
                 </li>
@@ -146,9 +93,6 @@
             </div>
 
 
-
-            <!-- MODULE IMAGE -->
-
             <div class="module-image-wrapper">
 
               <div class="image-frame">
@@ -156,7 +100,7 @@
                 <img
                   *ngIf="module.image"
                   [src]="module.image"
-                  [alt]="module.title"
+                  [alt]="module.title | translate"
                   loading="lazy"
                 />
 
@@ -173,55 +117,29 @@
       </div>
 
 
-
-      <!-- =============================
-      NAVIGATION BUTTONS
-      ============================== -->
-
       <button
         class="carousel-btn prev"
         (click)="move(-1)"
-        aria-label="Slide anterior"
+        aria-label="Previous slide"
       >
-
         <svg viewBox="0 0 24 24">
-          <path
-            d="M15 18L9 12L15 6"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
+          <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2"/>
         </svg>
-
       </button>
 
 
       <button
         class="carousel-btn next"
         (click)="move(1)"
-        aria-label="Siguiente slide"
+        aria-label="Next slide"
       >
-
         <svg viewBox="0 0 24 24">
-          <path
-            d="M9 18L15 12L9 6"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
+          <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2"/>
         </svg>
-
       </button>
 
     </div>
 
-
-
-    <!-- =============================
-    DOTS
-    ============================== -->
 
     <div class="carousel-dots">
 
@@ -230,7 +148,6 @@
         *ngFor="let m of modules; let i = index"
         [class.active]="i === currentIndex"
         (click)="goTo(i)"
-        [attr.aria-label]="'Ir al módulo ' + (i + 1)"
       ></button>
 
     </div>

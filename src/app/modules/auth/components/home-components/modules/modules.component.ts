@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit, OnDestroy } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 import { IconComponent } from 'src/app/shared/components/dashboard-component/icon/icon.component';
 
 interface ModuleItem {
@@ -13,7 +14,7 @@ interface ModuleItem {
 
 @Component({
   selector: 'app-modules',
-  imports:[CommonModule,IconComponent],
+  imports:[CommonModule,IconComponent,TranslateModule],
   templateUrl: './modules.component.html',
   styleUrls: ['./modules.component.scss']
 })
@@ -23,52 +24,51 @@ export class ModulesComponent implements OnInit, OnDestroy {
 
   intervalId: any;
 
-  modules: ModuleItem[] = [
-    {
-      number: '01',
-      category: 'Monitoreo',
-      title: 'Dashboard Operativo',
-      description:
-        'Visualiza el estado de tu planta en tiempo real. Monitorea producción, inventarios de materiales, volúmenes diarios y proyecciones mensuales desde un solo panel intuitivo.',
-      image: 'assets/modules/dashboard.png',
-      features: [
-        'KPIs en tiempo real de producción',
-        'Control de inventarios por material',
-        'Gráficas de volumen acumulado y proyectado',
-        'Vista multi-planta consolidada'
-      ]
-    },
+modules: ModuleItem[] = [
 
-    {
-      number: '02',
-      category: 'Gestión',
-      title: 'Generación de Remisiones',
-      description:
-        'Crea y gestiona pedidos de forma digital con seguimiento completo. Desde la captura inicial hasta la ubicación de entrega, cada detalle bajo control con integración directa al sistema CAS.',
-      image: 'assets/modules/remisiones.png',
-      features: [
-        'Captura rápida de pedidos y clientes',
-        'Configuración técnica de mezclas',
-        'Geolocalización de obras en tiempo real',
-        'Control de temperatura y humedad del material'
-      ]
-    },
+{
+number: '01',
+category: 'MODULES.MODULE_1.CATEGORY',
+title: 'MODULES.MODULE_1.TITLE',
+description: 'MODULES.MODULE_1.DESCRIPTION',
+image: 'assets/modules/dashboard.png',
+features: [
+'MODULES.MODULE_1.FEATURE_1',
+'MODULES.MODULE_1.FEATURE_2',
+'MODULES.MODULE_1.FEATURE_3',
+'MODULES.MODULE_1.FEATURE_4'
+]
+},
 
-    {
-      number: '03',
-      category: 'Analytics',
-      title: 'Reportes y Analytics',
-      description:
-        'Sistema avanzado de reportes con filtros inteligentes. Genera reportes de producción, inventarios, clientes y análisis operativos con exportación a múltiples formatos.',
-      image: 'assets/modules/reportes.png',
-      features: [
-        'Reportes de producción por periodo',
-        'Control diario de inventarios de materiales',
-        'Análisis por cliente, proyecto y vendedor',
-        'Exportación a Excel y PDF'
-      ]
-    }
-  ];
+{
+number: '02',
+category: 'MODULES.MODULE_2.CATEGORY',
+title: 'MODULES.MODULE_2.TITLE',
+description: 'MODULES.MODULE_2.DESCRIPTION',
+image: 'assets/modules/remisiones.png',
+features: [
+'MODULES.MODULE_2.FEATURE_1',
+'MODULES.MODULE_2.FEATURE_2',
+'MODULES.MODULE_2.FEATURE_3',
+'MODULES.MODULE_2.FEATURE_4'
+]
+},
+
+{
+number: '03',
+category: 'MODULES.MODULE_3.CATEGORY',
+title: 'MODULES.MODULE_3.TITLE',
+description: 'MODULES.MODULE_3.DESCRIPTION',
+image: 'assets/modules/reportes.png',
+features: [
+'MODULES.MODULE_3.FEATURE_1',
+'MODULES.MODULE_3.FEATURE_2',
+'MODULES.MODULE_3.FEATURE_3',
+'MODULES.MODULE_3.FEATURE_4'
+]
+}
+
+];
 
 
 

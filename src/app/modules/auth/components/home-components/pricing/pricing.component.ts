@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 interface PricingPlan {
   name: string;
@@ -13,77 +14,77 @@ interface PricingPlan {
 
 @Component({
   selector: 'app-pricing',
-  imports:[CommonModule],
+  imports:[CommonModule, TranslateModule],
   templateUrl: './pricing.component.html',
   styleUrls: ['./pricing.component.scss']
 })
 export class PricingComponent {
 
-  plans: PricingPlan[] = [
+plans: PricingPlan[] = [
 
-    {
-      name: 'Básica',
-      price: '$5,000',
-      period: 'MXN por planta / mes',
-      features: [
-        'Gestión de pedidos',
-        'Diseño de mezclas',
-        'Control de inventarios',
-        'Remisiones automáticas',
-        'Automatización de carga (CAS)',
-        'Usuarios ilimitados',
-        'Soporte comercial'
-      ]
-    },
+{
+name: 'PRICING.PLANS.BASIC.NAME',
+price: '$5,000',
+period: 'PRICING.PERIOD',
+features: [
+'PRICING.PLANS.BASIC.FEATURE_1',
+'PRICING.PLANS.BASIC.FEATURE_2',
+'PRICING.PLANS.BASIC.FEATURE_3',
+'PRICING.PLANS.BASIC.FEATURE_4',
+'PRICING.PLANS.BASIC.FEATURE_5',
+'PRICING.PLANS.BASIC.FEATURE_6',
+'PRICING.PLANS.BASIC.FEATURE_7'
+]
+},
 
-    {
-      name: 'Intermedia',
-      price: '$7,000',
-      period: 'MXN por planta / mes',
-      features: [
-        'Todo lo de Básica +',
-        'Control de calidad completo',
-        'Mantenimiento de equipos',
-        'Nómina semanal',
-        'Reportes de productividad',
-        'Soporte prioritario'
-      ]
-    },
+{
+name: 'PRICING.PLANS.MID.NAME',
+price: '$7,000',
+period: 'PRICING.PERIOD',
+features: [
+'PRICING.PLANS.MID.FEATURE_1',
+'PRICING.PLANS.MID.FEATURE_2',
+'PRICING.PLANS.MID.FEATURE_3',
+'PRICING.PLANS.MID.FEATURE_4',
+'PRICING.PLANS.MID.FEATURE_5',
+'PRICING.PLANS.MID.FEATURE_6'
+]
+},
 
-    {
-      name: 'Avanzada',
-      price: '$9,000',
-      period: 'MXN por planta / mes',
-      featured: true,
-      badge: 'COMING SOON',
-      features: [
-        'Todo lo de Intermedia +',
-        'Ventas y CxC',
-        'Compras y CxP',
-        'Estados financieros',
-        'Análisis de rentabilidad',
-        'Dashboards ejecutivos'
-      ]
-    },
+{
+name: 'PRICING.PLANS.ADVANCED.NAME',
+price: '$9,000',
+period: 'PRICING.PERIOD',
+featured: true,
+badge: 'PRICING.BADGES.SOON',
+features: [
+'PRICING.PLANS.ADVANCED.FEATURE_1',
+'PRICING.PLANS.ADVANCED.FEATURE_2',
+'PRICING.PLANS.ADVANCED.FEATURE_3',
+'PRICING.PLANS.ADVANCED.FEATURE_4',
+'PRICING.PLANS.ADVANCED.FEATURE_5',
+'PRICING.PLANS.ADVANCED.FEATURE_6'
+]
+},
 
-    {
-      name: 'Plus',
-      price: '$15,000',
-      period: 'MXN por planta / mes',
-      badge: 'COMING SOON',
-      badgeColor: 'secondary',
-      features: [
-        'Todo lo de Avanzada +',
-        'Control de flotilla GPS',
-        'Gestión multi-planta',
-        'Optimización de rutas',
-        'Analytics avanzado (BI)',
-        'Soporte 24/7 premium',
-        'Gerente de cuenta dedicado'
-      ]
-    }
+{
+name: 'PRICING.PLANS.PLUS.NAME',
+price: '$15,000',
+period: 'PRICING.PERIOD',
+badge: 'PRICING.BADGES.SOON',
+badgeColor: 'secondary',
+features: [
+'PRICING.PLANS.PLUS.FEATURE_1',
+'PRICING.PLANS.PLUS.FEATURE_2',
+'PRICING.PLANS.PLUS.FEATURE_3',
+'PRICING.PLANS.PLUS.FEATURE_4',
+'PRICING.PLANS.PLUS.FEATURE_5',
+'PRICING.PLANS.PLUS.FEATURE_6',
+'PRICING.PLANS.PLUS.FEATURE_7'
+]
+}
 
-  ];
+];
 
 
   startPlan(plan: PricingPlan) {

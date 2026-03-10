@@ -22,6 +22,7 @@ export class LanguageSelectorComponent {
   languages: LanguageOption[] = [
     { code: 'es', label: 'Español', flag: '🇲🇽' },
     { code: 'en', label: 'English', flag: '🇺🇸' },
+    { code: 'pt', label: 'Português', flag: '🇧🇷' }
   ];
 
   constructor(public langService: LanguageService) {}
