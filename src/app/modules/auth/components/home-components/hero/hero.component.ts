@@ -10,7 +10,6 @@ import { AnimationService } from './animations.service';
   standalone: true,
   imports:[
     TranslateModule,
-    ButtonComponent
   ],
   encapsulation: ViewEncapsulation.None // ⬅️ CLAVE
 })

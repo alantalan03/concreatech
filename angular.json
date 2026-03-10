@@ -82,7 +82,7 @@
 				"crypto-js"
 				],
 				"outputPath": {
-          "base": "dist/DASHBOARD"
+          "base": "dist/concreatech"
         },
         "index": "src/index.html",
 				"polyfills": [
