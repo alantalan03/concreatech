@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://concreatech.com.mx/sitemap.xml
