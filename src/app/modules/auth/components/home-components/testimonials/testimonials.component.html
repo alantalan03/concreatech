@@ -77,11 +77,12 @@
 
 			<div class="testimonial-dots">
 				<button
-					class="testimonial-dot"
-					*ngFor="let t of testimonials; let i = index"
-					[class.active]="i === currentIndex"
-					[attr.aria-label]="'Ir al testimonio ' + (i + 1)"
-					(click)="goTo(i)"
+				  class="testimonial-dot"
+				  *ngFor="let t of testimonials; let i = index"
+				  [class.active]="i === currentIndex"
+				  (click)="goTo(i)"
+				  [attr.aria-label]="'Ir al testimonio ' + (i + 1)"
+				  [attr.aria-current]="i === currentIndex ? 'true' : null"
 				></button>
 			</div>
 		</div>
