@@ -89,10 +89,28 @@
     }
   },
   "TESTIMONIALS": {
-    "TAG": "Casos de Sucesso",
-    "TITLE": "O que dizem nossos clientes",
+    "TAG": "Histórias de Sucesso",
+    "TITLE": "O que nossos clientes dizem",
     "SUBTITLE": "Empresas líderes do setor confiam na ConcreaTech para transformar suas operações",
-    "TRUSTED": "Confiam em nós",
+    "ITEM_1": {
+      "TEXT": "A plataforma COS nos deu visibilidade total da nossa operação. Agora podemos tomar decisões baseadas em dados reais e aumentamos nossa rentabilidade.",
+      "NAME": "Eng. Marco Lozoya",
+      "POSITION": "Diretor de Operações",
+      "COMPANY": "ACONSA"
+    },
+    "ITEM_2": {
+      "TEXT": "O módulo de gestão de pedidos ajudou nossa equipe comercial a ampliar sua atuação em campo. Além disso, proporcionou visibilidade em tempo real para toda a equipe executiva.",
+      "NAME": "Sr. Alvaro Madero",
+      "POSITION": "Gerente Geral",
+      "COMPANY": "Concretos y Agregados de Chihuahua"
+    },
+    "ITEM_3": {
+      "TEXT": "O sistema automático de tickets de entrega e o controle de frota por GPS revolucionaram nossa logística. Reduzimos os tempos de entrega em 40% e melhoramos significativamente a satisfação dos clientes.",
+      "NAME": "Eng. Carlos Hernández",
+      "POSITION": "Gerente de Logística",
+      "COMPANY": "GRUPO CONSTRUCTOR"
+    },
+    "TRUSTED": "Empresas que confiam em nós",
     "CLIENTS": {
       "CEMEX": "CEMEX",
       "HOLCIM": "HOLCIM",
