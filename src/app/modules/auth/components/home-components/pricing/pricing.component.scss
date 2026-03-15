@@ -7,6 +7,7 @@ padding:48px 16px;
 background:linear-gradient(180deg,#0D3B66 0%,#1a1a1a 100%);
 position:relative;
 overflow:hidden;
+font-family:var(--font--primary);
 }
 
 @media (min-width:768px){
@@ -39,24 +40,25 @@ pointer-events:none;
 
 
 /* ========================================
-HEADER COLORS FIX
+HEADER
 ======================================== */
 
 .pricing .section-header{
 text-align:center;
-margin-bottom:1.5rem;
+margin-bottom:var(--spacing-6);
 position:relative;
 z-index:10;
 }
 
 .pricing .section-tag{
-color:#10b981;
-font-size:13px;
-font-weight:600;
+font-family:var(--font-code);
+font-size:var(--font-c1);
+line-height:var(--font-lh-c1);
+font-weight:var(--semibold);
 letter-spacing:2px;
 text-transform:uppercase;
-margin-bottom:12px;
-font-family:'Space Mono',monospace;
+color:#10b981;
+margin-bottom:var(--spacing-3);
 }
 
 .pricing .cos-pricing-badge{
@@ -66,11 +68,11 @@ gap:8px;
 padding:10px 20px;
 background:linear-gradient(135deg,#10b981 0%,#0ea371 100%);
 color:white;
-border-radius:50px;
-font-size:15px;
-font-weight:700;
+border-radius:var(--radius-pill);
+font-size:var(--font-b2);
+font-weight:var(--bold);
 margin:8px 0 16px;
-font-family:'Space Mono',monospace;
+font-family:var(--font-code);
 box-shadow:0 4px 15px rgba(16,185,129,.3);
 }
 
@@ -80,18 +82,23 @@ height:18px;
 }
 
 .pricing .section-title{
-font-size:40px;
-font-weight:800;
+font-family:var(--font--primary);
+font-size:var(--font-b1);
+line-height:var(--font-lh-b1);
+font-weight:var(--extrabold);
+letter-spacing:var(--font-spacing-b);
 color:white;
-margin-bottom:16px;
+margin-bottom:var(--spacing-4);
 }
 
 .pricing .section-subtitle{
-font-size:18px;
+font-family:var(--font--secondary);
+font-size:var(--font-b2);
+line-height:var(--font-lh-b2);
+font-weight:var(--regular);
 color:#cbd5e1;
 max-width:700px;
 margin:auto;
-line-height:1.6;
 }
 
 
@@ -100,11 +107,11 @@ PRICING GRID
 ======================================== */
 
 .pricing-grid{
-max-width:1560px;
+max-width:1110px;
 margin:auto;
 display:grid;
 grid-template-columns:1fr;
-gap:20px;
+gap:var(--spacing-5);
 position:relative;
 z-index:10;
 perspective:1000px;
@@ -119,7 +126,7 @@ grid-template-columns:repeat(2,1fr);
 @media (min-width:1024px){
 .pricing-grid{
 grid-template-columns:repeat(4,1fr);
-gap:24px;
+gap:var(--spacing-6);
 }
 }
 
@@ -131,9 +138,9 @@ PRICING CARD
 .pricing-card{
 background:white;
 border:3px solid rgba(13,59,102,.2);
-border-radius:16px;
-padding:56px 32px 40px;
-transition:all .3s ease;
+border-radius:var(--radius-xl);
+padding: 16px 18px;
+transition:all var(--transition-normal);
 position:relative;
 box-shadow:0 8px 25px rgba(0,0,0,.12);
 overflow:visible;
@@ -148,7 +155,7 @@ width:100%;
 height:4px;
 background:linear-gradient(90deg,var(--primary) 0%,var(--secondary) 100%);
 opacity:0;
-transition:.3s;
+transition:var(--transition-normal);
 }
 
 .pricing-card:hover::before{
@@ -191,9 +198,9 @@ right:20px;
 padding:8px 20px;
 background:linear-gradient(135deg,#f59e0b 0%,#d97706 100%);
 color:white;
-border-radius:50px;
-font-size:12px;
-font-weight:800;
+border-radius:var(--radius-pill);
+font-size:var(--font-c1);
+font-weight:var(--extrabold);
 text-transform:uppercase;
 letter-spacing:.5px;
 box-shadow:0 6px 16px rgba(245,158,11,.4);
@@ -205,12 +212,15 @@ border:2px solid white;
 /* PLAN NAME */
 
 .pricing-name{
-font-size:22px;
-font-weight:800;
+font-family:var(--font--primary);
+font-size:var(--font-b1);
+line-height:var(--font-lh-b1);
+font-weight:var(--extrabold);
+letter-spacing:var(--font-spacing-b);
 color:var(--primary);
-margin-bottom:12px;
-margin-top:12px;
-transition:.3s;
+margin-bottom:var(--spacing-3);
+margin-top:var(--spacing-3);
+transition:var(--transition-normal);
 }
 
 .pricing-card:hover .pricing-name{
@@ -222,18 +232,21 @@ transform:translateX(5px);
 /* PRICE */
 
 .pricing-price{
-font-size:36px;
-font-weight:800;
+font-family:var(--font-code);
+font-size:var(--font-bh6);
+line-height:var(--font-lh-bh6);
+font-weight:var(--extrabold);
 color:var(--primary);
-margin-bottom:8px;
-font-family:'Space Mono',monospace;
+margin-bottom:var(--spacing-2);
 display:none;
 }
 
 .pricing-period{
+font-family:var(--font--secondary);
+font-size:var(--font-b2);
+line-height:var(--font-lh-b2);
 color:#5A6C7D;
-font-size:16px;
-margin-bottom:32px;
+margin-bottom:var(--spacing-6);
 display:none;
 }
 
@@ -244,18 +257,20 @@ FEATURE LIST
 
 .pricing-features{
 list-style:none;
-margin-bottom:40px;
+margin-bottom:var(--spacing-7);
 }
 
 .pricing-features li{
+font-family:var(--font--secondary);
+font-size:var(--font-c1);
+line-height:var(--font-lh-c1);
+font-weight:var(--semibold);
 color:var(--dark);
-padding:16px 0;
+padding:var(--spacing-3) 0;
 display:flex;
 align-items:flex-start;
-gap:16px;
-font-weight:600;
-font-size:16px;
-transition:.2s;
+gap:var(--spacing-4);
+transition:var(--transition-fast);
 }
 
 .pricing-card:hover .pricing-features li{
@@ -276,11 +291,11 @@ display:flex;
 align-items:center;
 justify-content:center;
 box-shadow:0 3px 10px rgba(16,185,129,.3);
-transition:.3s;
+transition:var(--transition-normal);
 }
 
 .pricing-card:hover .pricing-features li::before{
-transform:scale(1.2) rotate(360deg);
+transform:scale(1.2);
 box-shadow:0 6px 16px rgba(16,185,129,.5);
 }
 
@@ -295,12 +310,14 @@ padding:18px;
 background:transparent;
 color:var(--primary);
 border:3px solid var(--primary);
-border-radius:10px;
-font-weight:700;
-font-size:17px;
+border-radius:var(--radius-lg);
+font-family:var(--font--primary);
+font-size:var(--font-c1);
+line-height:var(--font-lh-c1);
+font-weight:var(--bold);
+letter-spacing:0.02em;
 cursor:pointer;
-transition:.3s;
-font-family:'Sora',sans-serif;
+transition:var(--transition-normal);
 }
 
 .pricing-button:hover{
@@ -329,9 +346,9 @@ CTA SECTION
 ======================================== */
 
 .cta-section{
-margin-top:80px;
+margin-top:20px;
 padding:56px 32px;
-border-radius:18px;
+border-radius:var(--radius-xl);
 background:linear-gradient(
 135deg,
 rgba(16,185,129,.15) 0%,
@@ -348,6 +365,7 @@ z-index:10;
 box-shadow:0 15px 40px rgba(0,0,0,.25);
 }
 
+
 /* CONTENT */
 
 .cta-content{
@@ -355,32 +373,41 @@ max-width:620px;
 margin:auto;
 }
 
+
 /* TITLE */
 
 .cta-title{
-font-size:28px;
-font-weight:800;
+font-family:var(--font--primary);
+font-size:var(--font-bh6);
+line-height:var(--font-lh-bh6);
+font-weight:var(--extrabold);
+letter-spacing:var(--font-spacing-bh);
 color:white;
-margin-bottom:16px;
+margin-bottom:var(--spacing-4);
 }
+
 
 /* DESCRIPTION */
 
 .cta-description{
+font-family:var(--font--secondary);
+font-size:var(--font-b1);
+line-height:var(--font-lh-b1);
+font-weight:var(--regular);
 color:#cbd5e1;
-font-size:17px;
-line-height:1.7;
-margin-bottom:32px;
+margin-bottom:var(--spacing-6);
 }
+
 
 /* BUTTONS */
 
 .cta-buttons{
 display:flex;
 justify-content:center;
-gap:16px;
+gap:var(--spacing-4);
 flex-wrap:wrap;
 }
+
 
 /* CALENDLY BUTTON */
 
@@ -395,11 +422,14 @@ var(--secondary) 0%,
 #0ea371 100%
 );
 color:white;
-font-weight:700;
-border-radius:10px;
+font-family:var(--font--primary);
+font-size:var(--font-b1);
+line-height:var(--font-lh-b1);
+font-weight:var(--bold);
+letter-spacing:0.02em;
+border-radius:var(--radius-lg);
 text-decoration:none;
-font-size:16px;
-transition:.3s;
+transition:var(--transition-normal);
 box-shadow:0 6px 20px rgba(16,185,129,.35);
 }
 
@@ -413,6 +443,7 @@ background:linear-gradient(
 );
 }
 
+
 /* RESPONSIVE */
 
 @media (max-width:768px){
@@ -422,11 +453,12 @@ padding:48px 24px;
 }
 
 .cta-title{
-font-size:24px;
+font-size:var(--font-h2);
+line-height:var(--font-lh-h2);
 }
 
 .cta-description{
-font-size:16px;
+font-size:var(--font-b2);
 }
 
 .calendly-btn{

@@ -2,13 +2,15 @@
 
   <div class="nav-container">
 
-    <!-- LOGO -->
-    <div class="logo" (click)="scrollTo('testimonios')">
-      <img src="assets/logos/logotipo.png" class="logo-image" alt="Logo de ConcreaTech" width="165" height="71">
+    <div class="logo" (click)="scrollTo('inicio')">
+      <img
+        src="assets/logos/logotipo.png"
+        class="logo-image"
+        alt="Logo ConcreaTech"
+      />
     </div>
 
-    <!-- LINKS DESKTOP -->
-    <ul class="nav-links desktop-only" style="  margin-bottom: 0rem !important;">
+    <ul class="nav-links desktop-only">
 
       <li
         *ngFor="let item of navItems"
@@ -20,10 +22,7 @@
 
     </ul>
 
-    <!-- ACTIONS -->
     <div class="nav-actions">
-
-      
 
       <a
         href="https://cos.concreatech.com.mx/login"
@@ -42,7 +41,6 @@
 
       <app-language-selector class="desktop-only"></app-language-selector>
 
-      <!-- MOBILE BUTTON -->
       <div
         class="menu-toggle mobile-only"
         [class.open]="menuOpen"
@@ -57,28 +55,90 @@
 
   </div>
 
-  <!-- MOBILE MENU -->
-  <div class="mobile-menu" [class.open]="menuOpen">
+</nav>
 
-    <nav class="mobile-links">
 
-      <a
-        *ngFor="let item of navItems"
-        (click)="scrollTo(item.id)"
-        [class.active]="activeSection === item.id"
-      >
-        {{ item.label | translate }}
-      </a>
+<div
+  class="mobile-overlay"
+  [class.open]="menuOpen"
+  (click)="closeMenu()"
+></div>
 
-    </nav>
 
-    <div class="mobile-divider"></div>
+<div
+  class="mobile-menu"
+  [class.open]="menuOpen"
+>
 
-    <div class="mobile-lang">
-      <button (click)="changeLang('es')">🇲🇽 Español</button>
-      <button (click)="changeLang('en')">🇺🇸 English</button>
-    </div>
+  <div class="mobile-header">
+
+    <img
+      src="assets/logos/logotipo.png"
+      class="mobile-logo"
+      alt="ConcreaTech"
+    />
+
+    <button
+      class="mobile-close"
+      (click)="closeMenu()"
+      aria-label="Close menu"
+    >
+      ✕
+    </button>
 
   </div>
 
-</nav>
+
+  <nav class="mobile-links">
+
+    <a
+      *ngFor="let item of navItems"
+      (click)="scrollTo(item.id)"
+      [class.active]="activeSection === item.id"
+    >
+      {{ item.label | translate }}
+    </a>
+
+  </nav>
+
+
+  <div class="mobile-actions">
+
+    <a
+      href="https://cos.concreatech.com.mx/login"
+      class="mobile-login"
+    >
+      {{ 'NAV.LOGIN' | translate }}
+    </a>
+
+    <a
+      href="https://calendly.com/concreatech-mx/30min"
+      target="_blank"
+      class="mobile-cta"
+    >
+      {{ 'NAV.DEMO' | translate }}
+    </a>
+
+  </div>
+
+
+  <div class="mobile-divider"></div>
+
+
+  <div class="mobile-lang">
+
+    <button (click)="changeLang('es')">
+      🇲🇽 Español
+    </button>
+
+    <button (click)="changeLang('en')">
+      🇺🇸 English
+    </button>
+
+    <button (click)="changeLang('pt')">
+      🇧🇷 Português
+    </button>
+
+  </div>
+
+</div>

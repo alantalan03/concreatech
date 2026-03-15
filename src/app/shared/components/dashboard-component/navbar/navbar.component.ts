@@ -4,9 +4,9 @@ import {
   HostListener,
   AfterViewInit
 } from '@angular/core';
+
 import { TranslateModule } from '@ngx-translate/core';
 import { LanguageService } from 'src/app/core/services/translate/language.service';
-import { ButtonComponent } from '../button/button.component';
 import { LanguageSelectorComponent } from '../language-selector/language-selector.component';
 
 interface NavItem {
@@ -48,22 +48,31 @@ export class NavbarComponent implements AfterViewInit {
   }
 
   toggleMenu() {
+
     this.menuOpen = !this.menuOpen;
+
+    document.body.style.overflow =
+      this.menuOpen ? 'hidden' : 'auto';
+
   }
 
   closeMenu() {
+
     this.menuOpen = false;
+    document.body.style.overflow = 'auto';
+
   }
 
-  changeLang(lang: 'es' | 'en') {
+  changeLang(lang: 'es' | 'en' | 'pt') {
+
     this.langService.setLang(lang);
     this.closeMenu();
+
   }
 
   scrollTo(sectionId: string) {
 
     const element = document.getElementById(sectionId);
-
     if (!element) return;
 
     const navbarHeight = 80;
@@ -81,6 +90,7 @@ export class NavbarComponent implements AfterViewInit {
     this.activeSection = sectionId;
 
     this.closeMenu();
+
   }
 
   @HostListener('window:scroll')
@@ -93,7 +103,6 @@ export class NavbarComponent implements AfterViewInit {
     for (const section of this.navItems) {
 
       const element = document.getElementById(section.id);
-
       if (!element) continue;
 
       const offset = element.offsetTop;
@@ -105,7 +114,9 @@ export class NavbarComponent implements AfterViewInit {
       ) {
         this.activeSection = section.id;
       }
+
     }
+
   }
 
 }

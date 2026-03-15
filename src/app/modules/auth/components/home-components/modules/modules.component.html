@@ -5,11 +5,14 @@
     <span class="section-tag">
       {{ 'MODULES.TAG' | translate }}
     </span>
-    <br>
 
     <div class="cos-pricing-badge">
 
-      <app-icon name="check-square" color="#FFFFFF" size="md" strokeWidth="semibold">
+      <app-icon
+        name="check-square"
+        color="#FFFFFF"
+        size="md"
+        strokeWidth="semibold">
       </app-icon>
 
       <span>
@@ -18,7 +21,7 @@
 
     </div>
 
-    <h2 class="section-title">
+    <h2 id="modules-title" class="section-title">
       {{ 'MODULES.TITLE' | translate }}
     </h2>
 
@@ -31,7 +34,11 @@
 
   <div class="carousel-wrapper">
 
-    <div class="carousel-container">
+    <div
+      class="carousel-container"
+      (mouseenter)="pauseAutoSlide()"
+      (mouseleave)="resumeAutoSlide()"
+    >
 
       <div class="modules-carousel">
 
@@ -57,16 +64,13 @@
 
               </div>
 
-
               <h3 class="module-title">
                 {{ module.title | translate }}
               </h3>
 
-
               <p class="module-description">
                 {{ module.description | translate }}
               </p>
-
 
               <ul class="module-features">
 
@@ -98,13 +102,13 @@
               <div class="image-frame">
 
                 <img
-                  	*ngIf="module.image"
-                  	[src]="module.image"
-                  	[alt]="module.title | translate"
-                 	loading="lazy"
-					decoding="async"
-					width="600"
-  					height="400"
+                  *ngIf="module.image"
+                  [src]="module.image"
+                  [alt]="module.title | translate"
+                  loading="lazy"
+                  decoding="async"
+                  width="600"
+                  height="600"
                 />
 
                 <div class="image-glow"></div>
@@ -123,22 +127,32 @@
       <button
         class="carousel-btn prev"
         (click)="move(-1)"
+          (mouseenter)="hoverPrev = true"
+  (mouseleave)="hoverPrev = false"
         aria-label="Previous slide"
       >
-        <svg viewBox="0 0 24 24">
-          <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2"/>
-        </svg>
+        <app-icon
+            name="chevron-left"
+            [color]="hoverPrev ? '#FFFFFF' : '#000000'"
+            size="2xl"
+            strokeWidth="semibold">
+          </app-icon>
       </button>
 
 
       <button
         class="carousel-btn next"
         (click)="move(1)"
+          (mouseenter)="hoverNext = true"
+  (mouseleave)="hoverNext = false"
         aria-label="Next slide"
       >
-        <svg viewBox="0 0 24 24">
-          <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2"/>
-        </svg>
+          <app-icon
+            name="chevron-right"
+            [color]="hoverNext ? '#FFFFFF' : '#000000'"
+            size="2xl"
+            strokeWidth="semibold">
+          </app-icon>
       </button>
 
     </div>
@@ -151,8 +165,8 @@
         *ngFor="let m of modules; let i = index"
         [class.active]="i === currentIndex"
         (click)="goTo(i)"
-		[attr.aria-label]="'Ir al módulo ' + (i + 1)"
-  		[attr.aria-current]="i === currentIndex ? 'true' : null"
+        [attr.aria-label]="'Go to module ' + (i + 1)"
+        [attr.aria-current]="i === currentIndex ? 'true' : null"
       ></button>
 
     </div>

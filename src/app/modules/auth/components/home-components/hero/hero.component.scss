@@ -212,3 +212,12 @@
     font-size: 2.2rem;
   }
 }
+
+.hero-visual-float g {
+  animation: floatMachine 6s ease-in-out infinite;
+}
+
+.hero-visual-float g:nth-child(4){animation-delay:.5s}
+.hero-visual-float g:nth-child(5){animation-delay:1s}
+.hero-visual-float g:nth-child(6){animation-delay:1.5s}
+.hero-visual-float g:nth-child(7){animation-delay:2s}
