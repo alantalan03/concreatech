@@ -39,7 +39,9 @@ hoverNext = false;
         'MODULES.MODULE_1.FEATURE_1',
         'MODULES.MODULE_1.FEATURE_2',
         'MODULES.MODULE_1.FEATURE_3',
-        'MODULES.MODULE_1.FEATURE_4'
+        'MODULES.MODULE_1.FEATURE_4',
+        'MODULES.MODULE_1.FEATURE_5',
+        'MODULES.MODULE_1.FEATURE_6'
       ]
     },
 
@@ -53,7 +55,8 @@ hoverNext = false;
         'MODULES.MODULE_2.FEATURE_1',
         'MODULES.MODULE_2.FEATURE_2',
         'MODULES.MODULE_2.FEATURE_3',
-        'MODULES.MODULE_2.FEATURE_4'
+        'MODULES.MODULE_2.FEATURE_4',
+        'MODULES.MODULE_2.FEATURE_5'
       ]
     }
 

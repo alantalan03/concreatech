@@ -128,12 +128,35 @@
     "CTA_SUBTITLE": "Agende uma visita técnica gratuita e receba um diagnóstico personalizado",
     "CTA_BUTTON": "Agendar visita técnica gratuita"
   },
-  "MODULES": {
-    "TAG": "Módulos do Sistema",
-    "BADGE": "Módulos dentro da plataforma COS",
-    "TITLE": "Funcionalidades por Licença",
-    "SUBTITLE": "Cada licença desbloqueia módulos específicos para digitalizar aspectos chave da sua operação"
+"MODULES": {
+  "TAG": "Módulos do Sistema",
+  "BADGE": "Módulos dentro da plataforma COS",
+  "TITLE": "Funcionalidades por Licença",
+  "SUBTITLE": "Cada licença desbloqueia módulos específicos para digitalizar aspectos-chave da sua operação",
+
+  "MODULE_1": {
+    "CATEGORY": "Vendas",
+    "TITLE": "Geração de pedidos.",
+    "DESCRIPTION": "Dentro deste módulo, crie e gerencie pedidos digitalmente a partir do seu dispositivo móvel.",
+    "FEATURE_1": "<strong>Captura rápida pelo celular ou web</strong> - Vendedores criam pedidos em campo em <2 minutos",
+    "FEATURE_2": "<strong>Cotação instantânea com preços dinâmicos</strong> - Tarifas por cliente, volume e projeto",
+    "FEATURE_3": "<strong>Validação automática de crédito</strong> - Aprovação em tempo real conforme o limite do cliente",
+    "FEATURE_4": "<strong>Agendamento inteligente de entregas</strong> - Calendário com disponibilidade da planta e frota",
+    "FEATURE_5": "<strong>Acompanhamento em tempo real</strong> - Cliente vê o status: capturado → programado → em produção → em rota",
+    "FEATURE_6": "<strong>Integração com estoque e produção</strong> - Sincronização automática com a planta e o armazém"
   },
+
+  "MODULE_2": {
+    "CATEGORY": "Planta",
+    "TITLE": "Geração de remessas.",
+    "DESCRIPTION": "Elimine o papel e digitalize completamente o processo de entrega com assinatura do cliente em campo, evidência fotográfica e envio automático por e-mail ou WhatsApp.",
+    "FEATURE_1": "<strong>Geração automática a partir do dosificador</strong> - Sem captura manual, zero erros humanos",
+    "FEATURE_2": "<strong>Dados reais de produção</strong> - Volume exato, fórmula, tempos e materiais consumidos",
+    "FEATURE_3": "<strong>Múltiplos formatos: PDF, JSON, XML</strong> - Download direto ou integração programática",
+    "FEATURE_4": "<strong>API RESTful para automação</strong> - Conecte com ERP, SAP ou sistemas proprietários",
+    "FEATURE_5": "<strong>Rastreabilidade completa do lote</strong> - Da dosagem até a entrega com timestamp GPS"
+  }
+},
   "PRICING": {
     "TAG": "Planos de Licenciamento",
     "BADGE": "COS - Software de Controle Operacional",

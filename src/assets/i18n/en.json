@@ -193,38 +193,31 @@
 	},
 	"MODULES": {
 		"TAG": "System Modules",
-		"BADGE": "Modules inside the COS platform",
+		"BADGE": "Modules within the COS platform",
 		"TITLE": "Features by License",
 		"SUBTITLE": "Each license unlocks specific modules to digitize key aspects of your operation",
 
 		"MODULE_1": {
-			"CATEGORY": "Monitoring",
-			"TITLE": "Operational Dashboard",
-			"DESCRIPTION": "View the real-time status of your plant. Monitor production, material inventories and daily volumes from a single dashboard.",
-			"FEATURE_1": "Real-time production KPIs",
-			"FEATURE_2": "Material inventory control",
-			"FEATURE_3": "Production volume charts",
-			"FEATURE_4": "Multi-plant consolidated view"
+			"CATEGORY": "Sales",
+			"TITLE": "Order generation.",
+			"DESCRIPTION": "Within this module, create and manage orders digitally from your mobile device.",
+			"FEATURE_1": "<strong>Fast capture from mobile or web</strong> - Sales reps create field orders in <2 minutes",
+			"FEATURE_2": "<strong>Instant quotes with dynamic pricing</strong> - Rates by customer, volume, and project",
+			"FEATURE_3": "<strong>Automatic credit validation</strong> - Real-time approval based on the customer's credit limit",
+			"FEATURE_4": "<strong>Smart delivery scheduling</strong> - Calendar with plant and fleet availability",
+			"FEATURE_5": "<strong>Real-time tracking</strong> - Customers see status: captured → scheduled → in production → on route",
+			"FEATURE_6": "<strong>Inventory and production integration</strong> - Automatic synchronization with plant and warehouse"
 		},
 
 		"MODULE_2": {
-			"CATEGORY": "Management",
-			"TITLE": "Delivery Ticket Management",
-			"DESCRIPTION": "Create and manage orders digitally with full tracking from capture to delivery.",
-			"FEATURE_1": "Quick order and client capture",
-			"FEATURE_2": "Technical mix configuration",
-			"FEATURE_3": "Real-time job site geolocation",
-			"FEATURE_4": "Material temperature and humidity control"
-		},
-
-		"MODULE_3": {
-			"CATEGORY": "Analytics",
-			"TITLE": "Reports & Analytics",
-			"DESCRIPTION": "Advanced reporting system with smart filters and multi-format export.",
-			"FEATURE_1": "Production reports by period",
-			"FEATURE_2": "Daily material inventory tracking",
-			"FEATURE_3": "Analysis by client and project",
-			"FEATURE_4": "Export to Excel and PDF"
+			"CATEGORY": "Plant",
+			"TITLE": "Delivery ticket generation.",
+			"DESCRIPTION": "Eliminate paperwork and fully digitize the delivery process with on-site customer signatures, photo evidence, and automatic sending via email or WhatsApp.",
+			"FEATURE_1": "<strong>Automatic generation from the dosing system</strong> - No manual input, zero human errors",
+			"FEATURE_2": "<strong>Real production data</strong> - Exact volume, formula, times, and materials consumed",
+			"FEATURE_3": "<strong>Multiple formats: PDF, JSON, XML</strong> - Direct download or programmatic integration",
+			"FEATURE_4": "<strong>RESTful API for automation</strong> - Connect with ERP, SAP, or proprietary systems",
+			"FEATURE_5": "<strong>Full batch traceability</strong> - From dosing to delivery with GPS timestamp"
 		}
 	},
 	"PRICING": {

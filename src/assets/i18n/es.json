@@ -189,33 +189,26 @@
 		"SUBTITLE": "Cada licencia desbloquea módulos específicos para digitalizar aspectos clave de tu operación",
 
 		"MODULE_1": {
-			"CATEGORY": "Monitoreo",
-			"TITLE": "Dashboard Operativo",
-			"DESCRIPTION": "Visualiza el estado de tu planta en tiempo real. Monitorea producción, inventarios de materiales y volúmenes diarios desde un solo panel.",
-			"FEATURE_1": "KPIs en tiempo real de producción",
-			"FEATURE_2": "Control de inventarios por material",
-			"FEATURE_3": "Gráficas de volumen acumulado",
-			"FEATURE_4": "Vista multi-planta consolidada"
+			"CATEGORY": "Ventas",
+			"TITLE": "Generación de pedidos.",
+			"DESCRIPTION": "Dentro del módulo crea y gestiona digitalmente desde tu dispositivo móvil.",
+			"FEATURE_1": "<strong>Captura rápida desde móvil o web</strong> - Vendedores crean pedidos en campo en <2 minutos",
+			"FEATURE_2": "<strong>Cotización instantánea con precios dinámicos</strong> - Tarifas por cliente, volumen y proyecto",
+			"FEATURE_3": "<strong>Validación automática de crédito</strong> - Aprobación en tiempo real según límite del cliente",
+			"FEATURE_4": "<strong>Programación inteligente de entregas</strong> - Calendario con disponibilidad de planta y flotilla",
+			"FEATURE_5": "<strong>Seguimiento en tiempo real</strong> - Cliente ve estatus: capturado → programado → en producción → en ruta",
+			"FEATURE_6": "<strong>Integración con inventario y producción</strong> - Sincronización automática con planta y almacén"
 		},
 
 		"MODULE_2": {
-			"CATEGORY": "Gestión",
-			"TITLE": "Generación de Remisiones",
-			"DESCRIPTION": "Crea y gestiona pedidos digitalmente con seguimiento completo desde captura hasta entrega.",
-			"FEATURE_1": "Captura rápida de pedidos y clientes",
-			"FEATURE_2": "Configuración técnica de mezclas",
-			"FEATURE_3": "Geolocalización de obras",
-			"FEATURE_4": "Control de temperatura y humedad"
-		},
-
-		"MODULE_3": {
-			"CATEGORY": "Analytics",
-			"TITLE": "Reportes y Analytics",
-			"DESCRIPTION": "Sistema avanzado de reportes con filtros inteligentes y exportación a múltiples formatos.",
-			"FEATURE_1": "Reportes de producción por periodo",
-			"FEATURE_2": "Control diario de inventarios",
-			"FEATURE_3": "Análisis por cliente y proyecto",
-			"FEATURE_4": "Exportación a Excel y PDF"
+			"CATEGORY": "Planta",
+			"TITLE": "Generación de remisiones.",
+			"DESCRIPTION": "Elimina el papel y digitaliza completamente el proceso de entrega con firma del cliente en campo, evidencia fotográfica y envío automático por email/WhatsApp.",
+			"FEATURE_1": "<strong>Generación automática desde dosificador</strong> - Sin captura manual, cero errores humanos",
+			"FEATURE_2": "<strong>Datos reales de producción</strong> - Volumen exacto, fórmula, tiempos y materiales consumidos",
+			"FEATURE_3": "<strong>Múltiples formatos: PDF, JSON, XML</strong> - Descarga directa o integración programática",
+			"FEATURE_4": "<strong>API RESTful para automatización</strong> - Conecta con ERP, SAP o sistemas propietarios",
+			"FEATURE_5": "<strong>Trazabilidad completa del batch</strong> - Desde dosificación hasta entrega con timestamp GPS"
 		}
 	},
 	"PRICING": {
